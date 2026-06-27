@@ -548,8 +548,21 @@
     .risk-item { grid-template-columns: 1fr; gap: 8px; padding: 12px 16px; }
     .risk-name { font-size: 13px; }
     .risk-desc { font-size: 12px; }
-    .assumption-row { grid-template-columns: 1fr; gap: 4px; padding: 10px 12px; }
+    .assumption-row { grid-template-columns: 1fr; gap: 8px; padding: 12px; }
     .assumption-row .conf { text-align: left; }
+    .assumption-row .label::before,
+    .assumption-row .value::before,
+    .assumption-row .conf::before {
+      content: attr(data-label);
+      display: block;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 9px;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--text-muted);
+      margin-bottom: 2px;
+    }
+    .assumption-row:first-child { display: none; }
     .decision-box { padding: 24px 20px; margin: 24px 0; }
     .decision-box h3 { font-size: 20px; }
     .callout { padding: 14px 16px; flex-direction: column; gap: 8px; }
@@ -1890,54 +1903,54 @@ Jai Shri Krishna 🙏</div>
 
 <div style="background: var(--cream); border-radius: 2px; overflow: hidden; margin: 24px 0;">
   <div class="assumption-row" style="background: var(--deep-blue); color: white;">
-    <span style="color: rgba(255,255,255,0.6); font-size:10px; font-family: 'JetBrains Mono'; text-transform:uppercase; letter-spacing:0.1em;">Assumption</span>
-    <span style="color: rgba(255,255,255,0.6); font-size:10px; font-family: 'JetBrains Mono'; text-transform:uppercase; letter-spacing:0.1em;">Basis</span>
-    <span style="color: rgba(255,255,255,0.6); font-size:10px; font-family: 'JetBrains Mono'; text-transform:uppercase; letter-spacing:0.1em;">Confidence</span>
+    <span data-label="Assumption" style="color: rgba(255,255,255,0.6); font-size:10px; font-family: 'JetBrains Mono'; text-transform:uppercase; letter-spacing:0.1em;">Assumption</span>
+    <span data-label="Basis" style="color: rgba(255,255,255,0.6); font-size:10px; font-family: 'JetBrains Mono'; text-transform:uppercase; letter-spacing:0.1em;">Basis</span>
+    <span data-label="Confidence" style="color: rgba(255,255,255,0.6); font-size:10px; font-family: 'JetBrains Mono'; text-transform:uppercase; letter-spacing:0.1em;">Confidence</span>
   </div>
   <div class="assumption-row">
-    <div class="label">Temple timings unchanged</div>
-    <div class="value">Sourced from official temple sites + corroborating sources. Summer schedule applies Aug 27–29. Govardhan evening reopening at 4 PM confirmed.</div>
-    <div class="conf">High. Verify 1 week before.</div>
+    <div class="label" data-label="Assumption">Temple timings unchanged</div>
+    <div class="value" data-label="Basis">Sourced from official temple sites + corroborating sources. Summer schedule applies Aug 27–29. Govardhan evening reopening at 4 PM confirmed.</div>
+    <div class="conf" data-label="Confidence">High. Verify 1 week before.</div>
   </div>
   <div class="assumption-row">
-    <div class="label">Govardhan e-rickshaw available</div>
-    <div class="value">Plentiful at Govardhan. Full-day hire expected to be available. If not, Tempo Traveller alternative works.</div>
-    <div class="conf">High. Verify with hotel.</div>
+    <div class="label" data-label="Assumption">Govardhan e-rickshaw available</div>
+    <div class="value" data-label="Basis">Plentiful at Govardhan. Full-day hire expected to be available. If not, Tempo Traveller alternative works.</div>
+    <div class="conf" data-label="Confidence">High. Verify with hotel.</div>
   </div>
   <div class="assumption-row">
-    <div class="label">Mumbai group can manage Day 1 afternoon</div>
-    <div class="value">The largest assumption in this plan. Overnight train + 6-hour Govardhan outing. E-rickshaw makes it low-exertion, but the cumulative day is long.</div>
-    <div class="conf">Medium. Verify with Mumbai group.</div>
+    <div class="label" data-label="Assumption">Mumbai group can manage Day 1 afternoon</div>
+    <div class="value" data-label="Basis">The largest assumption in this plan. Overnight train + 6-hour Govardhan outing. E-rickshaw makes it low-exertion, but the cumulative day is long.</div>
+    <div class="conf" data-label="Confidence">Medium. Verify with Mumbai group.</div>
   </div>
   <div class="assumption-row">
-    <div class="label">Raksha Bandhan = 28 Aug</div>
-    <div class="value">Multiple Panchang sources confirm Sravana Purnima = 28 August 2026. Muhurat 5:57 AM, no Bhadra.</div>
-    <div class="conf">Very high.</div>
+    <div class="label" data-label="Assumption">Raksha Bandhan = 28 Aug</div>
+    <div class="value" data-label="Basis">Multiple Panchang sources confirm Sravana Purnima = 28 August 2026. Muhurat 5:57 AM, no Bhadra.</div>
+    <div class="conf" data-label="Confidence">Very high.</div>
   </div>
   <div class="assumption-row">
-    <div class="label">Taj Mahal open on Saturday</div>
-    <div class="value">Taj Mahal is closed every Friday. Saturday is fully operational. Confirmed by official timings.</div>
-    <div class="conf">Definitive.</div>
+    <div class="label" data-label="Assumption">Taj Mahal open on Saturday</div>
+    <div class="value" data-label="Basis">Taj Mahal is closed every Friday. Saturday is fully operational. Confirmed by official timings.</div>
+    <div class="conf" data-label="Confidence">Definitive.</div>
   </div>
   <div class="assumption-row">
-    <div class="label">All members mobile for Taj</div>
-    <div class="value">Golf carts available from parking to entry gate. Paved walkways inside. Resting benches.</div>
-    <div class="conf">High.</div>
+    <div class="label" data-label="Assumption">All members mobile for Taj</div>
+    <div class="value" data-label="Basis">Golf carts available from parking to entry gate. Paved walkways inside. Resting benches.</div>
+    <div class="conf" data-label="Confidence">High.</div>
   </div>
   <div class="assumption-row">
-    <div class="label">No extreme rainfall</div>
-    <div class="value">Assumes typical August monsoon — intermittent, not continuous. Check forecast 48 hrs before.</div>
-    <div class="conf">Medium.</div>
+    <div class="label" data-label="Assumption">No extreme rainfall</div>
+    <div class="value" data-label="Basis">Assumes typical August monsoon — intermittent, not continuous. Check forecast 48 hrs before.</div>
+    <div class="conf" data-label="Confidence">Medium.</div>
   </div>
   <div class="assumption-row">
-    <div class="label">Accommodation pre-booked</div>
-    <div class="value">This plan falls apart without confirmed accommodation for 12 people in Vrindavan.</div>
-    <div class="conf">Action required immediately.</div>
+    <div class="label" data-label="Assumption">Accommodation pre-booked</div>
+    <div class="value" data-label="Basis">This plan falls apart without confirmed accommodation for 12 people in Vrindavan.</div>
+    <div class="conf" data-label="Confidence">Action required immediately.</div>
   </div>
   <div class="assumption-row">
-    <div class="label">Taj Mahal tickets pre-booked</div>
-    <div class="value">Online booking required to avoid 1-hr+ ticket queue. Book 1 week ahead.</div>
-    <div class="conf">Action required.</div>
+    <div class="label" data-label="Assumption">Taj Mahal tickets pre-booked</div>
+    <div class="value" data-label="Basis">Online booking required to avoid 1-hr+ ticket queue. Book 1 week ahead.</div>
+    <div class="conf" data-label="Confidence">Action required.</div>
   </div>
 </div>
 
