@@ -962,8 +962,20 @@
   }
 
   /* ─── REVISION CONTAINERS ─── */
-  .rev { display: none; }
-  .rev.active { display: block; }
+  .rev {
+    opacity: 0;
+    visibility: hidden;
+    height: 0;
+    overflow: hidden;
+    transition: opacity 0.35s ease, visibility 0.35s ease, height 0.01s 0.35s;
+  }
+  .rev.active {
+    opacity: 1;
+    visibility: visible;
+    height: auto;
+    overflow: visible;
+    transition: opacity 0.35s ease, visibility 0.35s ease, height 0.01s 0s;
+  }
 </style>
 </head>
 <body>

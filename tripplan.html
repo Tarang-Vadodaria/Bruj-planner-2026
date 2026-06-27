@@ -946,6 +946,36 @@
     border-color: var(--gold-light);
     color: var(--gold);
   }
+
+  /* ─── REVISION TOGGLE ─── */
+  .rev-slider::before {
+    content: '1';
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 600;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  html.dark-mode .rev-slider::before {
+    content: '2';
+  }
+
+  /* ─── REVISION CONTAINERS ─── */
+  .rev {
+    opacity: 0;
+    visibility: hidden;
+    height: 0;
+    overflow: hidden;
+    transition: opacity 0.35s ease, visibility 0.35s ease, height 0.01s 0.35s;
+  }
+  .rev.active {
+    opacity: 1;
+    visibility: visible;
+    height: auto;
+    overflow: visible;
+    transition: opacity 0.35s ease, visibility 0.35s ease, height 0.01s 0s;
+  }
 </style>
 </head>
 <body>
@@ -953,7 +983,7 @@
 <!-- ═══════════════════════════════════════════ COVER ═══════════════════════════════════════════ -->
 <div class="cover">
   <div>
-    <div class="cover-label">Confidential · Pilgrimage Operations Engagement · <em>Revision 2</em></div>
+    <div class="cover-label">Confidential · Pilgrimage Operations Engagement · <em>Revision 1</em></div>
     <div class="cover-title">Braj Yatra<br><em>Raksha Bandhan</em><br>2026</div>
     <div class="cover-sub">
       A consulting-grade operational plan for a multigenerational Gujarati family pilgrimage 
@@ -984,14 +1014,24 @@
     </div>
   </div>
 
-  <!-- Cover toggle -->
-  <div class="cover-toggle">
-    <span class="toggle-label">Display mode</span>
-    <label class="toggle-switch">
-      <input type="checkbox" id="coverToggle">
-      <span class="toggle-slider"></span>
-    </label>
-    <span class="toggle-label" style="color:rgba(255,255,255,0.6)">Dark</span>
+  <!-- Cover toggles -->
+  <div class="cover-toggle" style="display:flex; gap:40px; justify-content:center;">
+    <div style="display:flex; align-items:center; gap:10px;">
+      <span class="toggle-label">Display mode</span>
+      <label class="toggle-switch">
+        <input type="checkbox" id="coverToggle">
+        <span class="toggle-slider"></span>
+      </label>
+      <span class="toggle-label" style="color:rgba(255,255,255,0.6)">Dark</span>
+    </div>
+    <div style="display:flex; align-items:center; gap:10px;">
+      <span class="toggle-label">Revision</span>
+      <label class="toggle-switch">
+        <input type="checkbox" id="revToggle">
+        <span class="toggle-slider rev-slider"></span>
+      </label>
+      <span class="toggle-label" style="color:rgba(255,255,255,0.6)">Rev 2</span>
+    </div>
   </div>
 
 </div>
@@ -1000,7 +1040,7 @@
 <button id="darkModeFab" aria-label="Toggle dark mode" title="Toggle dark mode">&#9790;</button>
 <div class="page">
 
-
+<div class="rev rev-1 active">
 
 <!-- ─── TABLE OF CONTENTS ─── -->
 <div class="toc">
@@ -1839,7 +1879,7 @@
 <div id="sec-12"></div>
 <div class="section-eyebrow">05 · Communication</div>
 <h2 class="section-title">WhatsApp Summary</h2>
-<p class="section-subtitle"><em>Updated for Rev 2 — Govardhan on Day 1, Taj on Day 3.</em></p>
+<p class="section-subtitle"><em>Updated for Rev 1 — Govardhan on Day 1, Taj on Day 3.</em></p>
 
 <div class="whatsapp-box">
   <div class="wa-label">WhatsApp Message — Copy &amp; Send</div>
@@ -1930,7 +1970,7 @@ Jai Shri Krishna 🙏</div>
 <div id="sec-01"></div>
 <div class="section-eyebrow">07 · Evidence Registry</div>
 <h2 class="section-title">Temple Timing Matrix</h2>
-<p class="section-subtitle">All timings sourced from official temple sites and corroborated by minimum two independent sources. August falls in Summer season (March–October) for all Braj temples. <strong>Updated for Rev 2.</strong></p>
+<p class="section-subtitle">All timings sourced from official temple sites and corroborated by minimum two independent sources. August falls in Summer season (March–October) for all Braj temples. <strong>Updated for Rev 1.</strong></p>
 
 <div class="table-wrap">
 <table class="matrix-table">
@@ -2144,7 +2184,7 @@ Jai Shri Krishna 🙏</div>
 <div id="sec-10"></div>
 <div class="section-eyebrow">09 · Decision Matrix</div>
 <h2 class="section-title">Key Decisions This Report Makes</h2>
-<p class="section-subtitle"><em>Updated for Rev 2. Govardhan re-sequenced, Taj added, Prem Mandir moved to morning.</em></p>
+<p class="section-subtitle"><em>Updated for Rev 1. Govardhan re-sequenced, Taj added, Prem Mandir moved to morning.</em></p>
 
 <div class="table-wrap">
 <table class="matrix-table">
@@ -2232,7 +2272,7 @@ Jai Shri Krishna 🙏</div>
 <div id="sec-07"></div>
 <div class="section-eyebrow">10 · Risk Register</div>
 <h2 class="section-title">What Can Break — And What To Do</h2>
-<p class="section-subtitle"><em>Updated for Rev 2. New risks: Taj timing, Day 1 fatigue, two-group coordination on Govardhan day.</em></p>
+<p class="section-subtitle"><em>Updated for Rev 1. New risks: Taj timing, Day 1 fatigue, two-group coordination on Govardhan day.</em></p>
 
 <div style="background:var(--cream); padding: 0; border-radius: 2px; overflow: hidden; margin-bottom: 32px;">
   <div class="risk-item" style="background: var(--deep-blue); color:white;">
@@ -2622,13 +2662,101 @@ Jai Shri Krishna 🙏</div>
   </div>
 </div>
 
-<hr class="section-divider">
+</div><!-- end .rev-1 -->
 
-<!-- FOOTER -->
+<!-- ═══════════════════════════════ REVISION 2 — PLACEHOLDER ═══════════════════════════════ -->
+<div class="rev rev-2">
+
+  <div id="sec-toc"></div>
+  <div class="section-eyebrow">01 · Table of Contents</div>
+  <h2 class="section-title">Braj Yatra — Revision 2</h2>
+  <p class="section-subtitle">Revision 2 content will be built here.</p>
+  <hr class="section-divider">
+
+  <div id="sec-01"></div>
+  <div class="section-eyebrow">02 · Executive Summary</div>
+  <h2 class="section-title">Executive Summary</h2>
+  <p class="section-subtitle">TBD</p>
+  <hr class="section-divider">
+
+  <div id="sec-02"></div>
+  <div class="section-eyebrow">03 · Evidence Registry</div>
+  <h2 class="section-title">Temple Timing Matrix</h2>
+  <p class="section-subtitle">TBD</p>
+  <hr class="section-divider">
+
+  <div id="sec-03"></div>
+  <div class="section-eyebrow">04 · Logistics Evidence</div>
+  <h2 class="section-title">Distance &amp; Travel Time Matrix</h2>
+  <p class="section-subtitle">TBD</p>
+  <hr class="section-divider">
+
+  <div id="sec-04"></div>
+  <div class="section-eyebrow">05 · Stakeholder Analysis</div>
+  <h2 class="section-title">Who This Trip Is Really For</h2>
+  <p class="section-subtitle">TBD</p>
+  <hr class="section-divider">
+
+  <div id="sec-05"></div>
+  <div class="section-eyebrow">06 · Core Recommendation</div>
+  <h2 class="section-title">The [Key Decision] Question</h2>
+  <p class="section-subtitle">TBD</p>
+  <hr class="section-divider">
+
+  <div id="sec-06"></div>
+  <div class="section-eyebrow">07 · Recommended Plan</div>
+  <h2 class="section-title">[Duration] Itinerary</h2>
+  <p class="section-subtitle">TBD</p>
+  <hr class="section-divider">
+
+  <div id="sec-07"></div>
+  <div class="section-eyebrow">08 · Fallback Plan</div>
+  <h2 class="section-title">[Shorter] Itinerary</h2>
+  <p class="section-subtitle">TBD</p>
+  <hr class="section-divider">
+
+  <div id="sec-08"></div>
+  <div class="section-eyebrow">09 · Risk Register</div>
+  <h2 class="section-title">What Can Break — And What To Do</h2>
+  <p class="section-subtitle">TBD</p>
+  <hr class="section-divider">
+
+  <div id="sec-09"></div>
+  <div class="section-eyebrow">10 · Assumption Register</div>
+  <h2 class="section-title">What This Plan Assumes</h2>
+  <p class="section-subtitle">TBD</p>
+  <hr class="section-divider">
+
+  <div id="sec-10"></div>
+  <div class="section-eyebrow">11 · Accessibility Analysis</div>
+  <h2 class="section-title">[Demographic] Assessment</h2>
+  <p class="section-subtitle">TBD</p>
+  <hr class="section-divider">
+
+  <div id="sec-11"></div>
+  <div class="section-eyebrow">12 · Decision Matrix</div>
+  <h2 class="section-title">Key Decisions This Report Makes</h2>
+  <p class="section-subtitle">TBD</p>
+  <hr class="section-divider">
+
+  <div id="sec-12"></div>
+  <div class="section-eyebrow">13 · Communication</div>
+  <h2 class="section-title">WhatsApp Summary</h2>
+  <p class="section-subtitle">TBD</p>
+  <hr class="section-divider">
+
+  <div id="sec-13"></div>
+  <div class="section-eyebrow">14 · Evidence Log</div>
+  <h2 class="section-title">Source Registry</h2>
+  <p class="section-subtitle">TBD</p>
+
+</div><!-- end .rev-2 -->
+
+<hr class="section-divider">
 <div style="text-align: center; padding: 32px 0 16px; border-top: 1px solid var(--divider);">
-  <p style="font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--text-muted); letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 8px;">Braj Yatra Consulting Report · Raksha Bandhan 2026 · <em>Revision 2</em></p>
+  <p style="font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--text-muted); letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 8px;">Braj Yatra Consulting Report · Raksha Bandhan 2026 · <em id="footerRevLabel">Revision 1</em></p>
   <p style="font-family: 'EB Garamond', serif; font-size: 18px; color: var(--saffron); font-style: italic;">Jai Shri Krishna 🙏</p>
-  <p style="font-size: 12px; color: var(--text-muted); margin-top: 16px;">All temple timings should be verified directly with temples one week before travel. This report is accurate as of June 2026. Festival-specific adjustments may apply. <em>Revision 2 incorporates learnings from a comparative analysis with an external travel planner.</em></p>
+  <p style="font-size: 12px; color: var(--text-muted); margin-top: 16px;">All temple timings should be verified directly with temples one week before travel. This report is accurate as of June 2026. Festival-specific adjustments may apply. <em>Revision 1 incorporates learnings from a comparative analysis with an external travel planner.</em></p>
 </div>
 
 </div><!-- end .page -->
@@ -2637,30 +2765,60 @@ Jai Shri Krishna 🙏</div>
 (function() {
   var html = document.documentElement;
   var coverToggle = document.getElementById('coverToggle');
+  var revToggle = document.getElementById('revToggle');
   var fab = document.getElementById('darkModeFab');
-  var STORAGE_KEY = 'tripplan-darkmode';
+  var DM_KEY = 'tripplan-darkmode';
+  var REV_KEY = 'tripplan-revision';
 
   function setDarkMode(enabled) {
     html.classList.toggle('dark-mode', enabled);
     if (coverToggle) coverToggle.checked = enabled;
     if (fab) fab.innerHTML = enabled ? '\u2600' : '\u263E';
-    localStorage.setItem(STORAGE_KEY, enabled ? '1' : '0');
+    localStorage.setItem(DM_KEY, enabled ? '1' : '0');
   }
 
-  // Initialize: localStorage > system preference > light
-  var stored = localStorage.getItem(STORAGE_KEY);
-  if (stored === '1') {
+  function setRevision(rev2) {
+    var rev1 = document.querySelector('.rev-1');
+    var rev2el = document.querySelector('.rev-2');
+    if (rev1) rev1.classList.toggle('active', !rev2);
+    if (rev2el) rev2el.classList.toggle('active', rev2);
+    if (revToggle) revToggle.checked = rev2;
+
+    // Update cover label and footer
+    var label = 'Revision ' + (rev2 ? '2' : '1');
+    var coverLabel = document.querySelector('.cover-label');
+    var footerLabel = document.getElementById('footerRevLabel');
+    if (coverLabel) coverLabel.innerHTML = 'Confidential · Pilgrimage Operations Engagement · <em>' + label + '</em>';
+    if (footerLabel) footerLabel.textContent = label;
+
+    localStorage.setItem(REV_KEY, rev2 ? '2' : '1');
+  }
+
+  // Initialize dark mode: localStorage > system preference > light
+  var dmStored = localStorage.getItem(DM_KEY);
+  if (dmStored === '1') {
     setDarkMode(true);
-  } else if (stored === null && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+  } else if (dmStored === null && window.matchMedia('(prefers-color-scheme: dark)').matches) {
     setDarkMode(true);
   } else {
     setDarkMode(false);
   }
 
-  // Cover toggle
+  // Initialize revision: localStorage > Rev 1
+  var revStored = localStorage.getItem(REV_KEY);
+  setRevision(revStored === '2');
+
+  // Dark mode toggle
   if (coverToggle) {
     coverToggle.addEventListener('change', function() {
       setDarkMode(this.checked);
+    });
+  }
+
+  // Revision toggle
+  if (revToggle) {
+    revToggle.addEventListener('change', function() {
+      setRevision(this.checked);
     });
   }
 
@@ -2670,7 +2828,6 @@ Jai Shri Krishna 🙏</div>
       setDarkMode(!html.classList.contains('dark-mode'));
     });
 
-    // Show FAB only after scrolling past the cover
     var cover = document.querySelector('.cover');
     if (cover) {
       var observer = new IntersectionObserver(function(entries) {
