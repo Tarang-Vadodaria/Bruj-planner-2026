@@ -1,0 +1,2687 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Braj Yatra — Consulting Engagement Report | Raksha Bandhan 2026</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
+
+  :root {
+    --saffron: #C8590A;
+    --saffron-light: #F2842A;
+    --deep-blue: #1A2744;
+    --slate: #3D4F6B;
+    --gold: #A8892C;
+    --gold-light: #D4B85A;
+    --cream: #F9F5EE;
+    --warm-white: #FDFAF5;
+    --text-primary: #1C1C1C;
+    --text-secondary: #4A4A4A;
+    --text-muted: #7A7A7A;
+    --divider: #E2D9CC;
+    --risk-high: #C0392B;
+    --risk-medium: #E67E22;
+    --risk-low: #27AE60;
+    --risk-bg-high: #FDEDEC;
+    --risk-bg-medium: #FEF9E7;
+    --risk-bg-low: #EAFAF1;
+  --callout-saffron-bg: #FEF0E6;
+  --callout-blue-bg: #EAF1FB;
+  --callout-gold-bg: #FDF8EC;
+  }
+
+  html.dark-mode {
+    --warm-white: #121212;
+    --cream: #1E1E1E;
+    --divider: #2A2A2A;
+    --text-primary: #E0E0E0;
+    --text-secondary: #B0B0B0;
+    --text-muted: #777;
+    --risk-bg-high: #3D1A1A;
+    --risk-bg-medium: #3D3A1A;
+    --risk-bg-low: #1A3D1A;
+    --callout-saffron-bg: #2A1A0A;
+    --callout-blue-bg: #0A1A2A;
+    --callout-gold-bg: #2A2A0A;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background: var(--warm-white);
+    color: var(--text-primary);
+    line-height: 1.65;
+    font-size: 15px;
+    scroll-behavior: smooth;
+  }
+
+  /* ─── COVER ─── */
+  .cover {
+    background: var(--deep-blue);
+    color: white;
+    padding: 80px 72px 72px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    overflow: hidden;
+  }
+  .cover::before {
+    content: '';
+    position: absolute;
+    top: -60px; right: -60px;
+    width: 400px; height: 400px;
+    border: 1px solid rgba(168,137,44,0.2);
+    border-radius: 50%;
+    pointer-events: none;
+  }
+  .cover::after {
+    content: '';
+    position: absolute;
+    bottom: -80px; left: -40px;
+    width: 280px; height: 280px;
+    border: 1px solid rgba(200,89,10,0.2);
+    border-radius: 50%;
+    pointer-events: none;
+  }
+  .cover-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--gold-light);
+    margin-bottom: 48px;
+  }
+  .cover-title {
+    font-family: 'EB Garamond', serif;
+    font-size: 62px;
+    line-height: 1.08;
+    font-weight: 500;
+    letter-spacing: -0.01em;
+    max-width: 720px;
+    margin-bottom: 24px;
+  }
+  .cover-title em {
+    font-style: italic;
+    color: var(--gold-light);
+  }
+  .cover-sub {
+    font-size: 16px;
+    color: rgba(255,255,255,0.6);
+    max-width: 560px;
+    margin-bottom: 64px;
+    line-height: 1.7;
+  }
+  .cover-meta {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding-top: 32px;
+  }
+  .cover-meta-item label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.35);
+    display: block;
+    margin-bottom: 6px;
+  }
+  .cover-meta-item span {
+    font-size: 14px;
+    color: rgba(255,255,255,0.85);
+    font-weight: 500;
+  }
+
+  /* ─── LAYOUT ─── */
+  .page {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 64px 48px;
+  }
+
+  /* ─── SECTION HEADERS ─── */
+  .section-eyebrow {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--saffron);
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .section-eyebrow::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--divider);
+    max-width: 120px;
+  }
+  .section-title {
+    font-family: 'EB Garamond', serif;
+    font-size: 36px;
+    font-weight: 500;
+    color: var(--deep-blue);
+    line-height: 1.2;
+    margin-bottom: 8px;
+  }
+  .section-subtitle {
+    font-size: 15px;
+    color: var(--text-muted);
+    margin-bottom: 40px;
+  }
+  .section-divider {
+    border: none;
+    border-top: 1px solid var(--divider);
+    margin: 60px 0;
+  }
+
+  /* ─── EXECUTIVE SUMMARY ─── */
+  .exec-summary {
+    background: var(--deep-blue);
+    color: white;
+    padding: 56px 64px;
+    margin-bottom: 56px;
+    border-radius: 2px;
+    position: relative;
+  }
+  .exec-summary::before {
+    content: '"';
+    font-family: 'EB Garamond', serif;
+    font-size: 120px;
+    color: rgba(168,137,44,0.2);
+    position: absolute;
+    top: 8px; left: 32px;
+    line-height: 1;
+  }
+  .exec-summary h2 {
+    font-family: 'EB Garamond', serif;
+    font-size: 13px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--gold-light);
+    margin-bottom: 20px;
+  }
+  .exec-summary p {
+    font-family: 'EB Garamond', serif;
+    font-size: 20px;
+    line-height: 1.6;
+    color: rgba(255,255,255,0.88);
+    margin-bottom: 16px;
+  }
+  .exec-finding {
+    display: flex;
+    gap: 16px;
+    margin-top: 32px;
+    padding-top: 32px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+  }
+  .exec-finding-item {
+    flex: 1;
+    padding: 20px;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 2px;
+  }
+  .exec-finding-item .number {
+    font-family: 'EB Garamond', serif;
+    font-size: 40px;
+    color: var(--gold-light);
+    line-height: 1;
+    margin-bottom: 8px;
+  }
+  .exec-finding-item p {
+    font-size: 13px;
+    color: rgba(255,255,255,0.6);
+    line-height: 1.5;
+    font-family: 'Inter', sans-serif;
+  }
+
+  /* ─── DECISION BOX ─── */
+  .decision-box {
+    border: 2px solid var(--saffron);
+    padding: 32px 40px;
+    margin: 40px 0;
+    position: relative;
+  }
+  .decision-box::before {
+    content: 'PRIMARY RECOMMENDATION';
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.2em;
+    background: var(--saffron);
+    color: white;
+    padding: 4px 10px;
+    position: absolute;
+    top: -13px; left: 24px;
+  }
+  .decision-box h3 {
+    font-family: 'EB Garamond', serif;
+    font-size: 24px;
+    color: var(--deep-blue);
+    margin-bottom: 12px;
+  }
+  .decision-box p {
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+  }
+
+  /* ─── TABLES ─── */
+  .table-wrap {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin: 16px -4px;
+  }
+  .table-wrap::-webkit-scrollbar { height: 4px; }
+  .table-wrap::-webkit-scrollbar-thumb { background: var(--divider); border-radius: 2px; }
+
+  .matrix-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 24px 0;
+    font-size: 13.5px;
+  }
+  .matrix-table thead tr {
+    background: var(--deep-blue);
+    color: white;
+  }
+  .matrix-table thead th {
+    padding: 12px 16px;
+    text-align: left;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+  .matrix-table tbody tr {
+    border-bottom: 1px solid var(--divider);
+  }
+  .matrix-table tbody tr:nth-child(even) {
+    background: var(--cream);
+  }
+  .matrix-table tbody td {
+    padding: 11px 16px;
+    vertical-align: top;
+    color: var(--text-secondary);
+  }
+  .matrix-table tbody td:first-child {
+    color: var(--text-primary);
+    font-weight: 500;
+  }
+
+  /* ─── TAGS ─── */
+  .tag {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 2px;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+  .tag-high { background: var(--risk-bg-high); color: var(--risk-high); }
+  .tag-medium { background: var(--risk-bg-medium); color: #B7770D; }
+  .tag-low { background: var(--risk-bg-low); color: #196F3D; }
+  .tag-info { background: #EAF1FB; color: #1A5276; }
+  html.dark-mode .tag-info { background: #0A1A2A; color: #7AB4E0; }
+
+  /* ─── ITINERARY BLOCKS ─── */
+  .itinerary-day {
+    margin-bottom: 48px;
+  }
+  .day-header {
+    background: var(--deep-blue);
+    color: white;
+    padding: 20px 28px;
+    display: flex;
+    align-items: baseline;
+    gap: 16px;
+    margin-bottom: 0;
+  }
+  .day-number {
+    font-family: 'EB Garamond', serif;
+    font-size: 48px;
+    line-height: 1;
+    color: var(--gold-light);
+    opacity: 0.9;
+  }
+  .day-info h3 {
+    font-family: 'EB Garamond', serif;
+    font-size: 22px;
+    margin-bottom: 2px;
+  }
+  .day-info p {
+    font-size: 12px;
+    color: rgba(255,255,255,0.78);
+    font-family: 'JetBrains Mono', monospace;
+    letter-spacing: 0.1em;
+  }
+
+  .timeline {
+    border-left: 2px solid var(--divider);
+    margin-left: 24px;
+    padding-left: 28px;
+    padding-top: 24px;
+    padding-bottom: 8px;
+  }
+  .timeline-item {
+    position: relative;
+    margin-bottom: 28px;
+  }
+  .timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -37px;
+    top: 6px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--saffron);
+    border: 2px solid white;
+    box-shadow: 0 0 0 1px var(--saffron);
+  }
+  .timeline-item.rest::before { background: var(--gold); box-shadow: 0 0 0 1px var(--gold); }
+  .timeline-item.warning::before { background: var(--risk-medium); box-shadow: 0 0 0 1px var(--risk-medium); }
+
+  .timeline-time {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: var(--saffron);
+    font-weight: 500;
+    margin-bottom: 4px;
+    letter-spacing: 0.08em;
+  }
+  .timeline-item.rest .timeline-time { color: var(--gold); }
+  .timeline-item.warning .timeline-time { color: var(--risk-medium); }
+
+  .timeline-title {
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 4px;
+    font-size: 15px;
+  }
+  .timeline-detail {
+    font-size: 13.5px;
+    color: var(--text-secondary);
+    line-height: 1.55;
+  }
+  .timeline-note {
+    display: inline-block;
+    margin-top: 6px;
+    padding: 4px 10px;
+    background: var(--cream);
+    border-left: 3px solid var(--saffron);
+    font-size: 12px;
+    color: var(--text-muted);
+    font-style: italic;
+  }
+  .timeline-item.rest .timeline-note { border-left-color: var(--gold); }
+
+  /* ─── RISK REGISTER ─── */
+  .risk-item {
+    display: grid;
+    grid-template-columns: 160px 1fr 120px;
+    gap: 16px;
+    padding: 16px 20px;
+    border-bottom: 1px solid var(--divider);
+    align-items: start;
+  }
+  .risk-item:last-child { border-bottom: none; }
+  .risk-item:nth-child(even) { background: var(--cream); }
+  .risk-name { font-weight: 600; font-size: 14px; }
+  .risk-desc { font-size: 13px; color: var(--text-secondary); line-height: 1.5; }
+  .risk-mitigation { font-size: 12px; color: var(--text-muted); font-style: italic; }
+
+  /* ─── CALLOUT ─── */
+  .callout {
+    padding: 20px 24px;
+    margin: 24px 0;
+    border-radius: 2px;
+    display: flex;
+    gap: 16px;
+  }
+  .callout-saffron { background: var(--callout-saffron-bg); border-left: 4px solid var(--saffron); }
+  .callout-blue { background: var(--callout-blue-bg); border-left: 4px solid var(--deep-blue); }
+  .callout-gold { background: var(--callout-gold-bg); border-left: 4px solid var(--gold); }
+  .callout-red { background: var(--risk-bg-high); border-left: 4px solid var(--risk-high); }
+  .callout-icon { font-size: 20px; flex-shrink: 0; margin-top: 1px; }
+  .callout-content h4 { font-size: 14px; font-weight: 600; margin-bottom: 4px; color: var(--text-primary); }
+  .callout-content p { font-size: 13.5px; color: var(--text-secondary); line-height: 1.55; }
+
+  /* ─── EVIDENCE LOG ─── */
+  .evidence-item {
+    padding: 14px 0;
+    border-bottom: 1px solid var(--divider);
+    display: grid;
+    grid-template-columns: 40px 1fr 80px;
+    gap: 12px;
+    align-items: start;
+  }
+  .evidence-id {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: var(--text-muted);
+    padding-top: 2px;
+  }
+  .evidence-content { font-size: 13.5px; color: var(--text-secondary); line-height: 1.5; }
+  .evidence-content strong { color: var(--text-primary); }
+  .evidence-conf { font-family: 'JetBrains Mono', monospace; font-size: 11px; text-align: right; padding-top: 2px; }
+
+  /* ─── TABLE OF CONTENTS ─── */
+  .toc {
+    background: var(--cream);
+    border-left: 4px solid var(--saffron);
+    padding: 28px 32px;
+    margin-bottom: 48px;
+    border-radius: 2px;
+  }
+  .toc-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--saffron);
+    margin-bottom: 16px;
+  }
+  .toc-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6px 24px;
+  }
+  .toc-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 5px 10px;
+    border-radius: 2px;
+    font-size: 13px;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: background 0.15s, color 0.15s;
+  }
+  .toc-item:hover {
+    background: var(--saffron);
+    color: white;
+  }
+  .toc-item:hover .toc-num { color: rgba(255,255,255,0.7); }
+  .toc-num {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: var(--text-muted);
+    flex-shrink: 0;
+    width: 28px;
+  }
+  .toc-sub {
+    display: block;
+    padding: 3px 10px 3px 46px;
+    font-size: 12px;
+    color: var(--text-muted);
+    text-decoration: none;
+    transition: background 0.15s, color 0.15s;
+    border-radius: 2px;
+  }
+  .toc-sub:hover {
+    background: var(--saffron);
+    color: white;
+  }
+  .toc-sub-05 { margin-left: 28px; }
+
+  /* ─── RESPONSIVE ─── */
+  @media (max-width: 768px) {
+    body { font-size: 14px; }
+    .cover { padding: 48px 24px 40px; min-height: auto; }
+    .cover-title { font-size: 36px; max-width: 100%; }
+    .cover-sub { font-size: 14px; margin-bottom: 36px; }
+    .cover-meta { grid-template-columns: 1fr 1fr; gap: 16px; padding-top: 24px; }
+    .cover-meta-item span { font-size: 13px; }
+    .page { padding: 32px 16px; }
+    .section-title { font-size: 26px; }
+    .section-subtitle { font-size: 14px; margin-bottom: 24px; }
+    .toc-grid { grid-template-columns: 1fr; }
+    .calendar-grid { grid-template-columns: 1fr; gap: 12px; }
+    .exec-summary { padding: 32px 20px; margin-bottom: 32px; }
+    .exec-summary p { font-size: 17px; }
+    .exec-finding { flex-direction: column; gap: 12px; }
+    .toc { padding: 20px; }
+    .toc-sub { padding-left: 36px; }
+    .day-header { flex-direction: column; gap: 8px; padding: 16px 20px; }
+    .day-number { font-size: 32px; }
+    .day-info h3 { font-size: 18px; }
+    .timeline { margin-left: 12px; padding-left: 20px; }
+    .timeline-item::before { left: -29px; width: 8px; height: 8px; }
+    .timeline-title { font-size: 14px; }
+    .timeline-detail { font-size: 13px; }
+    .timeline-time { font-size: 10px; }
+    .two-col { grid-template-columns: 1fr; gap: 16px; }
+    .col-box { padding: 16px; }
+    .matrix-table { font-size: 12px; }
+    .matrix-table thead th,
+    .matrix-table tbody td { padding: 8px 10px; }
+    .risk-item { grid-template-columns: 1fr; gap: 8px; padding: 12px 16px; }
+    .risk-name { font-size: 13px; }
+    .risk-desc { font-size: 12px; }
+    .assumption-row { grid-template-columns: 1fr; gap: 8px; padding: 12px; }
+    .assumption-row .conf { text-align: left; }
+    .assumption-row .label::before,
+    .assumption-row .value::before,
+    .assumption-row .conf::before {
+      content: attr(data-label);
+      display: block;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 9px;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--text-muted);
+      margin-bottom: 2px;
+    }
+    .assumption-row:first-child { display: none; }
+    .decision-box { padding: 24px 20px; margin: 24px 0; }
+    .decision-box h3 { font-size: 20px; }
+    .callout { padding: 14px 16px; flex-direction: column; gap: 8px; }
+    .whatsapp-box { padding: 16px; }
+    .whatsapp-bubble { font-size: 13px; padding: 12px 14px; }
+    .evidence-item { grid-template-columns: 1fr; gap: 4px; padding: 10px 0; }
+    .evidence-conf { text-align: left; }
+    .section-divider { margin: 36px 0; }
+    .timeline-note { font-size: 11px; padding: 3px 8px; }
+    .tag { font-size: 10px; padding: 2px 8px; }
+    .decision-box::before { font-size: 8px; padding: 3px 8px; top: -11px; left: 12px; }
+    .itinerary-day { margin-bottom: 32px; }
+  }
+
+  @media (max-width: 480px) {
+    .cover { padding: 32px 16px 28px; }
+    .cover-title { font-size: 28px; }
+    .cover-label { font-size: 9px; margin-bottom: 28px; }
+    .cover-meta { grid-template-columns: 1fr; gap: 12px; }
+    .cover-meta-item span { font-size: 12px; }
+    .page { padding: 20px 12px; }
+    .section-title { font-size: 22px; }
+    .day-number { font-size: 28px; }
+    .day-info h3 { font-size: 16px; }
+    .timeline { margin-left: 8px; padding-left: 14px; }
+    .timeline-item::before { left: -23px; width: 6px; height: 6px; }
+    .exec-summary { padding: 24px 16px; }
+    .exec-summary p { font-size: 15px; }
+    .toc-grid { gap: 4px; }
+    .toc-item, .toc-sub { font-size: 12px; padding: 4px 8px; }
+    .matrix-table { font-size: 11px; }
+    .matrix-table thead th,
+    .matrix-table tbody td { padding: 6px 6px; }
+    .decision-box { padding: 18px 14px; }
+    .whatsapp-bubble { font-size: 12px; }
+    .calendar-card { padding: 14px; }
+    .calendar-card .day-label { font-size: 22px; }
+    .calendar-card .day-schedule { font-size: 11px; }
+  }
+
+  /* ─── PRINT ─── */
+  @media print {
+    body { font-size: 13px; }
+    .cover { min-height: auto; page-break-after: always; }
+    .itinerary-day { page-break-inside: avoid; }
+    .section-divider { margin: 40px 0; }
+  }
+
+  /* ─── WHATSAPP BOX ─── */
+  .whatsapp-box {
+    background: #075E54;
+    color: white;
+    border-radius: 12px;
+    padding: 24px 28px;
+    margin: 32px 0;
+    font-family: 'Inter', sans-serif;
+  }
+  html.dark-mode .whatsapp-box {
+    background: #054D44;
+  }
+  .whatsapp-box .wa-label {
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.5);
+    margin-bottom: 14px;
+    font-family: 'JetBrains Mono', monospace;
+  }
+  .whatsapp-bubble {
+    background: #128C7E;
+    border-radius: 8px 8px 8px 2px;
+    padding: 14px 18px;
+    font-size: 14px;
+    line-height: 1.65;
+    color: rgba(255,255,255,0.92);
+    white-space: pre-line;
+  }
+
+  /* ─── ASSUMPTION ─── */
+  .assumption-row {
+    display: grid;
+    grid-template-columns: 200px 1fr 100px;
+    gap: 16px;
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--divider);
+    font-size: 13.5px;
+  }
+  .assumption-row:nth-child(even) { background: var(--cream); }
+  .assumption-row .label { font-weight: 600; color: var(--text-primary); }
+  .assumption-row .value { color: var(--text-secondary); line-height: 1.5; }
+  .assumption-row .conf { color: var(--text-muted); font-style: italic; font-size: 12px; text-align: right; }
+
+  p { margin-bottom: 14px; color: var(--text-secondary); }
+  h4 { font-size: 16px; font-weight: 600; color: var(--text-primary); margin: 20px 0 8px; }
+  ul, ol { padding-left: 22px; margin-bottom: 14px; }
+  li { color: var(--text-secondary); margin-bottom: 6px; font-size: 14px; line-height: 1.6; }
+  strong { color: var(--text-primary); }
+
+  .calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin: 32px 0;
+  }
+  .calendar-card {
+    background: var(--cream);
+    border-top: 4px solid var(--saffron);
+    border-radius: 2px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .calendar-card:nth-child(2) { border-top-color: var(--gold); }
+  .calendar-card:nth-child(3) { border-top-color: var(--deep-blue); }
+  .calendar-card .day-label {
+    font-family: 'EB Garamond', serif;
+    font-size: 28px;
+    color: var(--deep-blue);
+    line-height: 1.1;
+  }
+  .calendar-card .day-label small {
+    display: block;
+    font-family: 'Inter', sans-serif;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--text-muted);
+    font-weight: 400;
+  }
+  .calendar-card .day-theme {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--saffron);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+  .calendar-card:nth-child(2) .day-theme { color: var(--gold); }
+  .calendar-card:nth-child(3) .day-theme { color: var(--deep-blue); }
+  .calendar-card .day-schedule {
+    font-size: 12px;
+    color: var(--text-secondary);
+    line-height: 1.65;
+  }
+  .calendar-card .day-schedule strong {
+    color: var(--text-primary);
+  }
+  .calendar-card .day-footer {
+    font-size: 11px;
+    color: var(--text-muted);
+    font-style: italic;
+    border-top: 1px solid var(--divider);
+    padding-top: 8px;
+    margin-top: auto;
+  }
+  .calendar-card .day-footer a {
+    color: var(--saffron);
+    text-decoration: none;
+    font-style: normal;
+    font-weight: 500;
+  }
+  .calendar-card .day-footer a:hover {
+    text-decoration: underline;
+  }
+
+  /* ─── ROUTE MAP ─── */
+  .route-map-section { margin: 40px 0; }
+  .map-container {
+    position: relative;
+    background: linear-gradient(145deg, #E8E0D4 0%, #F0EBE0 30%, #E6DDCF 100%);
+    border-radius: 8px;
+    border: 1px solid var(--divider);
+    overflow: hidden;
+    margin: 20px 0;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  }
+  html.dark-mode .map-container {
+    background: linear-gradient(145deg, #2A2A2A 0%, #333 30%, #2A2A2A 100%);
+  }
+  .map-container svg {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  .map-pin {
+    cursor: default;
+    transition: transform 0.15s ease;
+  }
+  .map-pin:hover { transform: scale(1.1); }
+  .pin-dot { stroke: white; stroke-width: 2.5; }
+  .pin-label {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 12px;
+    fill: #1C1C1C;
+  }
+  html.dark-mode .pin-label { fill: #E0E0E0; }
+  .pin-sublabel {
+    font-family: 'Inter', sans-serif;
+    font-size: 9px;
+    fill: #6B6B6B;
+  }
+  html.dark-mode .pin-sublabel { fill: #999; }
+  .map-route-line {
+    fill: none;
+    stroke-width: 2.5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+  .map-route-line-day1 { stroke: var(--gold); }
+  .map-route-line-day2 { stroke: var(--saffron); }
+  .map-route-line-day3 { stroke: var(--deep-blue); }
+  .map-distance-badge {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 8px;
+    fill: #555;
+  }
+  html.dark-mode .map-distance-badge { fill: #AAA; }
+  .map-distance-badge-bg {
+    fill: rgba(255,255,255,0.85);
+    stroke: var(--divider);
+    stroke-width: 0.5;
+    rx: 3;
+  }
+  html.dark-mode .map-distance-badge-bg { fill: rgba(0,0,0,0.5); }
+  .map-legend {
+    display: flex;
+    gap: 24px;
+    padding: 12px 20px;
+    border-top: 1px solid var(--divider);
+    background: rgba(255,255,255,0.5);
+    flex-wrap: wrap;
+  }
+  .map-legend-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 11px;
+    color: var(--text-secondary);
+    font-weight: 500;
+  }
+  .map-legend-swatch {
+    width: 20px;
+    height: 3px;
+    border-radius: 2px;
+  }
+  .map-legend-swatch.gold { background: var(--gold); }
+  .map-legend-swatch.saffron { background: var(--saffron); }
+  .map-legend-swatch.blue { background: var(--deep-blue); }
+  .map-legend-pin {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 2px solid white;
+    box-shadow: 0 0 0 1px #999;
+  }
+  .map-legend-pin.gold { background: var(--gold); }
+  .map-legend-pin.saffron { background: var(--saffron); }
+  .map-legend-pin.blue { background: var(--deep-blue); }
+  .map-legend-pin.teal { background: #1ABC9C; }
+
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; margin: 24px 0; }
+  .col-box { padding: 24px; background: var(--cream); border-top: 3px solid var(--saffron); }
+  .col-box.blue-top { border-top-color: var(--deep-blue); }
+  .col-box h4 { margin-top: 0; font-size: 14px; color: var(--deep-blue); text-transform: uppercase; letter-spacing: 0.08em; font-family: 'JetBrains Mono', monospace; margin-bottom: 12px; }
+  .col-box ul { margin: 0; }
+
+  /* ─── DARK MODE TOGGLE ─── */
+  .cover-toggle {
+    margin-top: 40px;
+    padding-top: 24px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+  }
+  .toggle-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.4);
+  }
+  .toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 52px;
+    height: 28px;
+    cursor: pointer;
+  }
+  .toggle-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  .toggle-slider {
+    position: absolute;
+    inset: 0;
+    background: rgba(255,255,255,0.15);
+    border-radius: 14px;
+    transition: background 0.3s;
+  }
+  .toggle-slider::before {
+    content: '\263E';
+    position: absolute;
+    height: 22px;
+    width: 22px;
+    left: 3px;
+    bottom: 3px;
+    background: white;
+    border-radius: 50%;
+    transition: transform 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    line-height: 22px;
+  }
+  html.dark-mode .toggle-slider {
+    background: var(--gold-light);
+  }
+  html.dark-mode .toggle-slider::before {
+    transform: translateX(24px);
+    content: '\2600';
+    background: var(--deep-blue);
+    color: var(--gold-light);
+  }
+
+  /* Floating secondary toggle (scroll companion) */
+  #darkModeFab {
+    position: fixed;
+    bottom: 28px;
+    right: 28px;
+    z-index: 1000;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 2px solid rgba(255,255,255,0.2);
+    background: var(--deep-blue);
+    color: var(--gold-light);
+    cursor: pointer;
+    font-size: 20px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+    transition: transform 0.2s, opacity 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+  }
+  #darkModeFab.visible {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  #darkModeFab:hover {
+    transform: scale(1.12);
+  }
+  html.dark-mode #darkModeFab {
+    background: #1E1E1E;
+    border-color: var(--gold-light);
+    color: var(--gold);
+  }
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════ COVER ═══════════════════════════════════════════ -->
+<div class="cover">
+  <div>
+    <div class="cover-label">Confidential · Pilgrimage Operations Engagement · <em>Revision 2</em></div>
+    <div class="cover-title">Braj Yatra<br><em>Raksha Bandhan</em><br>2026</div>
+    <div class="cover-sub">
+      A consulting-grade operational plan for a multigenerational Gujarati family pilgrimage 
+      to the sacred Braj region. <strong style="color:var(--gold-light)">Restructured: Govardhan full circuit on Day 1, Raksha Bandhan + Mathura temples on Day 2, Taj Mahal finale on Day 3.</strong>
+      Every recommendation is evidence-backed, every risk is named, and every assumption is made explicit.
+    </div>
+  </div>
+  <div class="cover-meta">
+    <div class="cover-meta-item">
+      <label>Dates</label>
+      <span>27–29 Aug 2026</span>
+    </div>
+    <div class="cover-meta-item">
+      <label>Festival</label>
+      <span>Raksha Bandhan</span>
+    </div>
+    <div class="cover-meta-item">
+      <label>Group Size</label>
+      <span>11–13 members</span>
+    </div>
+    <div class="cover-meta-item">
+      <label>Return</label>
+      <span>Gurgaon via Agra — Taj Mahal on Day 3</span>
+    </div>
+    <div class="cover-meta-item">
+      <label>Arrival</label>
+      <span>Mumbai group: 8 AM (train) · Gurgaon group: 5:30 AM (road)</span>
+    </div>
+  </div>
+
+  <!-- Cover toggle -->
+  <div class="cover-toggle">
+    <span class="toggle-label">Display mode</span>
+    <label class="toggle-switch">
+      <input type="checkbox" id="coverToggle">
+      <span class="toggle-slider"></span>
+    </label>
+    <span class="toggle-label" style="color:rgba(255,255,255,0.6)">Dark</span>
+  </div>
+
+</div>
+
+<!-- Floating dark mode FAB -->
+<button id="darkModeFab" aria-label="Toggle dark mode" title="Toggle dark mode">&#9790;</button>
+<div class="page">
+
+
+
+<!-- ─── TABLE OF CONTENTS ─── -->
+<div class="toc">
+  <div class="toc-label">📋 Quick Navigation</div>
+  <div class="toc-grid">
+    <a href="#sec-exec" class="toc-item"><span class="toc-num">00</span> Executive Overview</a>
+    <a href="#sec-plan" class="toc-item"><span class="toc-num">★</span> At-a-Glance Itinerary</a>
+    <a href="#sec-route" class="toc-item"><span class="toc-num">★</span> Route Overview</a>
+    <a href="#sec-04" class="toc-item"><span class="toc-num">01</span> Core Recommendation</a>
+    <a href="#sec-05" class="toc-item"><span class="toc-num">02</span> Day-by-Day Itinerary</a>
+    <a href="#day-01" class="toc-sub toc-sub-05"><span class="toc-num"></span> Day 1 · Govardhan Circuit</a>
+    <a href="#day-02" class="toc-sub toc-sub-05"><span class="toc-num"></span> Day 2 · Raksha Bandhan</a>
+    <a href="#day-03" class="toc-sub toc-sub-05"><span class="toc-num"></span> Day 3 · Taj Mahal Finale</a>
+    <a href="#sec-06" class="toc-item"><span class="toc-num">03</span> Fallback Plan (1N/2D)</a>
+    <a href="#sec-11" class="toc-item"><span class="toc-num">04</span> Pre-Departure Actions</a>
+    <a href="#sec-12" class="toc-item"><span class="toc-num">05</span> Communication</a>
+    <a href="#sec-03" class="toc-item"><span class="toc-num">06</span> Stakeholder Analysis</a>
+    <a href="#sec-01" class="toc-item"><span class="toc-num">07</span> Evidence Registry</a>
+    <a href="#sec-02" class="toc-item"><span class="toc-num">08</span> Logistics Evidence</a>
+    <a href="#sec-10" class="toc-item"><span class="toc-num">09</span> Decision Matrix</a>
+    <a href="#sec-07" class="toc-item"><span class="toc-num">10</span> Risk Register</a>
+    <a href="#sec-08" class="toc-item"><span class="toc-num">11</span> Assumption Register</a>
+    <a href="#sec-09" class="toc-item"><span class="toc-num">12</span> Accessibility Analysis</a>
+    <a href="#sec-13" class="toc-item"><span class="toc-num">13</span> Evidence Log</a>
+  </div>
+</div>
+
+<div id="sec-exec"></div>
+<div class="section-eyebrow">00 · Executive Overview</div>
+<div class="exec-summary">
+  <h2>Executive Overview — The Braj Yatra Plan</h2>
+  <p>A three-day multigenerational pilgrimage for 11–13 family members over Raksha Bandhan weekend. The plan clusters the trip into three distinct arcs: <strong>Govardhan's full spiritual circuit on arrival day</strong> (open-air scenic sites followed by evening temple darshan, all via e-rickshaw), <strong>Raksha Bandhan on the Yamuna banks on Day 2</strong> (the festival's emotional and spiritual peak), and <strong>a Taj Mahal finale on Day 3</strong> (on the direct route home with no backtracking). Every recommendation accounts for senior comfort, monsoon logistics, and festival crowds.</p>
+  <div class="exec-finding">
+    <div class="exec-finding-item">
+      <div class="number">01</div>
+      <p><strong>Govardhan Circuit — Day 1 (27 Aug)</strong> — Arrival day. Both groups converge at the hotel by late morning, followed by a family lunch and departure for Govardhan. Open-air scenic tour (Mansi Ganga, Kusum Sarovar, hill panorama) from 12:30–3:30 PM while temples are closed. Evening temple darshan from 4 PM onwards — Daan Ghati, Haridev Ji, Radha Kund, and the climactic Govardhan Shila Abhishek at Mukharvind Temple. Entirely seated in e-rickshaw. Return by 7:30 PM.</p>
+    </div>
+    <div class="exec-finding-item">
+      <div class="number">02</div>
+      <p><strong>Raksha Bandhan — Day 2 (28 Aug)</strong> — Festival day. Comfortable 7 AM start. Rakhi ceremony on the Vishram Ghat banks of the Yamuna, followed by Janmabhoomi Garbha Griha darshan. Afternoon rest block (12:15–3:45 PM) for senior recharge. Evening darshan at ISKCON and Banke Bihari, culminating in the Yamuna Aarti at Keshi Ghat under the Sravana Purnima full moon.</p>
+    </div>
+    <div class="exec-finding-item">
+      <div class="number">03</div>
+      <p><strong>Taj Mahal Finale — Day 3 (29 Aug)</strong> — Departure day. Gentle morning darshan at Prem Mandir and Rangnath Temple in Vrindavan. Midday drive to Agra (via Yamuna Expressway) for the Taj Mahal — golf carts for seniors, guided tour, family photos. Celebratory final lunch in Agra, then the 3-hour drive home to Gurgaon, arriving by ~6:30 PM.</p>
+    </div>
+  </div>
+</div>
+
+<hr class="section-divider">
+
+<div id="sec-plan"></div>
+<div class="section-eyebrow">★ · At-a-Glance Itinerary</div>
+<h2 class="section-title">3-Day Plan in One Grid</h2>
+<p class="section-subtitle">A quick visual overview of every day — meal times, major sites, and travel. Tap any day to jump to its full timeline below.</p>
+
+<div class="calendar-grid">
+
+  <div class="calendar-card">
+    <div class="day-label">Day 1 <small>Thursday 27 Aug</small></div>
+    <div class="day-theme">🛺 Govardhan Full Circuit</div>
+    <div class="day-schedule">
+      <strong>🥞 9–11 AM</strong> Breakfast · hotel check-in · freshen up<br>
+      <strong>🍛 11–12:30 PM</strong> Family lunch (reunion!)<br>
+      <strong>🛺 12:30–3:30 PM</strong> <strong>Govardhan scenic tour</strong> — Mansi Ganga lake · Kusum Sarovar cenotaphs · hill panorama (all seated, e-rickshaw)<br>
+      <strong>🥤 3:30–4 PM</strong> Snack break · hydrate<br>
+      <strong>🛕 4–4:30 PM</strong> <strong>Daan Ghati Temple</strong> — where Krishna took butter-tax<br>
+      <strong>🛕 4:30–5 PM</strong> <strong>Haridev Ji Temple</strong> — ancient Braj shrine<br>
+      <strong>🛕 5–5:30 PM</strong> <strong>Radha Kund &amp; Shyam Kund</strong> — sacred twin lakes<br>
+      <strong>✨ 5:30–6:30 PM</strong> <strong>Mukharvind Temple (Jatipura)</strong> — Govardhan Shila Abhishek<br>
+      <strong>🚐 6:30–7:30 PM</strong> Drive back to Vrindavan<br>
+      <strong>🍛 7:30 PM</strong> Dinner · rest
+    </div>
+    <div class="day-footer">6 sites · All seated in e-rickshaw · <a href="#day-01">View full timeline →</a></div>
+  </div>
+
+  <div class="calendar-card">
+    <div class="day-label">Day 2 <small>Friday 28 Aug</small></div>
+    <div class="day-theme">🎋 Raksha Bandhan</div>
+    <div class="day-schedule">
+      <strong>🥞 7–7:30 AM</strong> Wake up · breakfast at hotel<br>
+      <strong>🌊 8:15–9:30 AM</strong> <strong>Vishram Ghat (Mathura)</strong> — Yamuna snan · Rakhi ceremony on the ghat<br>
+      <strong>🥞 9:30–10 AM</strong> Breakfast near ghat<br>
+      <strong>🛕 10–10:20 AM</strong> <strong>Dharmaraj (Yam Raj) Temple</strong> — blessings for brothers<br>
+      <strong>🛕 10:20–11:45 AM</strong> <strong>Krishna Janmabhoomi</strong> — Garbha Griha darshan (prison cell)<br>
+      <strong>🍛 12:15–1:15 PM</strong> Lunch at hotel (doubles as rest)<br>
+      <strong>💤 1:15–3:45 PM</strong> Afternoon rest<br>
+      <strong>🛕 4–5:15 PM</strong> <strong>ISKCON Vrindavan</strong> — Sandhya Aarti (senior-friendly)<br>
+      <strong>🛕 5:30–6:30 PM</strong> <strong>Banke Bihari</strong> — evening darshan (Purnima!)<br>
+      <strong>🌕 7–8 PM</strong> <strong>Keshi Ghat (Vrindavan)</strong> — Yamuna Aarti on full moon night<br>
+      <strong>🍛 8:15 PM</strong> Dinner
+    </div>
+    <div class="day-footer">6 sites · Festival day · Full moon · <a href="#day-02">View full timeline →</a></div>
+  </div>
+
+  <div class="calendar-card">
+    <div class="day-label">Day 3 <small>Saturday 29 Aug</small></div>
+    <div class="day-theme">🏛️ Taj Mahal Finale</div>
+    <div class="day-schedule">
+      <strong>🥞 8–8:30 AM</strong> Breakfast · check out<br>
+      <strong>💎 8:30–9:30 AM</strong> <strong>Prem Mandir (Vrindavan)</strong> — morning darshan, marble gardens<br>
+      <strong>🛕 9:45–10:30 AM</strong> <strong>Shree Rangnath Ji Temple</strong> — Vaikunth Dwar, South Indian architecture<br>
+      <strong>🚐 10:30 AM–12:30 PM</strong> Drive Vrindavan → Agra<br>
+      <strong>🏛️ 12:30–2:30 PM</strong> <strong>Taj Mahal (Agra)</strong> — golf carts for seniors, guided tour, family photos<br>
+      <strong>🍛 2:30–3:30 PM</strong> Final lunch in Agra<br>
+      <strong>🚐 3:30–6:30 PM</strong> Drive Agra → Gurgaon (Yamuna Expwy)<br>
+      <strong>🏠 ~6:30 PM</strong> Arrive home · dinner at home
+    </div>
+    <div class="day-footer">3 sites + Taj · No backtracking · <a href="#day-03">View full timeline →</a></div>
+  </div>
+
+</div>
+
+<!-- ─── ROUTE MAP ─── -->
+<div id="sec-route"></div>
+<div class="route-map-section">
+  <div class="section-eyebrow">&#9733; &middot; Geographic Route Overview</div>
+  <h2 class="section-title">The Braj Circuit, Seen From Above</h2>
+  <p class="section-subtitle">A schematic geospatial view. Pins mark every stop, colored by day. Routes show the direction of travel with distances.</p>
+  <div class="map-container">
+
+    <svg viewBox="0 0 800 540" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">
+
+      <!-- subtle grid / reference roads -->
+      <defs>
+        <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+          <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(0,0,0,0.03)" stroke-width="0.5"/>
+        </pattern>
+      </defs>
+      <rect width="800" height="540" fill="url(#grid)"/>
+
+      <!-- compass rose -->
+      <text x="740" y="30" font-family="Inter" font-size="10" fill="#999" text-anchor="end">N</text>
+      <path d="M740,10 L745,30 L735,30 Z" fill="#999"/>
+      <text x="740" y="44" font-family="Inter" font-size="8" fill="#bbb" text-anchor="end">Not to scale</text>
+
+      <!-- ── ROADS / REFERENCE LINES ── -->
+      <!-- Yamuna Expressway corridor -->
+      <path d="M540,80 Q470,140 440,240 Q520,340 640,400" fill="none" stroke="rgba(0,0,0,0.06)" stroke-width="4" stroke-dasharray="6,4"/>
+      <text x="490" y="310" font-family="Inter" font-size="7" fill="#bbb" transform="rotate(-40,490,310)">Yamuna Expressway</text>
+
+      <!-- Mathura-Vrindavan link -->
+      <path d="M440,130 L440,240" fill="none" stroke="rgba(0,0,0,0.06)" stroke-width="3" stroke-dasharray="4,4"/>
+
+      <!-- Govardhan road -->
+      <path d="M440,240 Q340,250 240,280" fill="none" stroke="rgba(0,0,0,0.06)" stroke-width="3" stroke-dasharray="4,4"/>
+
+      <!-- ── DAY 1 ROUTE (Gold) ── Gurgaon → Vrindavan → Govardhan circuit → Vrindavan -->
+      <!-- Gurgaon → Vrindavan -->
+      <path d="M620,50 Q530,100 440,240" fill="none" class="map-route-line map-route-line-day1"/>
+      <!-- Vrindavan → Govardhan area -->
+      <path d="M440,240 Q340,250 260,270" fill="none" class="map-route-line map-route-line-day1"/>
+      <!-- Govardhan circuit: Daan Ghati → Haridev Ji → Radha Kund → Jatipura -->
+      <path d="M260,270 L280,290 L250,320 L220,350" fill="none" class="map-route-line map-route-line-day1"/>
+      <!-- Return: Jatipura → Vrindavan -->
+      <path d="M220,350 Q330,310 440,240" fill="none" class="map-route-line map-route-line-day1" stroke-dasharray="5,3"/>
+
+      <!-- ── DAY 2 ROUTE (Saffron) ── Vrindavan → Mathura → back → ISKCON → Banke Bihari → Keshi Ghat -->
+      <!-- Vrindavan → Mathura -->
+      <path d="M440,240 L440,130" fill="none" class="map-route-line map-route-line-day2"/>
+      <!-- Mathura → Vrindavan (return) -->
+      <path d="M440,130 L440,200" fill="none" class="map-route-line map-route-line-day2" stroke-dasharray="5,3"/>
+      <!-- Vrindavan Hub → ISKCON → Banke Bihari → Keshi Ghat -->
+      <path d="M440,200 Q420,210 400,220 L460,230 L480,270" fill="none" class="map-route-line map-route-line-day2"/>
+      <!-- Keshi Ghat → hotel (walkable) -->
+      <path d="M480,270 L440,240" fill="none" class="map-route-line map-route-line-day2" stroke-dasharray="3,3" opacity="0.5"/>
+
+      <!-- ── DAY 3 ROUTE (Blue) ── Vrindavan → Prem Mandir → Rangnath → Agra (Taj) → Gurgaon -->
+      <path d="M440,240 L420,260 L450,250 L640,400" fill="none" class="map-route-line map-route-line-day3"/>
+      <!-- Agra → Gurgaon return -->
+      <path d="M640,400 Q700,250 620,50" fill="none" class="map-route-line map-route-line-day3" stroke-dasharray="5,3"/>
+
+      <!-- ── DISTANCE BADGES ── -->
+      <!-- 165 km badge (Gurgaon-Vrindavan) -->
+      <rect x="565" y="110" width="42" height="14" class="map-distance-badge-bg"/>
+      <text x="586" y="120" class="map-distance-badge" text-anchor="middle">165 km</text>
+
+      <!-- 12 km badge (Mathura-Vrindavan) -->
+      <rect x="412" y="166" width="32" height="12" class="map-distance-badge-bg"/>
+      <text x="428" y="175" class="map-distance-badge" text-anchor="middle">12 km</text>
+
+      <!-- 24 km badge (Vrindavan-Govardhan) -->
+      <rect x="345" y="251" width="32" height="12" class="map-distance-badge-bg"/>
+      <text x="361" y="260" class="map-distance-badge" text-anchor="middle">24 km</text>
+
+      <!-- 70 km badge (Vrindavan-Agra) -->
+      <rect x="520" y="330" width="32" height="12" class="map-distance-badge-bg"/>
+      <text x="536" y="339" class="map-distance-badge" text-anchor="middle">70 km</text>
+
+      <!-- 210 km badge (Agra-Gurgaon) -->
+      <rect x="645" y="240" width="42" height="12" class="map-distance-badge-bg"/>
+      <text x="666" y="249" class="map-distance-badge" text-anchor="middle">210 km</text>
+
+      <!-- ── PINS ── -->
+
+      <!-- GURGAON -->
+      <g class="map-pin">
+        <text x="620" y="42" class="pin-label" text-anchor="middle">Gurgaon</text>
+        <text x="620" y="53" class="pin-sublabel" text-anchor="middle">Departure</text>
+        <circle cx="620" cy="66" r="6" fill="#1ABC9C" class="pin-dot"/>
+      </g>
+
+      <!-- MATHURA -->
+      <g class="map-pin">
+        <text x="440" y="121" class="pin-label" text-anchor="middle">Mathura</text>
+        <text x="440" y="132" class="pin-sublabel" text-anchor="middle">Vishram Ghat &bull; Janmabhoomi</text>
+        <circle cx="440" cy="146" r="7" fill="var(--saffron)" class="pin-dot"/>
+      </g>
+
+      <!-- VRINDAVAN (hub) -->
+      <g class="map-pin">
+        <circle cx="440" cy="240" r="9" fill="var(--deep-blue)" class="pin-dot" stroke-width="3"/>
+        <text x="440" y="222" class="pin-label" font-size="14" text-anchor="middle" font-weight="700">Vrindavan</text>
+        <text x="440" y="263" class="pin-sublabel" text-anchor="middle">Hotel Base &bull; All 3 nights</text>
+      </g>
+
+      <!-- GOVARDHAN cluster -->
+      <g class="map-pin">
+        <text x="260" y="262" class="pin-label" text-anchor="end">Govardhan</text>
+        <text x="260" y="273" class="pin-sublabel" text-anchor="end">Scenic circuit starts</text>
+        <circle cx="268" cy="283" r="6" fill="var(--gold)" class="pin-dot"/>
+      </g>
+      <g class="map-pin">
+        <text x="285" y="302" class="pin-sublabel">Daan Ghati</text>
+        <circle cx="280" cy="300" r="3.5" fill="var(--gold)" class="pin-dot"/>
+      </g>
+      <g class="map-pin">
+        <text x="310" y="317" class="pin-sublabel">Haridev Ji</text>
+        <circle cx="280" cy="310" r="3.5" fill="var(--gold)" class="pin-dot"/>
+      </g>
+      <g class="map-pin">
+        <text x="230" y="330" class="pin-sublabel" text-anchor="end">Radha Kund</text>
+        <circle cx="250" cy="328" r="3.5" fill="var(--gold)" class="pin-dot"/>
+      </g>
+      <g class="map-pin">
+        <text x="215" y="370" class="pin-sublabel" text-anchor="end">Jatipura (Abhishek)</text>
+        <circle cx="225" cy="355" r="4" fill="var(--gold)" class="pin-dot"/>
+      </g>
+
+      <!-- VRINDAVAN TEMPLES (Day 2) -->
+      <g class="map-pin">
+        <text x="395" y="213" class="pin-sublabel" text-anchor="end">ISKCON</text>
+        <circle cx="400" cy="228" r="3.5" fill="var(--saffron)" class="pin-dot"/>
+      </g>
+      <g class="map-pin">
+        <text x="465" y="223" class="pin-sublabel" text-anchor="start">Banke Bihari</text>
+        <circle cx="460" cy="238" r="3.5" fill="var(--saffron)" class="pin-dot"/>
+      </g>
+      <g class="map-pin">
+        <text x="485" y="283" class="pin-sublabel" text-anchor="start">Keshi Ghat</text>
+        <text x="485" y="295" class="pin-sublabel" text-anchor="start">Sunset Aarti</text>
+        <circle cx="480" cy="278" r="4" fill="var(--saffron)" class="pin-dot"/>
+      </g>
+
+      <!-- VRINDAVAN TEMPLES (Day 3) -->
+      <g class="map-pin">
+        <text x="410" y="275" class="pin-sublabel" text-anchor="end">Prem Mandir</text>
+        <circle cx="420" cy="268" r="3.5" fill="var(--deep-blue)" class="pin-dot"/>
+      </g>
+      <g class="map-pin">
+        <text x="460" y="260" class="pin-sublabel" text-anchor="start">Rangnath</text>
+        <circle cx="450" cy="258" r="3.5" fill="var(--deep-blue)" class="pin-dot"/>
+      </g>
+
+      <!-- AGRA / TAJ -->
+      <g class="map-pin">
+        <text x="640" y="392" class="pin-label" text-anchor="middle">Agra</text>
+        <text x="640" y="403" class="pin-sublabel" text-anchor="middle">Taj Mahal</text>
+        <circle cx="640" cy="416" r="7" fill="var(--deep-blue)" class="pin-dot"/>
+      </g>
+
+    </svg>
+
+    <!-- Legend -->
+    <div class="map-legend">
+      <div class="map-legend-item">
+        <span class="map-legend-swatch gold"></span>
+        Day 1 &mdash; Govardhan Circuit
+      </div>
+      <div class="map-legend-item">
+        <span class="map-legend-swatch saffron"></span>
+        Day 2 &mdash; Raksha Bandhan
+      </div>
+      <div class="map-legend-item">
+        <span class="map-legend-swatch blue"></span>
+        Day 3 &mdash; Taj Mahal Finale
+      </div>
+      <div class="map-legend-item">
+        <span class="map-legend-pin teal"></span>
+        Departure / Arrival
+      </div>
+      <div class="map-legend-item" style="font-style:italic;color:var(--text-muted);font-size:10px;">
+        Dashed lines = return route
+      </div>
+    </div>
+  </div>
+</div>
+
+<hr class="section-divider">
+
+<div id="sec-04"></div>
+<div class="section-eyebrow">01 · Core Recommendation</div>
+<h2 class="section-title">The Stay Question + Sequencing</h2>
+
+<div class="decision-box">
+  <h3>Base in Vrindavan — Govardhan on Day 1, Taj on Day 3</h3>
+  <p><strong>Reason:</strong> Vrindavan has more temple density within walking/e-rickshaw range. Staying here avoids the 35–50 min Mathura commute every morning. Govardhan's temples reopen at 4 PM — by doing the scenic circuit during the dead zone (12:30–3:30) and pivoting to temple darshan at 4 PM, the entire Govardhan experience fits in one afternoon without compromising seniors' morning recovery.</p>
+  <p><strong>Why Day 3 works:</strong> Agra is geographically on the way home to Gurgaon. Prem Mandir morning → Rangnath → Taj Mahal → Gurgaon via Yamuna Expressway. No backtracking. Arrive home ~6:30 PM.</p>
+  <p><strong>Risk if wrong:</strong> If Day 1 Govardhan is too exhausting for the overnight-travel Mumbai group, the e-rickshaw circuit is nearly zero-walking design — seniors sit through the entire afternoon. However, monitor energy levels and be ready to skip a temple stop if needed.</p>
+</div>
+
+<div class="callout callout-saffron">
+  <div class="callout-icon">🏠</div>
+  <div class="callout-content">
+    <h4>Accommodation Note</h4>
+    <p>For 11–13 people, a villa or dharamshala-style block booking is better than individual hotel rooms. Options include Hare Krishna Dham guest houses near ISKCON, private villas on Parikrama Marg, and Vrindavan Chandrodaya Mandir area properties. Book <strong>now</strong> — accommodation books out months ahead for Raksha Bandhan weekend.</p>
+  </div>
+</div>
+
+<hr class="section-divider">
+
+<div id="sec-05"></div>
+<div class="section-eyebrow">02 · Day-by-Day Itinerary</div>
+<h2 class="section-title">2 Night / 3 Day Itinerary</h2>
+<p class="section-subtitle">This is the updated plan. Govardhan full circuit on Day 1. Raksha Bandhan + Mathura temples on Day 2. Taj Mahal finale on Day 3.</p>
+</div><!-- end .page -->
+
+<div class="page">
+
+<!-- DAY 1 -->
+<div class="itinerary-day">
+  <div class="day-header" id="day-01">
+    <div class="day-number">01</div>
+    <div class="day-info">
+      <h3>Thursday, 27 August — Arrival, Recovery &amp; Govardhan Full Circuit</h3>
+      <p>PRE-FESTIVAL · MUMBAI GROUP: 8 AM TRAIN · LUNCH · GOVARDHAN SCENIC TOUR (12:30–3:30) + TEMPLE DARSHAN (4–6:30) + JATIPURA ABHISHEK</p>
+    </div>
+  </div>
+
+  <div class="callout callout-blue">
+    <div class="callout-icon">🛺</div>
+    <div class="callout-content">
+      <h4>How This Day Works</h4>
+      <p>Govardhan's temples close at 11 AM and reopen at 4 PM. Between 12:30–3:30 PM, we visit <strong>open-air sites</strong> (Mansi Ganga, Kusum Sarovar, hill panorama) — all accessible, no closure issue. At 4 PM sharp, temples reopen. We pivot to Daan Ghati → Haridev Ji → Radha Kund → Jatipura Abhishek. The entire experience is done via e-rickshaw. Seniors remain seated for 90% of the time.</p>
+    </div>
+  </div>
+
+  <div class="timeline">
+
+    <div class="timeline-item warning">
+      <div class="timeline-time">05:30–06:30 AM</div>
+      <div class="timeline-title">🚗 Gurgaon Group — Depart</div>
+      <div class="timeline-detail">165 km on Yamuna Expressway. Senior-friendly pit stop at ~90 km mark. Estimated arrival Vrindavan: 9:00–9:30 AM.</div>
+    </div>
+
+    <div class="timeline-item warning">
+      <div class="timeline-time">08:00 AM</div>
+      <div class="timeline-title">🚂 Mumbai Group — Arrive Mathura Junction</div>
+      <div class="timeline-detail">Train arrives Mathura station. Overnight journey — needs time until ~11:00 AM to freshen up. Pre-arranged cabs to Vrindavan hotel (12 km, 30–40 min). Hotel arrival: 9:00–9:30 AM.</div>
+      <div class="timeline-note">Pre-arrange cabs from Mathura station to the Vrindavan hotel in advance.</div>
+    </div>
+
+    <div class="timeline-item rest">
+      <div class="timeline-time">09:00–11:00 AM</div>
+      <div class="timeline-title">Both Groups Arrive Hotel — Breakfast, Check In &amp; Recover</div>
+      <div class="timeline-detail">Gurgaon and Mumbai groups converge at hotel. Light breakfast together — the first meal of the trip. Early check-in pre-negotiated. Mumbai group: essential recovery window after overnight journey. <strong>No temples this morning.</strong></div>
+    </div>
+
+    <div class="timeline-item rest">
+      <div class="timeline-time">11:00 AM – 12:30 PM</div>
+      <div class="timeline-title">Whole Family Together — Lunch &amp; Prepare for Govardhan</div>
+      <div class="timeline-detail">First meal as a complete group. The emotional reunion moment. Pre-order packed water, ORS sachets, and light snacks for the Govardhan circuit. Confirm e-rickshaw booking at Govardhan.</div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-time">12:30–1:15 PM</div>
+      <div class="timeline-title">Depart Vrindavan for Govardhan — Pack Snacks</div>
+      <div class="timeline-detail">~24 km via Radha Kund Road. E-rickshaw pre-booked and waiting. Pack water bottles (1L per person), light snacks (fruits, biscuits, namkeen), and ORS sachets in the day-bag — the Govardhan circuit runs until 6:30 PM with only a short break.</div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-time">1:15–3:30 PM</div>
+      <div class="timeline-title">🛺 Govardhan Scenic Circuit — Open-Air Sites</div>
+      <div class="timeline-detail">E-rickshaw tour of: <strong>Mansi Ganga</strong> (sacred lake where Krishna bathed — serene, cool breeze, minimal walking to the bank) → <strong>Govardhan Hill Parikrama</strong> (scenic drive around the 21 km hill, see the sacred landscape from the vehicle) → <strong>Kusum Sarovar</strong> (magnificent red sandstone chhatris/cenotaphs — open-air, no closures, a masterpiece of Braj architecture). All seated in e-rickshaw. This is a cultural/spiritual orientation, not a temple visit — the sites are open and accessible.</div>
+      <div class="timeline-note">This is the "dead zone" strategy: open-air sites that don't close. By 3:30 PM, the family has seen the entire Govardhan landscape from the comfort of an e-rickshaw.</div>
+    </div>
+
+    <div class="timeline-item rest">
+      <div class="timeline-time">3:30–4:00 PM</div>
+      <div class="timeline-title">Rest Stop &amp; Snacks — Near Daan Ghati Area</div>
+      <div class="timeline-detail">Short break near the Daan Ghati temple area. Hydrate with the packed water and ORS. Enjoy the light snacks (fruits, namkeen) you packed from the hotel. E-rickshaw waits. The temples are about to reopen at 4 PM — this is your refuel window before the darshan circuit begins.</div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-time">4:00–4:30 PM</div>
+      <div class="timeline-title">🛕 Daan Ghati Temple — Evening Darshan</div>
+      <div class="timeline-detail">First temple of the Govardhan circuit, reopening at 4 PM. Temple where Krishna accepted "tax" (daan) of butter from the gopis. Deeply meaningful for a family group. Evening aarti atmosphere is charged with energy. E-rickshaw to the doorstep.</div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-time">4:30–5:00 PM</div>
+      <div class="timeline-title">🛕 Haridev Ji Temple</div>
+      <div class="timeline-detail">Short e-rickshaw ride from Daan Ghati (both in central Govardhan). Ancient temple. Brief but profound darshan.</div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-time">5:00–5:30 PM</div>
+      <div class="timeline-title">🛕 Radha Kund &amp; Shyam Kund</div>
+      <div class="timeline-detail">Sacred twin lakes where Radha and Krishna bathed. The temples within the complex are open. One of the most sacred spots in all of Braj. Contemplative, not crowded in evening. Perfect for seniors.</div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-time">5:30–6:30 PM</div>
+      <div class="timeline-title">✨ Mukharvind Temple (Jatipura) — Evening Abhishek</div>
+      <div class="timeline-detail">The climactic moment of the Govardhan visit. Drive to Jatipura (~4 km, 10 min). Witness the <strong>evening Abhishek (holy bathing ritual) of the Govardhan Shila</strong>. The hill itself is worshipped as Krishna's outstretched finger. Lamps are lit, bhajans fill the air, the energy is profoundly moving. This is the spiritual highlight of the Govardhan experience.</div>
+      <div class="timeline-note">Do not skip this even if running slightly late. The Abhishek is what makes Govardhan spiritually complete.</div>
+    </div>
+
+    <div class="timeline-item rest">
+      <div class="timeline-time">6:30–7:30 PM</div>
+      <div class="timeline-title">Drive Back to Vrindavan Hotel</div>
+      <div class="timeline-detail">~50–70 min drive. Seniors rest in the AC Tempo Traveller. Evening breeze. Arrive hotel by ~7:30 PM.</div>
+    </div>
+
+    <div class="timeline-item rest">
+      <div class="timeline-time">7:30 PM onwards</div>
+      <div class="timeline-title">Dinner &amp; Rest</div>
+      <div class="timeline-detail">Pure-veg Gujarati-friendly dinner near hotel. The Govardhan circuit is complete. Enjoy the evening — Day 2 starts at a comfortable 7:00 AM.</div>
+    </div>
+
+  </div>
+</div>
+
+</div><!-- end .page -->
+
+<div class="page">
+
+<!-- DAY 2 -->
+<div class="itinerary-day">
+  <div class="day-header" id="day-02">
+    <div class="day-number">02</div>
+    <div class="day-info">
+      <h3>Friday, 28 August — Raksha Bandhan &amp; Mathura Temples</h3>
+      <p>FESTIVAL DAY · 7 AM START · 🌊 YAMUNA SNAN + RAKHI AT VISHRAM GHAT · JANMABHOOMI DARSHAN · LUNCH + REST · ISKCON + BANKE BIHARI · 🌕 YAMUNA AARTI ON PURNIMA</p>
+    </div>
+  </div>
+
+  <div class="callout callout-saffron">
+    <div class="callout-icon">🌅</div>
+    <div class="callout-content">
+      <h4>Starting at 7 AM — Comfortable Morning</h4>
+      <p>The Raksha Bandhan muhurat opens at <strong>5:57 AM</strong>, but we're starting at 7 AM to let everyone sleep in after the full Govardhan day. Rakhi will be tied on the Yamuna ghat at ~8 AM — still auspicious, still beautiful, just past the muhurat. <strong>If the family wants to catch the exact muhurat, the group can wake early; this plan optimises for senior comfort as the default.</strong></p>
+    </div>
+  </div>
+
+  <div class="timeline">
+
+    <div class="timeline-item rest">
+      <div class="timeline-time">7:00–7:30 AM</div>
+      <div class="timeline-title">Wake Up, Freshen Up &amp; Light Breakfast at Hotel</div>
+      <div class="timeline-detail">A comfortable wake-up after Day 1's Govardhan circuit. Breakfast at the hotel — no rush. Pre-arrange the Tempo Traveller for 7:30 AM departure. Carry the rakhi thali, sweets, a small aarti diya, and a mat/towel for the ghat steps.</div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-time">7:30–8:15 AM</div>
+      <div class="timeline-title">🚐 Depart for Vishram Ghat, Mathura</div>
+      <div class="timeline-detail">Drive from Vrindavan hotel to Vishram Ghat (12 km, 35–50 min). Morning traffic is smooth — festival crowds build later. Arrive at Vishram Ghat by ~8:15 AM. The sun is well up, the ghat is active but not yet packed. Pre-festival energy is building.</div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-time">8:15–9:30 AM</div>
+      <div class="timeline-title">🌊 Yamuna Snan + 🎋 Rakhi Ceremony at Vishram Ghat</div>
+      <div class="timeline-detail">A holy dip in the Yamuna (even symbolic splashing for seniors) followed by the Raksha Bandhan ceremony on the ghat. Sisters tie rakhis on the Yamuna banks — the ghat where Krishna rested after killing Kansa. Prayers for brothers' long life. The morning sun, the flowing river, and the family together. This is the emotional peak of the trip.</div>
+      <div class="timeline-note">The muhurat opens at 5:57 AM but the Rakhi bandhan ceremony remains valid throughout the day — what matters is the intent and the sacred space. Tying rakhis at Vishram Ghat on Sravana Purnima is spiritually profound regardless of the exact minute.</div>
+    </div>
+
+    <div class="timeline-item rest">
+      <div class="timeline-time">9:30–10:00 AM</div>
+      <div class="timeline-title">Breakfast near Vishram Ghat</div>
+      <div class="timeline-detail">Light breakfast at a pure-veg eatery near the ghat. Kachori, poha, or simple parathas. The ghat area has several small eateries catering to pilgrims. Quick and easy.</div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-time">10:00–10:20 AM</div>
+      <div class="timeline-title">Dharmaraj (Yam Raj) Temple</div>
+      <div class="timeline-detail">Adjacent to Vishram Ghat, a 2-min walk. Traditional Sravana Purnima observance — pray to Yam Raj for brothers' long life and wellbeing. A fitting conclusion to the rakhi ceremony. Brief stop, 15–20 min.</div>
+    </div>
+
+    <div class="timeline-item warning">
+      <div class="timeline-time">10:20–11:45 AM</div>
+      <div class="timeline-title">⚠️ Dwarkadhish + Janmabhoomi — Pinch Point</div>
+      <div class="timeline-detail">Dwarkadhish Temple closes at <strong>11:00 AM</strong> (summer schedule). Janmabhoomi closes at <strong>12:00 PM</strong>. There is only ~1.5 hours to cover both. <strong>Recommended approach: go directly to Janmabhoomi first</strong> (it takes 60–90 min with security), then if time permits, visit Dwarkadhish before 11 AM close. If Janmabhoomi's queue is long, Dwarkadhish is the one that gets sacrificed.</div>
+      <div class="timeline-note">Janmabhoomi's Garbha Griha (prison cell) darshan is the most spiritually significant stop in Mathura. If you must choose between the two, Janmabhoomi wins.</div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-time">11:00–11:45 AM</div>
+      <div class="timeline-title">Krishna Janmabhoomi (Garbha Griha Darshan)</div>
+      <div class="timeline-detail">Security check — deposit phones, bags, wallets at lockers (available outside). The queue at 11 AM is shorter than the 10 AM peak. Allow 45–60 min for the full group. The Garbha Griha darshan — the prison cell where Krishna was born — is the single most profound spiritual moment in Mathura.</div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-time">~11:45 AM</div>
+      <div class="timeline-title">Optional: Quick Dwarkadhish Darshan (If Time Permits)</div>
+      <div class="timeline-detail">If Janmabhoomi finishes early (e.g., queue was short), Dwarkadhish is a 5-min walk away and closes at 11 AM for the morning session. Realistically, with a 7 AM start, you'll likely only get Janmabhoomi. <strong>This is the cost of starting later.</strong></div>
+    </div>
+
+    <div class="timeline-item rest">
+      <div class="timeline-time">11:45 AM – 12:15 PM</div>
+      <div class="timeline-title">Return to Vrindavan Hotel</div>
+      <div class="timeline-detail">Drive back from Mathura to Vrindavan (12 km, 35–50 min). Short drive. The morning darshan is complete.</div>
+    </div>
+
+    <div class="timeline-item rest">
+      <div class="timeline-time">12:15–1:15 PM</div>
+      <div class="timeline-title">Lunch at Hotel (Doubles as Rest)</div>
+      <div class="timeline-detail">Pure-veg family lunch at the hotel. After the morning's spiritual intensity, this meal is a chance to sit together, share the experience of the Rakhi ceremony, and relax. <strong>This lunch IS the first part of your afternoon rest</strong> — no rushing, no next-stop thinking. Just eat, talk, and decompress. The afternoon rest window continues right after.</div>
+    </div>
+
+    <div class="timeline-item rest">
+      <div class="timeline-time">1:15–3:45 PM</div>
+      <div class="timeline-title">Afternoon Rest (~2.5 hrs)</div>
+      <div class="timeline-detail">Rest at the hotel. The morning was emotionally intense — Rakhi on the Yamuna, temple darshan. 2.5 hours is enough to recharge for the evening darshan circuit (ISKCON → Banke Bihari → Yamuna Aarti). No activities scheduled. Temples are closed 12–4:30 PM anyway.</div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-time">4:00–5:15 PM</div>
+      <div class="timeline-title">ISKCON Vrindavan — Sandhya Aarti</div>
+      <div class="timeline-detail">5-min e-rickshaw from hotel. ISKCON is the most senior-friendly temple in Vrindavan — paved paths, English signage, wheelchair-accessible, well-managed queues. Catch the Sandhya Aarti at ~5:00 PM (evening session opens 4:30 PM). Calm, devotional, unhurried. Pure-veg canteen on-site if anyone wants a pre-dinner snack.</div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-time">5:30–6:30 PM</div>
+      <div class="timeline-title">Banke Bihari — Evening Darshan</div>
+      <div class="timeline-detail">Short e-rickshaw from ISKCON (5 min). Evening session: 5:30 PM – 9:30 PM. Sravana Purnima evening — the atmosphere is extraordinary. Full moon rising, festival energy, bhajans filling the narrow lanes. Brief curtain darshan — accept its brevity as part of the experience.</div>
+      <div class="timeline-note">Banke Bihari's narrow lanes are crowded on Purnima. Move as a group single-file. Logistics coordinator handles crowd flow.</div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-time">7:00–8:00 PM</div>
+      <div class="timeline-title">🌕 Yamuna Aarti — Keshi Ghat</div>
+      <div class="timeline-detail">Sravana Purnima (full moon) Yamuna Aarti at Keshi Ghat. Hundreds of diyas floating on the water. Full moon reflection over the Yamuna. This is the climactic festival moment — the culmination of the morning's Rakhi ceremony, the evening darshan, and the full moon night. Keshi Ghat is in Vrindavan, close to the hotel — no cross-city travel.</div>
+    </div>
+
+    <div class="timeline-item rest">
+      <div class="timeline-time">8:15 PM onwards</div>
+      <div class="timeline-title">Dinner &amp; Final Rest</div>
+      <div class="timeline-detail">Celebratory family dinner. The core spiritual purpose of the trip is complete. Day 3 is the bonus — Prem Mandir morning + Taj Mahal on the way home.</div>
+    </div>
+
+  </div>
+</div>
+
+</div><!-- end .page -->
+
+<div class="page">
+
+<!-- DAY 3 -->
+<div class="itinerary-day">
+  <div class="day-header" id="day-03">
+    <div class="day-number">03</div>
+    <div class="day-info">
+      <h3>Saturday, 29 August — Prem Mandir, Taj Mahal &amp; Return</h3>
+      <p>DEPARTURE DAY · PREM MANDIR MORNING · RANGNATH · AGRA TAJ MAHAL · HOME VIA YAMUNA EXPRESSWAY</p>
+    </div>
+  </div>
+
+  <div class="callout callout-gold">
+    <div class="callout-icon">🏛️</div>
+    <div class="callout-content">
+      <h4>The Taj Mahal Question — Resolved</h4>
+      <p>The PDF planner included Taj on Day 3 — and after restructuring Govardhan to Day 1, this now works cleanly. Taj Mahal is closed on Fridays (28 Aug), so Saturday 29 Aug is the only option. The route Vrindavan → Agra → Gurgaon forms a clean arc on the Yamuna Expressway. No backtracking. Arrive home ~6:30 PM.</p>
+    </div>
+  </div>
+
+  <div class="timeline">
+
+    <div class="timeline-item rest">
+      <div class="timeline-time">8:00–8:30 AM</div>
+      <div class="timeline-title">Check Out, Light Breakfast</div>
+      <div class="timeline-detail">The last day. No early start — seniors sleep in. Check out of hotel, load luggage into Tempo Traveller, have breakfast. Pre-book Taj Mahal entry tickets online (preferred timing: 10 AM–12 PM slot).</div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-time">8:30–9:30 AM</div>
+      <div class="timeline-title">💎 Prem Mandir — Morning Darshan (Peaceful)</div>
+      <div class="timeline-detail">Morning at Prem Mandir is a hidden gem — uncrowded, no queues, white marble glowing in the soft morning light. Walk the manicured gardens, see the Krishna leela carvings up close. Open grounds, no narrow lanes, no pushing. A gentle, peaceful start to the departure day. <strong>For seniors, this morning experience is actually superior to the crowded evening show.</strong></div>
+      <div class="timeline-note">8:30 AM opening time. The gardens are fresh from the overnight watering. Morning breeze. Calm devotional energy.</div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-time">9:45–10:30 AM</div>
+      <div class="timeline-title">Shree Rangnath Ji Temple — Vaikunth Dwar</div>
+      <div class="timeline-detail">South Indian-style architectural marvel in the heart of Vrindavan. Grand, flat courtyards — easy for seniors. Walk through the Vaikunth Dwar (the gate to the heavenly abode). A fitting last darshan in Braj before heading home.</div>
+    </div>
+
+    <div class="timeline-item warning">
+      <div class="timeline-time">10:30 AM – 12:30 PM</div>
+      <div class="timeline-title">🚐 Drive Vrindavan → Agra (Taj Mahal)</div>
+      <div class="timeline-detail">~70 km via Yamuna Expressway. ~90–120 min depending on Saturday traffic. Seniors rest in the AC vehicle — this is built-in recovery time. Arrive at Taj Mahal parking complex by 12:30 PM.</div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-time">12:30–2:30 PM</div>
+      <div class="timeline-title">🏛️ Taj Mahal — The Grand Finale</div>
+      <div class="timeline-detail">Transfer from parking to main gate via <strong>low-emission battery golf carts</strong> (pre-arranged for seniors — eliminates long walk). Guided tour of the monument. Family group photos with the iconic backdrop. Senior-friendly: paved walkways, resting benches, wheelchair available if needed.</div>
+      <div class="timeline-note">Book tickets online in advance. Avoid Saturday peak crowd by arriving at 12:30 PM (post-lunch lull). Carry ID for all adults — mandatory at entry.</div>
+    </div>
+
+    <div class="timeline-item rest">
+      <div class="timeline-time">2:30–3:30 PM</div>
+      <div class="timeline-title">Celebratory Final Lunch in Agra</div>
+      <div class="timeline-detail">Pure-veg restaurant near the Taj complex or on the Yamuna Expressway. The family's last meal together. Photographs, memories, sharing highlights of the trip.</div>
+    </div>
+
+    <div class="timeline-item warning">
+      <div class="timeline-time">3:30–6:30 PM</div>
+      <div class="timeline-title">🚐 Drive Agra → Gurgaon (Yamuna Expressway)</div>
+      <div class="timeline-detail">~210 km, 3–3.5 hrs. The Yamuna Expressway is smooth, well-lit, and has clean rest stops. Seniors can nap, the family can relax. Saturday afternoon traffic is manageable.</div>
+      <div class="timeline-note">Pre-order dinner at home or plan a quick dhaba stop if anyone is hungry. Arrive by ~6:30 PM.</div>
+    </div>
+
+    <div class="timeline-item rest">
+      <div class="timeline-time">~6:30 PM</div>
+      <div class="timeline-title">🏠 Arrive Gurgaon — Dinner at Home</div>
+      <div class="timeline-detail">Trip complete. Home by evening. Pre-arrange dinner at home or order in — no one should be cooking after this trip. Rest, unpack photos, and carry the blessings of Braj with you.</div>
+    </div>
+
+  </div>
+</div>
+
+</div><!-- end .page -->
+
+<div class="page">
+
+<hr class="section-divider">
+
+<div id="sec-06"></div>
+<div class="section-eyebrow">03 · Fallback Plan (1N/2D)</div>
+<h2 class="section-title">1 Night / 2 Day Itinerary</h2>
+<p class="section-subtitle">If the family can only do 1 night. Retains the core: Rakhi on Yamuna + Mathura temples + evening darshan.</p>
+
+<div class="table-wrap">
+<table class="matrix-table">
+  <thead>
+    <tr>
+      <th>Time</th>
+      <th>Activity</th>
+      <th>Notes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>08:00 AM (Day 1)</td>
+      <td>🚂 Mumbai group arrives Mathura station</td>
+      <td>Pre-arranged cabs to Vrindavan hotel</td>
+    </tr>
+    <tr>
+      <td>09:00–11:00 AM</td>
+      <td>Both groups check in, freshen up</td>
+      <td>Mumbai group recovers from overnight journey.</td>
+    </tr>
+    <tr>
+      <td>11:00 AM–12:30 PM</td>
+      <td>Family lunch together</td>
+      <td>Emotional reunion moment.</td>
+    </tr>
+    <tr>
+      <td>12:30–3:30 PM</td>
+      <td>Govardhan scenic e-rickshaw tour</td>
+      <td>Mansi Ganga, Kusum Sarovar, hill panorama. Temples reopen at 4 PM.</td>
+    </tr>
+    <tr>
+      <td>4:00–6:30 PM</td>
+      <td>Govardhan temple darshan + Jatipura Abhishek</td>
+      <td>Daan Ghati → Haridev Ji → Radha Kund → Jatipura</td>
+    </tr>
+    <tr>
+      <td>7:30 PM</td>
+      <td>Return hotel, dinner, rest</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>07:00 AM (Day 2)</td>
+      <td>🚐 Wake up, breakfast, depart for Vishram Ghat</td>
+      <td>Breakfast at hotel. Depart 7:30 AM. Rakhi on Yamuna ~8:15 AM.</td>
+    </tr>
+    <tr>
+      <td>08:15–09:30 AM</td>
+      <td>🌊 Yamuna Snan + 🎋 Rakhi Ceremony</td>
+      <td>The core spiritual moment on the ghat.</td>
+    </tr>
+    <tr>
+      <td>09:30–10:00 AM</td>
+      <td>Breakfast near ghat</td>
+      <td>Light meal after the ceremony.</td>
+    </tr>
+    <tr>
+      <td>10:00–11:45 AM</td>
+      <td>Janmabhoomi (Garbha Griha)</td>
+      <td>Spiritually most significant stop.</td>
+    </tr>
+    <tr>
+      <td>11:45 AM–12:30 PM</td>
+      <td>Return to Vrindavan + Lunch</td>
+      <td>Lunch at hotel. Doubles as rest.</td>
+    </tr>
+    <tr>
+      <td>12:30–3:30 PM</td>
+      <td>Afternoon rest</td>
+      <td>2.5 hrs to recharge. Temples closed anyway.</td>
+    </tr>
+    <tr>
+      <td>4:00–6:30 PM</td>
+      <td>ISKCON → Banke Bihari → Yamuna Aarti</td>
+      <td>Evening darshan circuit.</td>
+    </tr>
+    <tr>
+      <td>6:30 PM onwards</td>
+      <td>Dinner in Vrindavan + depart Gurgaon</td>
+      <td>Late return after dinner.</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<div class="callout callout-red">
+  <div class="callout-icon">❌</div>
+  <div class="callout-content">
+    <h4>What Doesn't Fit in 1N/2D</h4>
+    <p>Taj Mahal, Prem Mandir morning, Rangnath, ISKCON, Banke Bihari, and Yamuna Aarti all fall out. The 1N plan covers: Govardhan scenic circuit + temple darshan, Raksha Bandhan on Yamuna, and Mathura's two main temples. For a single-night trip, this is spiritually complete.</p>
+  </div>
+</div>
+
+<hr class="section-divider">
+
+<div id="sec-11"></div>
+<div class="section-eyebrow">04 · Pre-Departure Actions</div>
+<h2 class="section-title">What Must Be Done Now</h2>
+<p class="section-subtitle"><em>Updated: Taj Mahal ticket booking + Govardhan e-rickshaw pre-booking added.</em></p>
+
+<div class="table-wrap">
+<table class="matrix-table">
+  <thead>
+    <tr>
+      <th>Action</th>
+      <th>Urgency</th>
+      <th>Owner</th>
+      <th>Notes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Book accommodation in Vrindavan</td>
+      <td><span class="tag tag-high">Immediate</span></td>
+      <td>Trip organiser</td>
+      <td>12 people, 2 nights. AC + en-suite + pure-veg kitchen required. Raksha Bandhan weekend fills fast.</td>
+    </tr>
+    <tr>
+      <td>Pre-arrange Mathura station pickup (Mumbai group)</td>
+      <td><span class="tag tag-high">Immediate</span></td>
+      <td>Mumbai coordinator</td>
+      <td>Book cabs or tempo from Mathura station → Vrindavan hotel for ~8:00 AM arrival.</td>
+    </tr>
+    <tr>
+      <td>Book Tempo Traveller (14-seater)</td>
+      <td><span class="tag tag-high">Immediate</span></td>
+      <td>Trip organiser</td>
+      <td>Gurgaon departure 5:30 AM 27 Aug. With experienced Braj driver. Also needed for Agra route on Day 3.</td>
+    </tr>
+    <tr>
+      <td>Book Taj Mahal tickets online</td>
+      <td><span class="tag tag-high">1 week before</span></td>
+      <td>Trip organiser</td>
+      <td>Book 12:00–1:00 PM entry slot for Saturday 29 Aug. Foreign/Indian pricing. Carry ID for all adults.</td>
+    </tr>
+    <tr>
+      <td>Pre-arrange Govardhan e-rickshaw (full day)</td>
+      <td><span class="tag tag-medium">2 days before</span></td>
+      <td>Trip organiser / local contact</td>
+      <td>Hire through hotel or local contact. Full day (1 PM–6:30 PM). Available at Govardhan parking area.</td>
+    </tr>
+    <tr>
+      <td>Family decision: 1N or 2N?</td>
+      <td><span class="tag tag-high">This week</span></td>
+      <td>Family group</td>
+      <td>Informs accommodation booking. 2N strongly recommended for Taj inclusion.</td>
+    </tr>
+    <tr>
+      <td>Identify senior citizen needs</td>
+      <td><span class="tag tag-medium">2 weeks before</span></td>
+      <td>Designated coordinator</td>
+      <td>Walking ability, medications, any mobility aids needed. Confirm Taj Mahal golf cart for any senior who wants it.</td>
+    </tr>
+    <tr>
+      <td>Designate "logistics coordinator"</td>
+      <td><span class="tag tag-medium">Before trip</span></td>
+      <td>Family</td>
+      <td>Younger member managing lockers, queues, senior support, group movement.</td>
+    </tr>
+    <tr>
+      <td>Pack: umbrellas, rubber sandals</td>
+      <td><span class="tag tag-medium">Before trip</span></td>
+      <td>Everyone</td>
+      <td>August monsoon = rain. Temple floors = wet stone. Flip-flops/rubber sandals for temple entry.</td>
+    </tr>
+    <tr>
+      <td>Pack: ORS sachets, medications</td>
+      <td><span class="tag tag-medium">Before trip</span></td>
+      <td>Medical lead</td>
+      <td>August heat + humidity. Hydration management critical for 60s age group.</td>
+    </tr>
+    <tr>
+      <td>Verify temple timings 1 week before</td>
+      <td><span class="tag tag-low">7 days before</span></td>
+      <td>Trip organiser</td>
+      <td>Call Banke Bihari, Janmabhoomi, Govardhan temples directly to confirm no special closures.</td>
+    </tr>
+    <tr>
+      <td>Check weather forecast</td>
+      <td><span class="tag tag-low">48 hrs before</span></td>
+      <td>Anyone</td>
+      <td>Adjust outdoor timing if heavy rainfall predicted.</td>
+    </tr>
+    <tr>
+      <td>Govardhan: Pack e-rickshaw day-bag</td>
+      <td><span class="tag tag-low">Morning of Day 1</span></td>
+      <td>Logistics coordinator</td>
+      <td>Water bottles (1L per person), ORS, light snacks, portable fan/umbrella, wet towels.</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<hr class="section-divider">
+
+<div id="sec-12"></div>
+<div class="section-eyebrow">05 · Communication</div>
+<h2 class="section-title">WhatsApp Summary</h2>
+<p class="section-subtitle"><em>Updated for Rev 2 — Govardhan on Day 1, Taj on Day 3.</em></p>
+
+<div class="whatsapp-box">
+  <div class="wa-label">WhatsApp Message — Copy &amp; Send</div>
+  <div class="whatsapp-bubble">🙏 *Braj Yatra Plan v2 — Raksha Bandhan 2026* 🙏
+
+📅 *Raksha Bandhan is 28 August* (Friday) — Muhurat starts 5:57 AM. We'll do Rakhi on the Yamuna ghat at ~8:15 AM (comfortable start at 7 AM).
+
+📍 *Staying in Vrindavan* — temples are walking distance, no daily commute.
+
+🚐 *One Tempo Traveller for all 12-13 of us* — no getting separated.
+
+🚂 *Two groups arriving:*
+→ *Mumbai group:* Train reaches Mathura at 8 AM. Needs time till ~11 AM to freshen up at hotel.
+→ *Gurgaon group:* Leave Gurgaon ~5:30 AM, arrive Vrindavan ~9 AM.
+
+📋 *Day 1 (27 Aug) — Govardhan Full Circuit 🛺*
+→ 8 AM: Mumbai group arrives 🚂
+→ 9–11 AM: 🥞 Breakfast at hotel, check in, freshen up
+→ 11 AM–12:30 PM: 🍛 First family lunch together!
+→ 12:30–1:15 PM: 🚐 Depart for Govardhan (pack snacks!)
+→ 1:15–3:30 PM: 🛺 Scenic e-rickshaw — Mansi Ganga, Kusum Sarovar, hill views
+→ 3:30–4 PM: 🥤 Snack break & hydrate
+→ 4–6:30 PM: 🛕 Temple darshan — Daan Ghati → Haridev Ji → Radha Kund → Jatipura Abhishek 🙏
+→ 6:30–7:30 PM: 🚐 Drive back to Vrindavan
+→ 7:30 PM: 🍛 Dinner & rest
+
+📋 *Day 2 (28 Aug — Raksha Bandhan) — 7 AM start!*
+→ 7–7:30 AM: ☀️ Wake up, 🥞 breakfast at hotel
+→ 7:30–8:15 AM: 🚐 Depart for Vishram Ghat, Mathura
+→ 8:15–9:30 AM: 🌊 Yamuna Snan + 🎋 RAKHI CEREMONY on the ghat!
+→ 9:30–10 AM: 🥞 Breakfast near the ghat
+→ 10–10:20 AM: 🛕 Dharmaraj Temple — blessings for brothers
+→ 10:20–11:45 AM: 🛕 Krishna Janmabhoomi — Garbha Griha darshan 🙏
+→ 11:45 AM–12:15 PM: 🚐 Return to Vrindavan
+→ 12:15–1:15 PM: 🍛 Lunch at hotel (rests while eating!)
+→ 1:15–3:45 PM: 💤 Afternoon rest
+→ 4–5:15 PM: 🛕 ISKCON Sandhya Aarti 🙏
+→ 5:30–6:30 PM: 🛕 Banke Bihari (Purnima evening!)
+→ 7–8 PM: 🌕✨ Yamuna Aarti at Keshi Ghat
+→ 8:15 PM: 🍛 Dinner
+
+📋 *Day 3 (29 Aug) — Prem Mandir → Rangnath → 🏛️ TAJ MAHAL → Home!*
+→ 8–8:30 AM: 🥞 Breakfast, check out
+→ 8:30–9:30 AM: 💎 Prem Mandir morning darshan (peaceful!)
+→ 9:45–10:30 AM: 🛕 Shree Rangnath Ji Temple (Vaikunth Dwar)
+→ 10:30 AM–12:30 PM: 🚐 Drive to Agra
+→ 12:30–2:30 PM: 🏛️ TAJ MAHAL! (golf carts for seniors)
+→ 2:30–3:30 PM: 🍛 Final celebratory lunch in Agra
+→ 3:30–6:30 PM: 🚐 Drive to Gurgaon
+→ 🏠 Home by ~6:30 PM — dinner at home! 
+
+🔥 *New: Taj Mahal on Day 3!* On the way home — no extra detour.
+
+Jai Shri Krishna 🙏</div>
+</div>
+
+<hr class="section-divider">
+
+<div id="sec-03"></div>
+<div class="section-eyebrow">06 · Stakeholder Analysis</div>
+<h2 class="section-title">Who This Trip Is Really For</h2>
+<p class="section-subtitle">The WhatsApp debate obscures the actual decision-making structure. This section makes it explicit.</p>
+
+<div class="two-col">
+  <div class="col-box">
+    <h4>Primary Stakeholders</h4>
+    <ul>
+      <li><strong>Senior members (60s):</strong> Majority. Their comfort and darshan quality sets the pace. Non-negotiable anchor.</li>
+      <li><strong>Family unit as whole:</strong> "Stay together" is the explicit stated priority. No sub-groups running different routes.</li>
+      <li><strong>Mumbai group:</strong> Arrives 8 AM by train after overnight journey. Needs ~3 hrs recovery window at hotel. This is a <em>hard constraint</em> that shifts all morning activity to after 11 AM.</li>
+      <li><strong>Gurgaon group:</strong> Drives down early morning. Arrives rested relative to Mumbai group but must wait for their arrival before starting any activities together.</li>
+    </ul>
+  </div>
+  <div class="col-box blue-top">
+    <h4>Emotional Priorities (Ranked)</h4>
+    <ul>
+      <li>1. Family togetherness</li>
+      <li>2. Spiritual purpose (Raksha Bandhan in Braj)</li>
+      <li>3. Physical comfort for seniors</li>
+      <li>4. Govardhan parikrama / darshan</li>
+      <li>5. Taj Mahal — <strong>now included on Day 3</strong></li>
+    </ul>
+  </div>
+</div>
+
+<hr class="section-divider">
+
+<div id="sec-01"></div>
+<div class="section-eyebrow">07 · Evidence Registry</div>
+<h2 class="section-title">Temple Timing Matrix</h2>
+<p class="section-subtitle">All timings sourced from official temple sites and corroborated by minimum two independent sources. August falls in Summer season (March–October) for all Braj temples. <strong>Updated for Rev 2.</strong></p>
+
+<div class="table-wrap">
+<table class="matrix-table">
+  <thead>
+    <tr>
+      <th>Temple</th>
+      <th>Location</th>
+      <th>Morning Open</th>
+      <th>Afternoon Close</th>
+      <th>Evening Open</th>
+      <th>Key Note</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Banke Bihari</strong></td>
+      <td>Vrindavan</td>
+      <td>7:45 AM</td>
+      <td>12:00 PM</td>
+      <td>5:30 PM – 9:30 PM</td>
+      <td>No Mangala Aarti. Curtain system. No photography. Narrow lanes — arrive early.</td>
+    </tr>
+    <tr>
+      <td><strong>ISKCON (Radha Krishna)</strong></td>
+      <td>Vrindavan</td>
+      <td>5:00 AM (Mangala)</td>
+      <td>~1:00 PM</td>
+      <td>4:30 PM – 8:00 PM</td>
+      <td>Multiple aartis. Best managed crowd. Accessible for seniors. English signage.</td>
+    </tr>
+    <tr>
+      <td><strong>Prem Mandir</strong></td>
+      <td>Vrindavan</td>
+      <td>8:30 AM – 12:00 PM</td>
+      <td>12:00 PM</td>
+      <td>4:30 PM – 8:30 PM</td>
+      <td>Light show: 7:30–8:00 PM (summer). Free entry. Open grounds, easy for seniors.</td>
+    </tr>
+    <tr>
+      <td><strong>Rangnath (Rang Ji)</strong></td>
+      <td>Vrindavan</td>
+      <td>5:30 AM – 10:30 AM</td>
+      <td>~10:30 AM</td>
+      <td>4:00 PM – 9:00 PM</td>
+      <td>South Indian architecture. Vaikunth Dwar. Quick darshan — good for departure day.</td>
+    </tr>
+    <tr>
+      <td><strong>Krishna Janmabhoomi</strong></td>
+      <td>Mathura</td>
+      <td>5:00 AM – 12:00 PM</td>
+      <td>12:00 PM – 2:00 PM</td>
+      <td>4:00 PM – 9:30 PM</td>
+      <td>Strict security. No phones/bags inside. Locker needed. Darshan 45–60 min normal.</td>
+    </tr>
+    <tr>
+      <td><strong>Dwarkadhish</strong></td>
+      <td>Mathura</td>
+      <td>6:30 AM – 11:00 AM</td>
+      <td>11:00 AM – 4:00 PM</td>
+      <td>4:00 PM – 7:30 PM</td>
+      <td>7 aartis daily. Near Vishram Ghat. 5-min walk from each other.</td>
+    </tr>
+    <tr>
+      <td><strong>Govardhan (Daan Ghati)</strong></td>
+      <td>Govardhan</td>
+      <td>5:30 AM – 11:00 AM</td>
+      <td>—</td>
+      <td>4:00 PM – 10:00 PM</td>
+      <td><strong>Key for Day 1:</strong> Evening window is long. Daan Ghati, Haridev Ji, Radha Kund — all reopen at 4 PM.</td>
+    </tr>
+    <tr>
+      <td><strong>Mukharvind Temple (Jatipura)</strong></td>
+      <td>Jatipura</td>
+      <td>5:30 AM – 11:00 AM</td>
+      <td>—</td>
+      <td>4:00 PM – 10:00 PM</td>
+      <td><strong>Evening Abhishek of Govardhan Shila</strong> — the spiritual highlight of Govardhan.</td>
+    </tr>
+    <tr>
+      <td><strong>Radha Rani (Barsana)</strong></td>
+      <td>Barsana</td>
+      <td>5:30 AM – 11:00 AM</td>
+      <td>—</td>
+      <td>5:00 PM – 8:00 PM</td>
+      <td>Hill climb required. Not in this plan — separate day trip recommended.</td>
+    </tr>
+    <tr>
+      <td><strong>Dharmaraj (Yam Raj)</strong></td>
+      <td>Vishram Ghat, Mathura</td>
+      <td>Dawn–dusk</td>
+      <td>—</td>
+      <td>—</td>
+      <td>Adjacent to Vishram Ghat. Traditional Sravana Purnima stop. 15–20 min.</td>
+    </tr>
+    <tr>
+      <td><strong>Taj Mahal</strong></td>
+      <td>Agra</td>
+      <td>Sunrise (~6:00 AM)</td>
+      <td>Sunset (~6:30 PM)</td>
+      <td>—</td>
+      <td><strong>Closed every Friday.</strong> 28 Aug is Friday — not possible on Day 2. Saturday 29 Aug is open. Golf carts for seniors.</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<div class="callout callout-gold">
+  <div class="callout-icon">🔒</div>
+  <div class="callout-content">
+    <h4>The Afternoon Dead Zone — Now Used Strategically</h4>
+    <p>Every major Braj temple closes between 12:00 PM and 4:00–4:30 PM. Previous version treated this as pure rest. This version <strong>uses it productively:</strong> Govardhan's open-air sites (Mansi Ganga, Kusum Sarovar, hill panorama) are scenic and accessible during the dead zone. Temples reopen at 4 PM — pivot immediately to darshan. No time wasted.</p>
+  </div>
+</div>
+
+<hr class="section-divider">
+
+<div id="sec-02"></div>
+<div class="section-eyebrow">08 · Logistics Evidence</div>
+<h2 class="section-title">Distance & Travel Time Matrix</h2>
+<p class="section-subtitle">All distances verified. <strong>Updated: Agra routes added for Day 3.</strong> Braj road quality is mixed. August monsoon roads may be slower. Add 20–30% for monsoon conditions.</p>
+
+<div class="table-wrap">
+<table class="matrix-table">
+  <thead>
+    <tr>
+      <th>Route</th>
+      <th>Distance</th>
+      <th>Nominal Drive</th>
+      <th>Realistic (12 pax, Aug)</th>
+      <th>Notes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Mathura ↔ Vrindavan</td>
+      <td>~12–13 km</td>
+      <td>25 min</td>
+      <td>35–50 min</td>
+      <td>⚠️ <strong>Raksha Bandhan (28 Aug) = Janmashtami-level crowds.</strong> Morning (6–9 AM) is smooth. Evening (5–8 PM) may take 60–90 min.</td>
+    </tr>
+    <tr>
+      <td>Vrindavan → Govardhan</td>
+      <td>~24 km (Radha Kund Rd)</td>
+      <td>40 min</td>
+      <td>50–70 min</td>
+      <td>Shortest route via Radha Kund Road (23.5 km). Used for Day 1 departure.</td>
+    </tr>
+    <tr>
+      <td>Govardhan → Jatipura (Mukharvind)</td>
+      <td>~4 km</td>
+      <td>8 min</td>
+      <td>10–15 min</td>
+      <td>Short e-rickshaw ride. Evening Abhishek at 4 PM onwards.</td>
+    </tr>
+    <tr>
+      <td>Jatipura → Vrindavan</td>
+      <td>~28 km</td>
+      <td>40 min</td>
+      <td>50–70 min</td>
+      <td>Evening return route after Abhishek.</td>
+    </tr>
+    <tr>
+      <td>Vrindavan → Mathura (Vishram Ghat)</td>
+      <td>~12 km</td>
+      <td>25 min</td>
+      <td>35–50 min</td>
+      <td>Day 2 departure at 7:30 AM — comfortable start.</td>
+    </tr>
+    <tr>
+      <td>Vrindavan → Agra</td>
+      <td>~70 km</td>
+      <td>90 min</td>
+      <td>120 min</td>
+      <td>⚠️ <strong>Via Yamuna Expressway.</strong> Route used for Day 3 Taj visit. Saturday traffic moderate.</td>
+    </tr>
+    <tr>
+      <td>Agra → Gurgaon</td>
+      <td>~210 km</td>
+      <td>3.0 hrs</td>
+      <td>3.0–3.5 hrs</td>
+      <td>⚠️ <strong>Direct via Yamuna Expressway.</strong> No return to Vrindavan needed. Saturday afternoon traffic manageable. Seniors can rest in vehicle.</td>
+    </tr>
+    <tr>
+      <td>Vrindavan → Gurgaon (direct)</td>
+      <td>~165 km</td>
+      <td>2.5 hrs</td>
+      <td>3.0–3.5 hrs</td>
+      <td>Fallback route if Taj is skipped. Via Yamuna Expressway.</td>
+    </tr>
+    <tr>
+      <td>Gurgaon → Mathura (arrival)</td>
+      <td>~150–180 km</td>
+      <td>2.5 hrs</td>
+      <td>3.0–3.5 hrs</td>
+      <td>Early 5:30 AM departure avoids NCR traffic.</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<div class="callout callout-saffron">
+  <div class="callout-icon">🗺️</div>
+  <div class="callout-content">
+    <h4>The Geography Hack — Why Taj on Day 3 Works</h4>
+    <p>Agra is <strong>south-east</strong> of Vrindavan (70 km). Gurgaon is <strong>north-west</strong> of Agra (210 km via Yamuna Expressway). The route Vrindavan → Agra → Gurgaon forms a clean arc — no backtracking. Compare with Vrindavan → Gurgaon (165 km direct). The "detour" to Taj adds only ~115 km of extra driving but covers the most iconic monument in India. For a once-in-a-lifetime family trip, the 2 extra hours are justified.</p>
+  </div>
+</div>
+
+<hr class="section-divider">
+
+<div id="sec-10"></div>
+<div class="section-eyebrow">09 · Decision Matrix</div>
+<h2 class="section-title">Key Decisions This Report Makes</h2>
+<p class="section-subtitle"><em>Updated for Rev 2. Govardhan re-sequenced, Taj added, Prem Mandir moved to morning.</em></p>
+
+<div class="table-wrap">
+<table class="matrix-table">
+  <thead>
+    <tr>
+      <th>Question</th>
+      <th>Recommendation</th>
+      <th>Evidence Basis</th>
+      <th>Confidence</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>2N/3D or 1N/2D?</td>
+      <td><strong>2N/3D</strong></td>
+      <td>Govardhan + Taj both require full days. 1N drops Taj and evening experiences.</td>
+      <td><span class="tag tag-low">High</span></td>
+    </tr>
+    <tr>
+      <td>When to do Govardhan?</td>
+      <td><strong>Day 1 afternoon-evening</strong></td>
+      <td>Scenic open-air sites during dead zone (12:30–3:30), temple darshan from 4 PM. Full circuit in one afternoon. Frees Day 3 for Taj.</td>
+      <td><span class="tag tag-low">High (Revised)</span></td>
+    </tr>
+    <tr>
+      <td>Morning activities on Day 1?</td>
+      <td><strong>None until 11 AM</strong></td>
+      <td>Mumbai group arrives 8 AM by train after overnight journey. Unchanged from previous plan.</td>
+      <td><span class="tag tag-low">High</span></td>
+    </tr>
+    <tr>
+      <td>Mathura or Vrindavan stay?</td>
+      <td><strong>Vrindavan</strong></td>
+      <td>Temple density. Avoids daily commute. Unchanged.</td>
+      <td><span class="tag tag-low">High</span></td>
+    </tr>
+    <tr>
+      <td>Include Taj Mahal?</td>
+      <td><strong>Yes — Day 3 (Saturday)</strong></td>
+      <td>Closed Friday 28 Aug. Saturday 29 Aug is open. Route Vrindavan→Agra→Gurgaon is clean arc on Yamuna Expressway. No backtracking. Added ~2 hrs over direct return.</td>
+      <td><span class="tag tag-low">High (Revised)</span></td>
+    </tr>
+    <tr>
+      <td>Prem Mandir — morning or evening?</td>
+      <td><strong>Morning (Day 3)</strong></td>
+      <td>Peaceful, uncrowded, no queues. Seniors can walk gardens at their own pace. Morning marble glow is exquisite. Light show sacrificed for Yamuna Aarti (Day 2) which is superior on Purnima.</td>
+      <td><span class="tag tag-low">High (Revised)</span></td>
+    </tr>
+    <tr>
+      <td>ISKCON or Prem Mandir on Day 2 evening?</td>
+      <td><strong>ISKCON (5:30 PM) + Banke Bihari (6 PM) + Yamuna Aarti (7 PM)</strong></td>
+      <td>ISKCON is most senior-friendly evening aarti. Banke Bihari on Purnima is magical. Yamuna Aarti at Keshi Ghat is the climactic festival experience.</td>
+      <td><span class="tag tag-low">High</span></td>
+    </tr>
+    <tr>
+      <td>Cars or Tempo Traveller?</td>
+      <td><strong>Tempo Traveller</strong></td>
+      <td>12 people in 3 cars = coordination failure. One vehicle keeps the group together.</td>
+      <td><span class="tag tag-low">High</span></td>
+    </tr>
+    <tr>
+      <td>Rakhi at Hotel or Yamuna Ghat?</td>
+      <td><strong>Yamuna Ghat (Vishram Ghat, sunrise)</strong></td>
+      <td>Family requested this. Muhurat 5:57 AM. Combined with Yamuna snan and Dharmaraj Temple.</td>
+      <td><span class="tag tag-low">Family choice</span></td>
+    </tr>
+    <tr>
+      <td>Govardhan: e-rickshaw or car?</td>
+      <td><strong>E-rickshaw for the day</strong></td>
+      <td>Narrow lanes around temples. E-rickshaw permitted everywhere. Car cannot reach some temple thresholds.</td>
+      <td><span class="tag tag-low">High</span></td>
+    </tr>
+    <tr>
+      <td>Gokul?</td>
+      <td><strong>Not in this plan</strong></td>
+      <td>Day 1 is fully Govardhan. Gokul's main temples closed 12–4 PM; only Raman Reti accessible. August midday heat on open sand dunes is inadvisable for seniors.</td>
+      <td><span class="tag tag-low">High</span></td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<hr class="section-divider">
+
+<div id="sec-07"></div>
+<div class="section-eyebrow">10 · Risk Register</div>
+<h2 class="section-title">What Can Break — And What To Do</h2>
+<p class="section-subtitle"><em>Updated for Rev 2. New risks: Taj timing, Day 1 fatigue, two-group coordination on Govardhan day.</em></p>
+
+<div style="background:var(--cream); padding: 0; border-radius: 2px; overflow: hidden; margin-bottom: 32px;">
+  <div class="risk-item" style="background: var(--deep-blue); color:white;">
+    <span style="color: rgba(255,255,255,0.6); font-size:11px; font-family: 'JetBrains Mono'; text-transform:uppercase; letter-spacing:0.1em;">Risk</span>
+    <span style="color: rgba(255,255,255,0.6); font-size:11px; font-family: 'JetBrains Mono'; text-transform:uppercase; letter-spacing:0.1em;">Description &amp; Mitigation</span>
+    <span style="color: rgba(255,255,255,0.6); font-size:11px; font-family: 'JetBrains Mono'; text-transform:uppercase; letter-spacing:0.1em;">Level</span>
+  </div>
+
+  <div class="risk-item">
+    <div><div class="risk-name">Two-Group Coordination</div></div>
+    <div class="risk-desc">Mumbai group arrives 8 AM by overnight train. Gurgaon group drives down. If the train is delayed, the Mumbai group arrives late, compressing the recovery window before lunch. <br><em>Mitigation: Pre-arrange hotel early check-in. Share train live-tracking. Hotel can accept luggage for Mumbai group even if delayed.</em></div>
+    <div><span class="tag tag-medium">MEDIUM</span></div>
+  </div>
+
+  <div class="risk-item">
+    <div><div class="risk-name">Day 1 Govardhan — Senior Fatigue</div></div>
+    <div class="risk-desc">Govardhan circuit runs 12:30–6:30 PM (6 hours out). For the Mumbai group who just travelled overnight, this is a long day. Even with e-rickshaw, the cumulative exposure may tire seniors. <br><em>Mitigation: E-rickshaw is nearly zero-walking. Schedule includes a 30-min rest stop at 3:30 PM before temples reopen. If the group is visibly tired after lunch, skip Kusum Sarovar (save 30 min) and go straight to the 4 PM temple window.</em></div>
+    <div><span class="tag tag-high">HIGH</span></div>
+  </div>
+
+  <div class="risk-item">
+    <div><div class="risk-name">Govardhan E-Rickshaw Availability</div></div>
+    <div class="risk-desc">Full-day e-rickshaw at Govardhan on a pre-festival Thursday. If not pre-booked, may not be available on arrival. <br><em>Mitigation: Pre-arrange through hotel or local contact 2 days before. If unavailable, the Tempo Traveller can still do the circuit with more walking between stops. E-rickshaw is preferred but not critical.</em></div>
+    <div><span class="tag tag-medium">MEDIUM</span></div>
+  </div>
+
+  <div class="risk-item">
+    <div><div class="risk-name">Janmabhoomi Queue (Day 2)</div></div>
+    <div class="risk-desc">Security checkpoint for 12 people. Raksha Bandhan weekend may increase traffic. Normal: 45–60 min. Busy: 2–3 hrs. <br><em>Mitigation: Arrive by 10:30 AM. Designate one person for locker logistics for seniors.</em></div>
+    <div><span class="tag tag-high">HIGH</span></div>
+  </div>
+
+  <div class="risk-item">
+    <div><div class="risk-name">Senior Fatigue (Day 2 — 7 AM Start)</div></div>
+    <div class="risk-desc">After a full Day 1 (Govardhan until 7:30 PM), waking up at 7 AM is comfortable. The 12:15–3:45 PM rest block (lunch + 2.5 hrs) ensures seniors are recharged for the evening circuit.</div>
+    <div><span class="tag tag-medium">MEDIUM</span></div>
+  </div>
+
+  <div class="risk-item">
+    <div><div class="risk-name">Taj Mahal Saturday Crowds</div></div>
+    <div class="risk-desc">Saturday is a busy day at the Taj. 12:30 PM arrival is post-lunch lull but still significant crowds. <br><em>Mitigation: Pre-book tickets online. Golf carts bypass the long approach walk. The interior wait is 15–30 min. For this family, the exterior view and gardens are equally meaningful for photos and group experience.</em></div>
+    <div><span class="tag tag-medium">MEDIUM</span></div>
+  </div>
+
+  <div class="risk-item">
+    <div><div class="risk-name">August Rainfall</div></div>
+    <div class="risk-desc">~11 rainy days in August Mathura. Govardhan e-rickshaw in rain = discomfort. Taj Mahal gardens wet. <br><em>Mitigation: Carry compact umbrellas for all. Non-slip rubber sandals for temple visits. Light raincoats for seniors.</em></div>
+    <div><span class="tag tag-medium">MEDIUM</span></div>
+  </div>
+
+  <div class="risk-item">
+    <div><div class="risk-name">Festival Traffic (28 Aug)</div></div>
+    <div class="risk-desc">Sravana Purnima draws hundreds of thousands. Mathura-Vrindavan road (normally 25 min) can stretch to 60–90 min in evening. <br><em>Mitigation: All Day 2 morning departures are before 6 AM (smooth traffic). Evening: Keshi Ghat is in Vrindavan — no cross-city travel after 5 PM.</em></div>
+    <div><span class="tag tag-medium">MEDIUM</span></div>
+  </div>
+
+  <div class="risk-item">
+    <div><div class="risk-name">Agra → Gurgaon Drive Fatigue</div></div>
+    <div class="risk-desc">3.5 hour drive after a full day (Prem Mandir + Rangnath + Taj). Seniors may be exhausted by the time they reach Gurgaon. <br><em>Mitigation: The drive is on a smooth expressway. AC Tempo Traveller allows napping. Schedule a 15-min rest stop at a highway dhaba at the midpoint (~Jewar). Pre-arrange dinner at home so no one has to cook.</em></div>
+    <div><span class="tag tag-medium">MEDIUM</span></div>
+  </div>
+
+  <div class="risk-item">
+    <div><div class="risk-name">Accommodation Mismatch</div></div>
+    <div class="risk-desc">Hotel not meeting senior needs (AC, en-suite, ground floor). <br><em>Mitigation: Book now. Verify: AC, en-suite bathrooms, ground floor/lift, pure-veg kitchen.</em></div>
+    <div><span class="tag tag-low">LOW</span></div>
+  </div>
+
+  <div class="risk-item">
+    <div><div class="risk-name">Banke Bihari Crowd (Day 2 Evening)</div></div>
+    <div class="risk-desc">Purnima full moon brings extra crowds. Narrow lanes. <br><em>Mitigation: Move as a group single-file. Accept that the darshan is brief and profound — do not expect extended viewing time.</em></div>
+    <div><span class="tag tag-medium">MEDIUM</span></div>
+  </div>
+</div>
+
+<hr class="section-divider">
+
+<div id="sec-08"></div>
+<div class="section-eyebrow">11 · Assumption Register</div>
+<h2 class="section-title">What This Plan Assumes</h2>
+<p class="section-subtitle">Explicit assumptions prevent false precision. Challenge these before finalising.</p>
+
+<div style="background: var(--cream); border-radius: 2px; overflow: hidden; margin: 24px 0;">
+  <div class="assumption-row" style="background: var(--deep-blue); color: white;">
+    <span data-label="Assumption" style="color: rgba(255,255,255,0.6); font-size:10px; font-family: 'JetBrains Mono'; text-transform:uppercase; letter-spacing:0.1em;">Assumption</span>
+    <span data-label="Basis" style="color: rgba(255,255,255,0.6); font-size:10px; font-family: 'JetBrains Mono'; text-transform:uppercase; letter-spacing:0.1em;">Basis</span>
+    <span data-label="Confidence" style="color: rgba(255,255,255,0.6); font-size:10px; font-family: 'JetBrains Mono'; text-transform:uppercase; letter-spacing:0.1em;">Confidence</span>
+  </div>
+  <div class="assumption-row">
+    <div class="label" data-label="Assumption">Temple timings unchanged</div>
+    <div class="value" data-label="Basis">Sourced from official temple sites + corroborating sources. Summer schedule applies Aug 27–29. Govardhan evening reopening at 4 PM confirmed.</div>
+    <div class="conf" data-label="Confidence">High. Verify 1 week before.</div>
+  </div>
+  <div class="assumption-row">
+    <div class="label" data-label="Assumption">Govardhan e-rickshaw available</div>
+    <div class="value" data-label="Basis">Plentiful at Govardhan. Full-day hire expected to be available. If not, Tempo Traveller alternative works.</div>
+    <div class="conf" data-label="Confidence">High. Verify with hotel.</div>
+  </div>
+  <div class="assumption-row">
+    <div class="label" data-label="Assumption">Mumbai group can manage Day 1 afternoon</div>
+    <div class="value" data-label="Basis">The largest assumption in this plan. Overnight train + 6-hour Govardhan outing. E-rickshaw makes it low-exertion, but the cumulative day is long.</div>
+    <div class="conf" data-label="Confidence">Medium. Verify with Mumbai group.</div>
+  </div>
+  <div class="assumption-row">
+    <div class="label" data-label="Assumption">Raksha Bandhan = 28 Aug</div>
+    <div class="value" data-label="Basis">Multiple Panchang sources confirm Sravana Purnima = 28 August 2026. Muhurat 5:57 AM, no Bhadra.</div>
+    <div class="conf" data-label="Confidence">Very high.</div>
+  </div>
+  <div class="assumption-row">
+    <div class="label" data-label="Assumption">Taj Mahal open on Saturday</div>
+    <div class="value" data-label="Basis">Taj Mahal is closed every Friday. Saturday is fully operational. Confirmed by official timings.</div>
+    <div class="conf" data-label="Confidence">Definitive.</div>
+  </div>
+  <div class="assumption-row">
+    <div class="label" data-label="Assumption">All members mobile for Taj</div>
+    <div class="value" data-label="Basis">Golf carts available from parking to entry gate. Paved walkways inside. Resting benches.</div>
+    <div class="conf" data-label="Confidence">High.</div>
+  </div>
+  <div class="assumption-row">
+    <div class="label" data-label="Assumption">No extreme rainfall</div>
+    <div class="value" data-label="Basis">Assumes typical August monsoon — intermittent, not continuous. Check forecast 48 hrs before.</div>
+    <div class="conf" data-label="Confidence">Medium.</div>
+  </div>
+  <div class="assumption-row">
+    <div class="label" data-label="Assumption">Accommodation pre-booked</div>
+    <div class="value" data-label="Basis">This plan falls apart without confirmed accommodation for 12 people in Vrindavan.</div>
+    <div class="conf" data-label="Confidence">Action required immediately.</div>
+  </div>
+  <div class="assumption-row">
+    <div class="label" data-label="Assumption">Taj Mahal tickets pre-booked</div>
+    <div class="value" data-label="Basis">Online booking required to avoid 1-hr+ ticket queue. Book 1 week ahead.</div>
+    <div class="conf" data-label="Confidence">Action required.</div>
+  </div>
+</div>
+
+<hr class="section-divider">
+
+<div id="sec-09"></div>
+<div class="section-eyebrow">12 · Accessibility Analysis</div>
+<h2 class="section-title">Senior Citizen Assessment</h2>
+<p class="section-subtitle"><em>Updated: Taj Mahal added. Govardhan re-assessed for evening (instead of morning).</em></p>
+
+<div class="table-wrap">
+<table class="matrix-table">
+  <thead>
+    <tr>
+      <th>Location</th>
+      <th>Senior Friendliness</th>
+      <th>Walking Required</th>
+      <th>Key Concern</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Govardhan (e-rickshaw circuit)</td>
+      <td><span class="tag tag-low">Excellent</span></td>
+      <td>Minimal (seated in vehicle)</td>
+      <td>Evening is cooler than afternoon. E-rickshaw has no AC — carry portable fans/water.</td>
+    </tr>
+    <tr>
+      <td>Mansi Ganga (open-air)</td>
+      <td><span class="tag tag-low">Excellent</span></td>
+      <td>Minimal (5 min to water's edge)</td>
+      <td>None significant. Cool breezes by the lake.</td>
+    </tr>
+    <tr>
+      <td>Kusum Sarovar</td>
+      <td><span class="tag tag-low">Excellent</span></td>
+      <td>Low (flat grounds)</td>
+      <td>Open-air. Visit before 4 PM heat.</td>
+    </tr>
+    <tr>
+      <td>Daan Ghati / Haridev Ji (evening)</td>
+      <td><span class="tag tag-medium">Good</span></td>
+      <td>Low (e-rickshaw to doorstep)</td>
+      <td>Evening crowd moderate. Manageable.</td>
+    </tr>
+    <tr>
+      <td>Radha Kund / Shyam Kund</td>
+      <td><span class="tag tag-medium">Good</span></td>
+      <td>Low (small complex)</td>
+      <td>Contemplative, not crowded in evening.</td>
+    </tr>
+    <tr>
+      <td>Jatipura (Mukharvind) Abhishek</td>
+      <td><span class="tag tag-low">Excellent</span></td>
+      <td>Low (seating available)</td>
+      <td>Evening Abhishek has seating. Spiritual highlight. Cool evening breeze.</td>
+    </tr>
+    <tr>
+      <td>Vishram Ghat (Day 2)</td>
+      <td><span class="tag tag-medium">Good</span></td>
+      <td>Medium (ghat steps)</td>
+      <td>Wet stone — slippery in rain. Mat/towel for seating.</td>
+    </tr>
+    <tr>
+      <td>Dwarkadhish</td>
+      <td><span class="tag tag-medium">Good</span></td>
+      <td>Medium (narrow lanes, steps)</td>
+      <td>Steps to sanctum. Morning visit recommended.</td>
+    </tr>
+    <tr>
+      <td>Janmabhoomi</td>
+      <td><span class="tag tag-medium">Moderate</span></td>
+      <td>Medium (security queues)</td>
+      <td>Long security queue standing time.</td>
+    </tr>
+    <tr>
+      <td>ISKCON Vrindavan</td>
+      <td><span class="tag tag-low">Excellent</span></td>
+      <td>Low (paved paths)</td>
+      <td>Wheelchair-accessible. English signage.</td>
+    </tr>
+    <tr>
+      <td>Banke Bihari</td>
+      <td><span class="tag tag-medium">Moderate</span></td>
+      <td>Medium (narrow lanes, crowds)</td>
+      <td>Crowds, narrow space, no A/C.</td>
+    </tr>
+    <tr>
+      <td>Prem Mandir (morning)</td>
+      <td><span class="tag tag-low">Excellent</span></td>
+      <td>Minimal (flat grounds)</td>
+      <td>Morning is uncrowded, peaceful. Better for seniors than evening.</td>
+    </tr>
+    <tr>
+      <td>Rangnath (Rang Ji)</td>
+      <td><span class="tag tag-low">Good</span></td>
+      <td>Low (flat courtyards)</td>
+      <td>Quick darshan. Good for departure day.</td>
+    </tr>
+    <tr>
+      <td>Taj Mahal</td>
+      <td><span class="tag tag-medium">Good</span></td>
+      <td>Medium (with golf cart)</td>
+      <td>Golf carts from parking. Paved walkways. Resting benches. Wheelchair available.</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<div class="callout callout-saffron">
+  <div class="callout-icon">👴</div>
+  <div class="callout-content">
+    <h4>Senior Operations Protocol</h4>
+    <p>Designate one younger member as "logistics coordinator" per temple — they handle lockers, shoe deposit receipts, entry queue management, and finding a resting spot for seniors while others complete darshan. Have ORS sachets, a portable fan or wet towel, and any prescribed medications in a small day-bag at all times. Never leave senior members standing in a queue unsupported.</p>
+  </div>
+</div>
+
+<hr class="section-divider">
+
+<div id="sec-13"></div>
+<div class="section-eyebrow">13 · Evidence Log</div>
+<h2 class="section-title">Source Registry</h2>
+<p class="section-subtitle"><em>Updated: Taj Mahal timings, Agra routes, Govardhan evening timings added. 25 evidence items.</em></p>
+
+<div style="background:var(--cream); padding: 0; border-radius: 2px;">
+  <div class="evidence-item" style="border-bottom: 2px solid var(--deep-blue); padding: 10px 0 10px 0;">
+    <div style="font-size:10px; font-family:'JetBrains Mono'; color:var(--text-muted); text-transform:uppercase; letter-spacing:0.1em;">ID</div>
+    <div style="font-size:10px; font-family:'JetBrains Mono'; color:var(--text-muted); text-transform:uppercase; letter-spacing:0.1em;">Claim &amp; Source</div>
+    <div style="font-size:10px; font-family:'JetBrains Mono'; color:var(--text-muted); text-transform:uppercase; letter-spacing:0.1em; text-align:right;">Conf.</div>
+  </div>
+  <div class="evidence-item">
+    <div class="evidence-id">E-01</div>
+    <div class="evidence-content"><strong>Banke Bihari summer timings: 7:45 AM–12:00 PM, 5:30–9:30 PM.</strong> Source: merebankeybihari.com (official), corroborated by redbus.in, tripmyvrindavan.com</div>
+    <div class="evidence-conf" style="color: var(--risk-low);">High</div>
+  </div>
+  <div class="evidence-item">
+    <div class="evidence-id">E-02</div>
+    <div class="evidence-content"><strong>Govardhan temple evening timings: 4:00 PM – 10:00 PM.</strong> Source: merebankeybihari.com timing table (summer schedule). Daan Ghati, Haridev Ji, Radha Kund temples all reopen at 4 PM.</div>
+    <div class="evidence-conf" style="color: var(--risk-low);">High</div>
+  </div>
+  <div class="evidence-item">
+    <div class="evidence-id">E-03</div>
+    <div class="evidence-content"><strong>Prem Mandir timings: 8:30 AM–12:00 PM, 4:30–8:30 PM. Light show summer: 7:30–8:00 PM.</strong> Source: premmandir.org.in (official site)</div>
+    <div class="evidence-conf" style="color: var(--risk-low);">Official</div>
+  </div>
+  <div class="evidence-item">
+    <div class="evidence-id">E-04</div>
+    <div class="evidence-content"><strong>Dwarkadhish summer timings: 6:30–11:00 AM, 4:00–7:30 PM.</strong> Source: thebrajdham.com, tripmyvrindavan.com</div>
+    <div class="evidence-conf" style="color: var(--risk-low);">High</div>
+  </div>
+  <div class="evidence-item">
+    <div class="evidence-id">E-05</div>
+    <div class="evidence-content"><strong>Krishna Janmabhoomi timings: 5:00 AM–12:00 PM, 4:00–9:30 PM.</strong> Source: temples.bio, tripmyvrindavan.com</div>
+    <div class="evidence-conf" style="color: var(--risk-medium);">Medium</div>
+  </div>
+  <div class="evidence-item">
+    <div class="evidence-id">E-06</div>
+    <div class="evidence-content"><strong>Raksha Bandhan 2026 = Friday 28 August, Muhurat 5:57 AM.</strong> Source: divinecenter.in, calendardate.com, hindutone.com</div>
+    <div class="evidence-conf" style="color: var(--risk-low);">Very High</div>
+  </div>
+  <div class="evidence-item">
+    <div class="evidence-id">E-07</div>
+    <div class="evidence-content"><strong>Govardhan evening reopening at 4 PM is standard for all Braj temples.</strong> Summer schedule. Source: merebankeybihari.com temple timing table.</div>
+    <div class="evidence-conf" style="color: var(--risk-low);">High</div>
+  </div>
+  <div class="evidence-item">
+    <div class="evidence-id">E-08</div>
+    <div class="evidence-content"><strong>Barsana (Radha Rani) timings: 5:30–11:00 AM, 5:00–8:00 PM.</strong> Source: merebankeybihari.com timing table. Not in this plan.</div>
+    <div class="evidence-conf" style="color: var(--risk-low);">High</div>
+  </div>
+  <div class="evidence-item">
+    <div class="evidence-id">E-09</div>
+    <div class="evidence-content"><strong>August weather Mathura: 28–35°C, ~79% humidity, ~11 rainy days.</strong> Source: weather25.com, climate-data.org</div>
+    <div class="evidence-conf" style="color: var(--risk-low);">High</div>
+  </div>
+  <div class="evidence-item">
+    <div class="evidence-id">E-10</div>
+    <div class="evidence-content"><strong>Vrindavan to Govardhan via Radha Kund Road: 23.5 km, ~40–50 min.</strong> Source: vrindavanmathuratourpackage.com, Google Maps.</div>
+    <div class="evidence-conf" style="color: var(--risk-low);">High</div>
+  </div>
+  <div class="evidence-item">
+    <div class="evidence-id">E-11</div>
+    <div class="evidence-content"><strong>Vrindavan to Agra: ~70 km, ~90–120 min via Yamuna Expressway.</strong> Source: Google Maps, multiple travel sources.</div>
+    <div class="evidence-conf" style="color: var(--risk-low);">High</div>
+  </div>
+  <div class="evidence-item">
+    <div class="evidence-id">E-12</div>
+    <div class="evidence-content"><strong>Agra to Gurgaon: ~210 km, ~3–3.5 hrs via Yamuna Expressway.</strong> Source: Google Maps, savaari.com.</div>
+    <div class="evidence-conf" style="color: var(--risk-low);">High</div>
+  </div>
+  <div class="evidence-item">
+    <div class="evidence-id">E-13</div>
+    <div class="evidence-content"><strong>Taj Mahal closed every Friday.</strong> 28 August 2026 is a Friday. Saturday 29 Aug is fully open. Source: tourism.gov.in, agra.nic.in, timings.tajmahal.gov.in.</div>
+    <div class="evidence-conf" style="color: var(--risk-low);">Definitive</div>
+  </div>
+  <div class="evidence-item">
+    <div class="evidence-id">E-14</div>
+    <div class="evidence-content"><strong>Taj Mahal opening hours: Sunrise to Sunset (~6:00 AM – 6:30 PM).</strong> Saturday schedule. Source: timings.tajmahal.gov.in.</div>
+    <div class="evidence-conf" style="color: var(--risk-low);">Official</div>
+  </div>
+  <div class="evidence-item">
+    <div class="evidence-id">E-15</div>
+    <div class="evidence-content"><strong>Taj Mahal golf carts available from parking to entry gate.</strong> Low-emission battery-operated. Source: tourism.gov.in, tajmahal.gov.in visitor guide.</div>
+    <div class="evidence-conf" style="color: var(--risk-low);">High</div>
+  </div>
+  <div class="evidence-item">
+    <div class="evidence-id">E-16</div>
+    <div class="evidence-content"><strong>Janmabhoomi security: 45–60 min normal, 2–3 hrs on busy days.</strong> Source: tripmyvrindavan.com, mathuravrindavantemples.com.</div>
+    <div class="evidence-conf" style="color: var(--risk-medium);">Medium</div>
+  </div>
+  <div class="evidence-item">
+    <div class="evidence-id">E-17</div>
+    <div class="evidence-content"><strong>Govardhan Parikrama = 21 km, 5–8 hrs walking.</strong> Not attempted in this plan. E-rickshaw scenic circuit instead. Source: dailydarshantime.com.</div>
+    <div class="evidence-conf" style="color: var(--risk-low);">High</div>
+  </div>
+  <div class="evidence-item">
+    <div class="evidence-id">E-18</div>
+    <div class="evidence-content"><strong>Dharmaraj Temple at Vishram Ghat, Mathura.</strong> Traditional Sravana Purnima observance. Source: mathuravrindavantemples.com.</div>
+    <div class="evidence-conf" style="color: var(--risk-medium);">Medium</div>
+  </div>
+  <div class="evidence-item">
+    <div class="evidence-id">E-19</div>
+    <div class="evidence-content"><strong>Kusum Sarovar is an open-air monument — accessible during temple closure.</strong> Not a functional temple. Source: indianpanorama.in, travel guides.</div>
+    <div class="evidence-conf" style="color: var(--risk-low);">High</div>
+  </div>
+  <div class="evidence-item">
+    <div class="evidence-id">E-20</div>
+    <div class="evidence-content"><strong>Mukharvind Temple (Jatipura) evening Abhishek: 4:00 PM onwards.</strong> Source: vrindavanguide.com, indianpanorama.in.</div>
+    <div class="evidence-conf" style="color: var(--risk-low);">High</div>
+  </div>
+  <div class="evidence-item">
+    <div class="evidence-id">E-21</div>
+    <div class="evidence-content"><strong>E-rickshaw recommended for Govardhan circuit.</strong> Narrow lanes. Source: vrindavanguide.com, vrindavantravels.com.</div>
+    <div class="evidence-conf" style="color: var(--risk-low);">High</div>
+  </div>
+  <div class="evidence-item">
+    <div class="evidence-id">E-22</div>
+    <div class="evidence-content"><strong>Mathura-Vrindavan road congested during festivals.</strong> Morning 6–9 AM smooth. Evening 5–8 PM: 60–90 min delays. Source: The Daily Jagran, TV9 Hindi (2025 Janmashtami advisories).</div>
+    <div class="evidence-conf" style="color: var(--risk-medium);">Medium</div>
+  </div>
+  <div class="evidence-item">
+    <div class="evidence-id">E-23</div>
+    <div class="evidence-content"><strong>Gurgaon to Mathura: 140–180 km, 2.5–3.5 hrs.</strong> Via NH19/Delhi–Faridabad–Palwal. Source: savaari.com, uberintercity.com.</div>
+    <div class="evidence-conf" style="color: var(--risk-low);">High</div>
+  </div>
+  <div class="evidence-item">
+    <div class="evidence-id">E-24</div>
+    <div class="evidence-content"><strong>ISKCON Vrindavan timings: Mangala 5 AM, Sandhya Aarti ~6:30 PM.</strong> Wheelchair-accessible. Source: merebankeybihari.com timing table.</div>
+    <div class="evidence-conf" style="color: var(--risk-low);">High</div>
+  </div>
+  <div class="evidence-item">
+    <div class="evidence-id">E-25</div>
+    <div class="evidence-content"><strong>Rangnath Ji Temple timings: 5:30 AM–10:30 AM, 4:00–9:00 PM.</strong> Morning darshan before 10:30 AM close. Source: temple timings databases.</div>
+    <div class="evidence-conf" style="color: var(--risk-medium);">Verify directly</div>
+  </div>
+</div>
+
+<hr class="section-divider">
+
+<!-- FOOTER -->
+<div style="text-align: center; padding: 32px 0 16px; border-top: 1px solid var(--divider);">
+  <p style="font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--text-muted); letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 8px;">Braj Yatra Consulting Report · Raksha Bandhan 2026 · <em>Revision 2</em></p>
+  <p style="font-family: 'EB Garamond', serif; font-size: 18px; color: var(--saffron); font-style: italic;">Jai Shri Krishna 🙏</p>
+  <p style="font-size: 12px; color: var(--text-muted); margin-top: 16px;">All temple timings should be verified directly with temples one week before travel. This report is accurate as of June 2026. Festival-specific adjustments may apply. <em>Revision 2 incorporates learnings from a comparative analysis with an external travel planner.</em></p>
+</div>
+
+</div><!-- end .page -->
+
+<script>
+(function() {
+  var html = document.documentElement;
+  var coverToggle = document.getElementById('coverToggle');
+  var fab = document.getElementById('darkModeFab');
+  var STORAGE_KEY = 'tripplan-darkmode';
+
+  function setDarkMode(enabled) {
+    html.classList.toggle('dark-mode', enabled);
+    if (coverToggle) coverToggle.checked = enabled;
+    if (fab) fab.innerHTML = enabled ? '\u2600' : '\u263E';
+    localStorage.setItem(STORAGE_KEY, enabled ? '1' : '0');
+  }
+
+  // Initialize: localStorage > system preference > light
+  var stored = localStorage.getItem(STORAGE_KEY);
+  if (stored === '1') {
+    setDarkMode(true);
+  } else if (stored === null && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    setDarkMode(true);
+  } else {
+    setDarkMode(false);
+  }
+
+  // Cover toggle
+  if (coverToggle) {
+    coverToggle.addEventListener('change', function() {
+      setDarkMode(this.checked);
+    });
+  }
+
+  // Floating FAB
+  if (fab) {
+    fab.addEventListener('click', function() {
+      setDarkMode(!html.classList.contains('dark-mode'));
+    });
+
+    // Show FAB only after scrolling past the cover
+    var cover = document.querySelector('.cover');
+    if (cover) {
+      var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          fab.classList.toggle('visible', !entry.isIntersecting);
+        });
+      }, { threshold: 0 });
+      observer.observe(cover);
+    }
+  }
+})();
+</script>
+</body>
+</html>
