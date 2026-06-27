@@ -575,8 +575,6 @@
     .tag { font-size: 10px; padding: 2px 8px; }
     .decision-box::before { font-size: 8px; padding: 3px 8px; top: -11px; left: 12px; }
     .itinerary-day { margin-bottom: 32px; }
-    .route-map { grid-template-columns: 1fr; gap: 12px; }
-    .route-col { padding: 14px; }
   }
 
   @media (max-width: 480px) {
@@ -603,8 +601,6 @@
     .calendar-card { padding: 14px; }
     .calendar-card .day-label { font-size: 22px; }
     .calendar-card .day-schedule { font-size: 11px; }
-    .route-map { grid-template-columns: 1fr; gap: 8px; }
-    .route-col { padding: 12px; }
   }
 
   /* ─── PRINT ─── */
@@ -731,117 +727,93 @@
 
   /* ─── ROUTE MAP ─── */
   .route-map-section { margin: 40px 0; }
-  .route-map {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 16px;
-    margin: 20px 0;
-  }
-  .route-col {
-    border-top: 4px solid var(--saffron);
-    border-radius: 2px;
-    background: var(--cream);
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-  }
-  .route-col:nth-child(2) { border-top-color: var(--gold); }
-  .route-col:nth-child(3) { border-top-color: var(--deep-blue); }
-  .route-col-title {
-    font-family: 'EB Garamond', serif;
-    font-size: 22px;
-    color: var(--deep-blue);
-    margin-bottom: 16px;
-    padding-bottom: 10px;
-    border-bottom: 1px solid var(--divider);
-    display: flex;
-    align-items: baseline;
-    justify-content: space-between;
-    gap: 8px;
-  }
-  .route-col-title small {
-    font-family: 'Inter', sans-serif;
-    font-size: 10px;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    color: var(--text-muted);
-    font-weight: 400;
-    white-space: nowrap;
-  }
-  .route-node {
+  .map-container {
     position: relative;
-    padding-left: 24px;
-    padding-bottom: 24px;
-    flex-shrink: 0;
+    background: linear-gradient(145deg, #E8E0D4 0%, #F0EBE0 30%, #E6DDCF 100%);
+    border-radius: 8px;
+    border: 1px solid var(--divider);
+    overflow: hidden;
+    margin: 20px 0;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
   }
-  .route-node:last-child { padding-bottom: 0; }
-  .route-node::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 5px;
+  .map-container svg {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  .map-pin {
+    cursor: default;
+    transition: transform 0.15s ease;
+  }
+  .map-pin:hover { transform: scale(1.1); }
+  .pin-dot { stroke: white; stroke-width: 2.5; }
+  .pin-label {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 12px;
+    fill: #1C1C1C;
+  }
+  .pin-sublabel {
+    font-family: 'Inter', sans-serif;
+    font-size: 9px;
+    fill: #6B6B6B;
+  }
+  .map-route-line {
+    fill: none;
+    stroke-width: 2.5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+  .map-route-line-day1 { stroke: var(--gold); }
+  .map-route-line-day2 { stroke: var(--saffron); }
+  .map-route-line-day3 { stroke: var(--deep-blue); }
+  .map-distance-badge {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 8px;
+    fill: #555;
+  }
+  .map-distance-badge-bg {
+    fill: rgba(255,255,255,0.85);
+    stroke: var(--divider);
+    stroke-width: 0.5;
+    rx: 3;
+  }
+  .map-legend {
+    display: flex;
+    gap: 24px;
+    padding: 12px 20px;
+    border-top: 1px solid var(--divider);
+    background: rgba(255,255,255,0.5);
+    flex-wrap: wrap;
+  }
+  .map-legend-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 11px;
+    color: var(--text-secondary);
+    font-weight: 500;
+  }
+  .map-legend-swatch {
+    width: 20px;
+    height: 3px;
+    border-radius: 2px;
+  }
+  .map-legend-swatch.gold { background: var(--gold); }
+  .map-legend-swatch.saffron { background: var(--saffron); }
+  .map-legend-swatch.blue { background: var(--deep-blue); }
+  .map-legend-pin {
+    display: inline-block;
     width: 10px;
     height: 10px;
     border-radius: 50%;
-    background: var(--saffron);
     border: 2px solid white;
-    box-shadow: 0 0 0 1px var(--saffron);
-    z-index: 1;
+    box-shadow: 0 0 0 1px #999;
   }
-  .route-col:nth-child(2) .route-node::before { background: var(--gold); box-shadow: 0 0 0 1px var(--gold); }
-  .route-col:nth-child(3) .route-node::before { background: var(--deep-blue); box-shadow: 0 0 0 1px var(--deep-blue); }
-  .route-node::after {
-    content: '';
-    position: absolute;
-    left: 4px;
-    top: 18px;
-    bottom: 0;
-    width: 2px;
-    background: var(--divider);
-  }
-  .route-node:last-child::after { display: none; }
-  .route-node-label {
-    display: block;
-    font-weight: 600;
-    font-size: 13px;
-    color: var(--text-primary);
-    line-height: 1.4;
-  }
-  .route-node-detail {
-    display: block;
-    font-size: 11.5px;
-    color: var(--text-secondary);
-    line-height: 1.4;
-    margin-top: 2px;
-  }
-  .route-node-dist {
-    display: inline-block;
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 10px;
-    color: var(--text-muted);
-    background: var(--warm-white);
-    padding: 1px 7px;
-    border-radius: 2px;
-    margin-left: 6px;
-    letter-spacing: 0.02em;
-  }
-  .route-base-marker {
-    font-size: 11px;
-    color: var(--deep-blue);
-    background: rgba(26,39,68,0.07);
-    padding: 6px 12px;
-    border-radius: 2px;
-    font-weight: 500;
-    margin-top: 0;
-    margin-bottom: 10px;
-    text-align: center;
-    font-family: 'JetBrains Mono', monospace;
-    letter-spacing: 0.05em;
-    font-size: 10px;
-    text-transform: uppercase;
-  }
-  .route-col:nth-child(2) .route-base-marker { color: var(--gold); background: rgba(168,137,44,0.1); }
-  .route-col:nth-child(3) .route-base-marker { color: var(--deep-blue); }
+  .map-legend-pin.gold { background: var(--gold); }
+  .map-legend-pin.saffron { background: var(--saffron); }
+  .map-legend-pin.blue { background: var(--deep-blue); }
+  .map-legend-pin.teal { background: #1ABC9C; }
 
   .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; margin: 24px 0; }
   .col-box { padding: 24px; background: var(--cream); border-top: 3px solid var(--saffron); }
@@ -1006,116 +978,185 @@
 <!-- ─── ROUTE MAP ─── -->
 <div id="sec-route"></div>
 <div class="route-map-section">
-  <div class="section-eyebrow">★ · Geographic Route Overview</div>
-  <h2 class="section-title">Where Everything Connects</h2>
-  <p class="section-subtitle">A spatial view of the 3-day circuit. Each column shows the day's route in order. Distances in km.</p>
-  <div class="route-map">
+  <div class="section-eyebrow">&#9733; &middot; Geographic Route Overview</div>
+  <h2 class="section-title">The Braj Circuit, Seen From Above</h2>
+  <p class="section-subtitle">A schematic geospatial view. Pins mark every stop, colored by day. Routes show the direction of travel with distances.</p>
+  <div class="map-container">
 
-    <!-- COL 1 – DAY 1 -->
-    <div class="route-col">
-      <div class="route-col-title">Day 1 <small>Thu 27 Aug</small></div>
-      <div class="route-base-marker">&#9679; Base: Vrindavan Hotel</div>
+    <svg viewBox="0 0 800 540" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">
 
-      <div class="route-node">
-        <span class="route-node-label">&#128652; Gurgaon Group Departs</span>
-        <span class="route-node-detail">165 km via Yamuna Expressway <span class="route-node-dist">165 km</span></span>
+      <!-- subtle grid / reference roads -->
+      <defs>
+        <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+          <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(0,0,0,0.03)" stroke-width="0.5"/>
+        </pattern>
+      </defs>
+      <rect width="800" height="540" fill="url(#grid)"/>
+
+      <!-- compass rose -->
+      <text x="740" y="30" font-family="Inter" font-size="10" fill="#999" text-anchor="end">N</text>
+      <path d="M740,10 L745,30 L735,30 Z" fill="#999"/>
+      <text x="740" y="44" font-family="Inter" font-size="8" fill="#bbb" text-anchor="end">Not to scale</text>
+
+      <!-- ── ROADS / REFERENCE LINES ── -->
+      <!-- Yamuna Expressway corridor -->
+      <path d="M540,80 Q470,140 440,240 Q520,340 640,400" fill="none" stroke="rgba(0,0,0,0.06)" stroke-width="4" stroke-dasharray="6,4"/>
+      <text x="490" y="310" font-family="Inter" font-size="7" fill="#bbb" transform="rotate(-40,490,310)">Yamuna Expressway</text>
+
+      <!-- Mathura-Vrindavan link -->
+      <path d="M440,130 L440,240" fill="none" stroke="rgba(0,0,0,0.06)" stroke-width="3" stroke-dasharray="4,4"/>
+
+      <!-- Govardhan road -->
+      <path d="M440,240 Q340,250 240,280" fill="none" stroke="rgba(0,0,0,0.06)" stroke-width="3" stroke-dasharray="4,4"/>
+
+      <!-- ── DAY 1 ROUTE (Gold) ── Gurgaon → Vrindavan → Govardhan circuit → Vrindavan -->
+      <!-- Gurgaon → Vrindavan -->
+      <path d="M620,50 Q530,100 440,240" fill="none" class="map-route-line map-route-line-day1"/>
+      <!-- Vrindavan → Govardhan area -->
+      <path d="M440,240 Q340,250 260,270" fill="none" class="map-route-line map-route-line-day1"/>
+      <!-- Govardhan circuit: Daan Ghati → Haridev Ji → Radha Kund → Jatipura -->
+      <path d="M260,270 L280,290 L250,320 L220,350" fill="none" class="map-route-line map-route-line-day1"/>
+      <!-- Return: Jatipura → Vrindavan -->
+      <path d="M220,350 Q330,310 440,240" fill="none" class="map-route-line map-route-line-day1" stroke-dasharray="5,3"/>
+
+      <!-- ── DAY 2 ROUTE (Saffron) ── Vrindavan → Mathura → back → ISKCON → Banke Bihari → Keshi Ghat -->
+      <!-- Vrindavan → Mathura -->
+      <path d="M440,240 L440,130" fill="none" class="map-route-line map-route-line-day2"/>
+      <!-- Mathura → Vrindavan (return) -->
+      <path d="M440,130 L440,200" fill="none" class="map-route-line map-route-line-day2" stroke-dasharray="5,3"/>
+      <!-- Vrindavan Hub → ISKCON → Banke Bihari → Keshi Ghat -->
+      <path d="M440,200 Q420,210 400,220 L460,230 L480,270" fill="none" class="map-route-line map-route-line-day2"/>
+      <!-- Keshi Ghat → hotel (walkable) -->
+      <path d="M480,270 L440,240" fill="none" class="map-route-line map-route-line-day2" stroke-dasharray="3,3" opacity="0.5"/>
+
+      <!-- ── DAY 3 ROUTE (Blue) ── Vrindavan → Prem Mandir → Rangnath → Agra (Taj) → Gurgaon -->
+      <path d="M440,240 L420,260 L450,250 L640,400" fill="none" class="map-route-line map-route-line-day3"/>
+      <!-- Agra → Gurgaon return -->
+      <path d="M640,400 Q700,250 620,50" fill="none" class="map-route-line map-route-line-day3" stroke-dasharray="5,3"/>
+
+      <!-- ── DISTANCE BADGES ── -->
+      <!-- 165 km badge (Gurgaon-Vrindavan) -->
+      <rect x="565" y="110" width="42" height="14" class="map-distance-badge-bg"/>
+      <text x="586" y="120" class="map-distance-badge" text-anchor="middle">165 km</text>
+
+      <!-- 12 km badge (Mathura-Vrindavan) -->
+      <rect x="412" y="166" width="32" height="12" class="map-distance-badge-bg"/>
+      <text x="428" y="175" class="map-distance-badge" text-anchor="middle">12 km</text>
+
+      <!-- 24 km badge (Vrindavan-Govardhan) -->
+      <rect x="345" y="251" width="32" height="12" class="map-distance-badge-bg"/>
+      <text x="361" y="260" class="map-distance-badge" text-anchor="middle">24 km</text>
+
+      <!-- 70 km badge (Vrindavan-Agra) -->
+      <rect x="520" y="330" width="32" height="12" class="map-distance-badge-bg"/>
+      <text x="536" y="339" class="map-distance-badge" text-anchor="middle">70 km</text>
+
+      <!-- 210 km badge (Agra-Gurgaon) -->
+      <rect x="645" y="240" width="42" height="12" class="map-distance-badge-bg"/>
+      <text x="666" y="249" class="map-distance-badge" text-anchor="middle">210 km</text>
+
+      <!-- ── PINS ── -->
+
+      <!-- GURGAON -->
+      <g class="map-pin">
+        <text x="620" y="42" class="pin-label" text-anchor="middle">Gurgaon</text>
+        <text x="620" y="53" class="pin-sublabel" text-anchor="middle">Departure</text>
+        <circle cx="620" cy="66" r="6" fill="#1ABC9C" class="pin-dot"/>
+      </g>
+
+      <!-- MATHURA -->
+      <g class="map-pin">
+        <text x="440" y="121" class="pin-label" text-anchor="middle">Mathura</text>
+        <text x="440" y="132" class="pin-sublabel" text-anchor="middle">Vishram Ghat &bull; Janmabhoomi</text>
+        <circle cx="440" cy="146" r="7" fill="var(--saffron)" class="pin-dot"/>
+      </g>
+
+      <!-- VRINDAVAN (hub) -->
+      <g class="map-pin">
+        <circle cx="440" cy="240" r="9" fill="var(--deep-blue)" class="pin-dot" stroke-width="3"/>
+        <text x="440" y="222" class="pin-label" font-size="14" text-anchor="middle" font-weight="700">Vrindavan</text>
+        <text x="440" y="263" class="pin-sublabel" text-anchor="middle">Hotel Base &bull; All 3 nights</text>
+      </g>
+
+      <!-- GOVARDHAN cluster -->
+      <g class="map-pin">
+        <text x="260" y="262" class="pin-label" text-anchor="end">Govardhan</text>
+        <text x="260" y="273" class="pin-sublabel" text-anchor="end">Scenic circuit starts</text>
+        <circle cx="268" cy="283" r="6" fill="var(--gold)" class="pin-dot"/>
+      </g>
+      <g class="map-pin">
+        <text x="285" y="302" class="pin-sublabel">Daan Ghati</text>
+        <circle cx="280" cy="300" r="3.5" fill="var(--gold)" class="pin-dot"/>
+      </g>
+      <g class="map-pin">
+        <text x="310" y="317" class="pin-sublabel">Haridev Ji</text>
+        <circle cx="280" cy="310" r="3.5" fill="var(--gold)" class="pin-dot"/>
+      </g>
+      <g class="map-pin">
+        <text x="230" y="330" class="pin-sublabel" text-anchor="end">Radha Kund</text>
+        <circle cx="250" cy="328" r="3.5" fill="var(--gold)" class="pin-dot"/>
+      </g>
+      <g class="map-pin">
+        <text x="215" y="370" class="pin-sublabel" text-anchor="end">Jatipura (Abhishek)</text>
+        <circle cx="225" cy="355" r="4" fill="var(--gold)" class="pin-dot"/>
+      </g>
+
+      <!-- VRINDAVAN TEMPLES (Day 2) -->
+      <g class="map-pin">
+        <text x="395" y="213" class="pin-sublabel" text-anchor="end">ISKCON</text>
+        <circle cx="400" cy="228" r="3.5" fill="var(--saffron)" class="pin-dot"/>
+      </g>
+      <g class="map-pin">
+        <text x="465" y="223" class="pin-sublabel" text-anchor="start">Banke Bihari</text>
+        <circle cx="460" cy="238" r="3.5" fill="var(--saffron)" class="pin-dot"/>
+      </g>
+      <g class="map-pin">
+        <text x="485" y="283" class="pin-sublabel" text-anchor="start">Keshi Ghat</text>
+        <text x="485" y="295" class="pin-sublabel" text-anchor="start">Sunset Aarti</text>
+        <circle cx="480" cy="278" r="4" fill="var(--saffron)" class="pin-dot"/>
+      </g>
+
+      <!-- VRINDAVAN TEMPLES (Day 3) -->
+      <g class="map-pin">
+        <text x="410" y="275" class="pin-sublabel" text-anchor="end">Prem Mandir</text>
+        <circle cx="420" cy="268" r="3.5" fill="var(--deep-blue)" class="pin-dot"/>
+      </g>
+      <g class="map-pin">
+        <text x="460" y="260" class="pin-sublabel" text-anchor="start">Rangnath</text>
+        <circle cx="450" cy="258" r="3.5" fill="var(--deep-blue)" class="pin-dot"/>
+      </g>
+
+      <!-- AGRA / TAJ -->
+      <g class="map-pin">
+        <text x="640" y="392" class="pin-label" text-anchor="middle">Agra</text>
+        <text x="640" y="403" class="pin-sublabel" text-anchor="middle">Taj Mahal</text>
+        <circle cx="640" cy="416" r="7" fill="var(--deep-blue)" class="pin-dot"/>
+      </g>
+
+    </svg>
+
+    <!-- Legend -->
+    <div class="map-legend">
+      <div class="map-legend-item">
+        <span class="map-legend-swatch gold"></span>
+        Day 1 &mdash; Govardhan Circuit
       </div>
-      <div class="route-node">
-        <span class="route-node-label">&#128646; Mumbai Group Arrives Mathura</span>
-        <span class="route-node-detail">Pre-arranged cabs to Vrindavan <span class="route-node-dist">12 km</span></span>
+      <div class="map-legend-item">
+        <span class="map-legend-swatch saffron"></span>
+        Day 2 &mdash; Raksha Bandhan
       </div>
-      <div class="route-node">
-        <span class="route-node-label">&#127860; Family Lunch at Hotel</span>
-        <span class="route-node-detail">Both groups together — the reunion</span>
+      <div class="map-legend-item">
+        <span class="map-legend-swatch blue"></span>
+        Day 3 &mdash; Taj Mahal Finale
       </div>
-      <div class="route-node">
-        <span class="route-node-label">&#128698; Drive to Govardhan</span>
-        <span class="route-node-detail">E-rickshaw tour begins <span class="route-node-dist">24 km</span></span>
+      <div class="map-legend-item">
+        <span class="map-legend-pin teal"></span>
+        Departure / Arrival
       </div>
-      <div class="route-node">
-        <span class="route-node-label">&#128334; Scenic Circuit</span>
-        <span class="route-node-detail">Mansi Ganga &middot; Kusum Sarovar &middot; Hill panorama</span>
-      </div>
-      <div class="route-node">
-        <span class="route-node-label">&#128725; Temple Darshan</span>
-        <span class="route-node-detail">Daan Ghati &rarr; Haridev Ji &rarr; Radha Kund &rarr; Mukharvind (Jatipura)</span>
-      </div>
-      <div class="route-node">
-        <span class="route-node-label">&#128652; Return to Vrindavan</span>
-        <span class="route-node-detail">Dinner at hotel <span class="route-node-dist">24 km</span></span>
+      <div class="map-legend-item" style="font-style:italic;color:var(--text-muted);font-size:10px;">
+        Dashed lines = return route
       </div>
     </div>
-
-    <!-- COL 2 – DAY 2 -->
-    <div class="route-col">
-      <div class="route-col-title">Day 2 <small>Fri 28 Aug</small></div>
-      <div class="route-base-marker">&#9679; Base: Vrindavan Hotel</div>
-
-      <div class="route-node">
-        <span class="route-node-label">&#127860; Breakfast at Hotel</span>
-        <span class="route-node-detail">7 AM start &mdash; comfortable wake-up</span>
-      </div>
-      <div class="route-node">
-        <span class="route-node-label">&#127754; Vishram Ghat (Mathura)</span>
-        <span class="route-node-detail">Yamuna snan + Rakhi ceremony <span class="route-node-dist">12 km</span></span>
-      </div>
-      <div class="route-node">
-        <span class="route-node-label">&#128725; Janmabhoomi Complex</span>
-        <span class="route-node-detail">Garbha Griha darshan &middot; Dwarkadhish (if time)</span>
-      </div>
-      <div class="route-node">
-        <span class="route-node-label">&#128652; Return to Vrindavan</span>
-        <span class="route-node-detail">Lunch + 2.5 hr afternoon rest <span class="route-node-dist">12 km</span></span>
-      </div>
-      <div class="route-node">
-        <span class="route-node-label">&#128725; ISKCON Vrindavan</span>
-        <span class="route-node-detail">Sandhya Aarti &mdash; senior-friendly</span>
-      </div>
-      <div class="route-node">
-        <span class="route-node-label">&#128725; Banke Bihari</span>
-        <span class="route-node-detail">Evening darshan on Purnima</span>
-      </div>
-      <div class="route-node">
-        <span class="route-node-label">&#127769; Keshi Ghat</span>
-        <span class="route-node-detail">Yamuna Aarti under full moon</span>
-      </div>
-    </div>
-
-    <!-- COL 3 – DAY 3 -->
-    <div class="route-col">
-      <div class="route-col-title">Day 3 <small>Sat 29 Aug</small></div>
-      <div class="route-base-marker">&#9679; Leave: Vrindavan &rarr; Home</div>
-
-      <div class="route-node">
-        <span class="route-node-label">&#128142; Prem Mandir</span>
-        <span class="route-node-detail">Morning darshan &mdash; uncrowded, marble gardens</span>
-      </div>
-      <div class="route-node">
-        <span class="route-node-label">&#128725; Rangnath Temple</span>
-        <span class="route-node-detail">Vaikunth Dwar &mdash; last Braj darshan</span>
-      </div>
-      <div class="route-node">
-        <span class="route-node-label">&#128652; Drive to Agra</span>
-        <span class="route-node-detail">Via Yamuna Expressway <span class="route-node-dist">70 km</span></span>
-      </div>
-      <div class="route-node">
-        <span class="route-node-label">&#127963; Taj Mahal</span>
-        <span class="route-node-detail">Golf carts &middot; guided tour &middot; family photos</span>
-      </div>
-      <div class="route-node">
-        <span class="route-node-label">&#127860; Final Lunch in Agra</span>
-        <span class="route-node-detail">Celebratory meal near Taj complex</span>
-      </div>
-      <div class="route-node">
-        <span class="route-node-label">&#128652; Drive to Gurgaon</span>
-        <span class="route-node-detail">Via Yamuna Expressway &rarr; home by ~6:30 PM <span class="route-node-dist">210 km</span></span>
-      </div>
-      <div class="route-node">
-        <span class="route-node-label">&#127968; Arrive Home</span>
-        <span class="route-node-detail">Dinner at home &middot; trip complete</span>
-      </div>
-    </div>
-
   </div>
 </div>
 
