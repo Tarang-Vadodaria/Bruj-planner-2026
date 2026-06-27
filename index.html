@@ -957,12 +957,9 @@
     align-items: center;
     justify-content: center;
   }
-  html.dark-mode .rev-slider::before {
-    content: '2';
-  }
-  
   #revToggle:checked ~ .toggle-slider.rev-slider::before {
     content: '2';
+    transform: translateX(24px);
   }
 
   /* ─── REVISION CONTAINERS ─── */
