@@ -26,6 +26,24 @@
     --risk-bg-high: #FDEDEC;
     --risk-bg-medium: #FEF9E7;
     --risk-bg-low: #EAFAF1;
+  --callout-saffron-bg: #FEF0E6;
+  --callout-blue-bg: #EAF1FB;
+  --callout-gold-bg: #FDF8EC;
+  }
+
+  html.dark-mode {
+    --warm-white: #121212;
+    --cream: #1E1E1E;
+    --divider: #2A2A2A;
+    --text-primary: #E0E0E0;
+    --text-secondary: #B0B0B0;
+    --text-muted: #777;
+    --risk-bg-high: #3D1A1A;
+    --risk-bg-medium: #3D3A1A;
+    --risk-bg-low: #1A3D1A;
+    --callout-saffron-bg: #2A1A0A;
+    --callout-blue-bg: #0A1A2A;
+    --callout-gold-bg: #2A2A0A;
   }
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -312,6 +330,7 @@
   .tag-medium { background: var(--risk-bg-medium); color: #B7770D; }
   .tag-low { background: var(--risk-bg-low); color: #196F3D; }
   .tag-info { background: #EAF1FB; color: #1A5276; }
+  html.dark-mode .tag-info { background: #0A1A2A; color: #7AB4E0; }
 
   /* ─── ITINERARY BLOCKS ─── */
   .itinerary-day {
@@ -428,9 +447,9 @@
     display: flex;
     gap: 16px;
   }
-  .callout-saffron { background: #FEF0E6; border-left: 4px solid var(--saffron); }
-  .callout-blue { background: #EAF1FB; border-left: 4px solid var(--deep-blue); }
-  .callout-gold { background: #FDF8EC; border-left: 4px solid var(--gold); }
+  .callout-saffron { background: var(--callout-saffron-bg); border-left: 4px solid var(--saffron); }
+  .callout-blue { background: var(--callout-blue-bg); border-left: 4px solid var(--deep-blue); }
+  .callout-gold { background: var(--callout-gold-bg); border-left: 4px solid var(--gold); }
   .callout-red { background: var(--risk-bg-high); border-left: 4px solid var(--risk-high); }
   .callout-icon { font-size: 20px; flex-shrink: 0; margin-top: 1px; }
   .callout-content h4 { font-size: 14px; font-weight: 600; margin-bottom: 4px; color: var(--text-primary); }
@@ -620,6 +639,9 @@
     margin: 32px 0;
     font-family: 'Inter', sans-serif;
   }
+  html.dark-mode .whatsapp-box {
+    background: #054D44;
+  }
   .whatsapp-box .wa-label {
     font-size: 11px;
     letter-spacing: 0.12em;
@@ -736,6 +758,9 @@
     margin: 20px 0;
     box-shadow: 0 2px 12px rgba(0,0,0,0.06);
   }
+  html.dark-mode .map-container {
+    background: linear-gradient(145deg, #2A2A2A 0%, #333 30%, #2A2A2A 100%);
+  }
   .map-container svg {
     display: block;
     width: 100%;
@@ -753,11 +778,13 @@
     font-size: 12px;
     fill: #1C1C1C;
   }
+  html.dark-mode .pin-label { fill: #E0E0E0; }
   .pin-sublabel {
     font-family: 'Inter', sans-serif;
     font-size: 9px;
     fill: #6B6B6B;
   }
+  html.dark-mode .pin-sublabel { fill: #999; }
   .map-route-line {
     fill: none;
     stroke-width: 2.5;
@@ -772,12 +799,14 @@
     font-size: 8px;
     fill: #555;
   }
+  html.dark-mode .map-distance-badge { fill: #AAA; }
   .map-distance-badge-bg {
     fill: rgba(255,255,255,0.85);
     stroke: var(--divider);
     stroke-width: 0.5;
     rx: 3;
   }
+  html.dark-mode .map-distance-badge-bg { fill: rgba(0,0,0,0.5); }
   .map-legend {
     display: flex;
     gap: 24px;
@@ -820,6 +849,121 @@
   .col-box.blue-top { border-top-color: var(--deep-blue); }
   .col-box h4 { margin-top: 0; font-size: 14px; color: var(--deep-blue); text-transform: uppercase; letter-spacing: 0.08em; font-family: 'JetBrains Mono', monospace; margin-bottom: 12px; }
   .col-box ul { margin: 0; }
+
+  /* ─── DARK MODE TOGGLE ─── */
+  .cover-toggle {
+    margin-top: 40px;
+    padding-top: 24px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+  }
+  .toggle-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.4);
+  }
+  .toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 52px;
+    height: 28px;
+    cursor: pointer;
+  }
+  .toggle-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  .toggle-slider {
+    position: absolute;
+    inset: 0;
+    background: rgba(255,255,255,0.15);
+    border-radius: 14px;
+    transition: background 0.3s;
+  }
+  .toggle-slider::before {
+    content: '\263E';
+    position: absolute;
+    height: 22px;
+    width: 22px;
+    left: 3px;
+    bottom: 3px;
+    background: white;
+    border-radius: 50%;
+    transition: transform 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    line-height: 22px;
+  }
+  html.dark-mode .toggle-slider {
+    background: var(--gold-light);
+  }
+  html.dark-mode .toggle-slider::before {
+    transform: translateX(24px);
+    content: '\2600';
+    background: var(--deep-blue);
+    color: var(--gold-light);
+  }
+
+  /* Floating secondary toggle (scroll companion) */
+  #darkModeFab {
+    position: fixed;
+    bottom: 28px;
+    right: 28px;
+    z-index: 1000;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 2px solid rgba(255,255,255,0.2);
+    background: var(--deep-blue);
+    color: var(--gold-light);
+    cursor: pointer;
+    font-size: 20px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+    transition: transform 0.2s, opacity 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+  }
+  #darkModeFab.visible {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  #darkModeFab:hover {
+    transform: scale(1.12);
+  }
+  html.dark-mode #darkModeFab {
+    background: #1E1E1E;
+    border-color: var(--gold-light);
+    color: var(--gold);
+  }
+
+  /* ─── REVISION TOGGLE ─── */
+  .rev-slider::before {
+    content: '1';
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 600;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  html.dark-mode .rev-slider::before {
+    content: '2';
+  }
+
+  /* ─── REVISION CONTAINERS ─── */
+  .rev { display: none; }
+  .rev.active { display: block; }
 </style>
 </head>
 <body>
@@ -827,7 +971,7 @@
 <!-- ═══════════════════════════════════════════ COVER ═══════════════════════════════════════════ -->
 <div class="cover">
   <div>
-    <div class="cover-label">Confidential · Pilgrimage Operations Engagement · <em>Revision 2</em></div>
+    <div class="cover-label">Confidential · Pilgrimage Operations Engagement · <em>Revision 1</em></div>
     <div class="cover-title">Braj Yatra<br><em>Raksha Bandhan</em><br>2026</div>
     <div class="cover-sub">
       A consulting-grade operational plan for a multigenerational Gujarati family pilgrimage 
@@ -857,12 +1001,34 @@
       <span>Mumbai group: 8 AM (train) · Gurgaon group: 5:30 AM (road)</span>
     </div>
   </div>
+
+  <!-- Cover toggles -->
+  <div class="cover-toggle" style="display:flex; gap:40px; justify-content:center;">
+    <div style="display:flex; align-items:center; gap:10px;">
+      <span class="toggle-label">Display mode</span>
+      <label class="toggle-switch">
+        <input type="checkbox" id="coverToggle">
+        <span class="toggle-slider"></span>
+      </label>
+      <span class="toggle-label" style="color:rgba(255,255,255,0.6)">Dark</span>
+    </div>
+    <div style="display:flex; align-items:center; gap:10px;">
+      <span class="toggle-label">Revision</span>
+      <label class="toggle-switch">
+        <input type="checkbox" id="revToggle">
+        <span class="toggle-slider rev-slider"></span>
+      </label>
+      <span class="toggle-label" style="color:rgba(255,255,255,0.6)">Rev 2</span>
+    </div>
+  </div>
+
 </div>
 
-<!-- ═══════════════════════════════════════════ REPORT ═══════════════════════════════════════════ -->
+<!-- Floating dark mode FAB -->
+<button id="darkModeFab" aria-label="Toggle dark mode" title="Toggle dark mode">&#9790;</button>
 <div class="page">
 
-
+<div class="rev rev-1 active">
 
 <!-- ─── TABLE OF CONTENTS ─── -->
 <div class="toc">
@@ -1701,7 +1867,7 @@
 <div id="sec-12"></div>
 <div class="section-eyebrow">05 · Communication</div>
 <h2 class="section-title">WhatsApp Summary</h2>
-<p class="section-subtitle"><em>Updated for Rev 2 — Govardhan on Day 1, Taj on Day 3.</em></p>
+<p class="section-subtitle"><em>Updated for Rev 1 — Govardhan on Day 1, Taj on Day 3.</em></p>
 
 <div class="whatsapp-box">
   <div class="wa-label">WhatsApp Message — Copy &amp; Send</div>
@@ -1792,7 +1958,7 @@ Jai Shri Krishna 🙏</div>
 <div id="sec-01"></div>
 <div class="section-eyebrow">07 · Evidence Registry</div>
 <h2 class="section-title">Temple Timing Matrix</h2>
-<p class="section-subtitle">All timings sourced from official temple sites and corroborated by minimum two independent sources. August falls in Summer season (March–October) for all Braj temples. <strong>Updated for Rev 2.</strong></p>
+<p class="section-subtitle">All timings sourced from official temple sites and corroborated by minimum two independent sources. August falls in Summer season (March–October) for all Braj temples. <strong>Updated for Rev 1.</strong></p>
 
 <div class="table-wrap">
 <table class="matrix-table">
@@ -2006,7 +2172,7 @@ Jai Shri Krishna 🙏</div>
 <div id="sec-10"></div>
 <div class="section-eyebrow">09 · Decision Matrix</div>
 <h2 class="section-title">Key Decisions This Report Makes</h2>
-<p class="section-subtitle"><em>Updated for Rev 2. Govardhan re-sequenced, Taj added, Prem Mandir moved to morning.</em></p>
+<p class="section-subtitle"><em>Updated for Rev 1. Govardhan re-sequenced, Taj added, Prem Mandir moved to morning.</em></p>
 
 <div class="table-wrap">
 <table class="matrix-table">
@@ -2094,7 +2260,7 @@ Jai Shri Krishna 🙏</div>
 <div id="sec-07"></div>
 <div class="section-eyebrow">10 · Risk Register</div>
 <h2 class="section-title">What Can Break — And What To Do</h2>
-<p class="section-subtitle"><em>Updated for Rev 2. New risks: Taj timing, Day 1 fatigue, two-group coordination on Govardhan day.</em></p>
+<p class="section-subtitle"><em>Updated for Rev 1. New risks: Taj timing, Day 1 fatigue, two-group coordination on Govardhan day.</em></p>
 
 <div style="background:var(--cream); padding: 0; border-radius: 2px; overflow: hidden; margin-bottom: 32px;">
   <div class="risk-item" style="background: var(--deep-blue); color:white;">
@@ -2484,15 +2650,183 @@ Jai Shri Krishna 🙏</div>
   </div>
 </div>
 
-<hr class="section-divider">
+</div><!-- end .rev-1 -->
 
-<!-- FOOTER -->
+<!-- ═══════════════════════════════ REVISION 2 — PLACEHOLDER ═══════════════════════════════ -->
+<div class="rev rev-2">
+
+  <div id="sec-toc"></div>
+  <div class="section-eyebrow">01 · Table of Contents</div>
+  <h2 class="section-title">Braj Yatra — Revision 2</h2>
+  <p class="section-subtitle">Revision 2 content will be built here.</p>
+  <hr class="section-divider">
+
+  <div id="sec-01"></div>
+  <div class="section-eyebrow">02 · Executive Summary</div>
+  <h2 class="section-title">Executive Summary</h2>
+  <p class="section-subtitle">TBD</p>
+  <hr class="section-divider">
+
+  <div id="sec-02"></div>
+  <div class="section-eyebrow">03 · Evidence Registry</div>
+  <h2 class="section-title">Temple Timing Matrix</h2>
+  <p class="section-subtitle">TBD</p>
+  <hr class="section-divider">
+
+  <div id="sec-03"></div>
+  <div class="section-eyebrow">04 · Logistics Evidence</div>
+  <h2 class="section-title">Distance &amp; Travel Time Matrix</h2>
+  <p class="section-subtitle">TBD</p>
+  <hr class="section-divider">
+
+  <div id="sec-04"></div>
+  <div class="section-eyebrow">05 · Stakeholder Analysis</div>
+  <h2 class="section-title">Who This Trip Is Really For</h2>
+  <p class="section-subtitle">TBD</p>
+  <hr class="section-divider">
+
+  <div id="sec-05"></div>
+  <div class="section-eyebrow">06 · Core Recommendation</div>
+  <h2 class="section-title">The [Key Decision] Question</h2>
+  <p class="section-subtitle">TBD</p>
+  <hr class="section-divider">
+
+  <div id="sec-06"></div>
+  <div class="section-eyebrow">07 · Recommended Plan</div>
+  <h2 class="section-title">[Duration] Itinerary</h2>
+  <p class="section-subtitle">TBD</p>
+  <hr class="section-divider">
+
+  <div id="sec-07"></div>
+  <div class="section-eyebrow">08 · Fallback Plan</div>
+  <h2 class="section-title">[Shorter] Itinerary</h2>
+  <p class="section-subtitle">TBD</p>
+  <hr class="section-divider">
+
+  <div id="sec-08"></div>
+  <div class="section-eyebrow">09 · Risk Register</div>
+  <h2 class="section-title">What Can Break — And What To Do</h2>
+  <p class="section-subtitle">TBD</p>
+  <hr class="section-divider">
+
+  <div id="sec-09"></div>
+  <div class="section-eyebrow">10 · Assumption Register</div>
+  <h2 class="section-title">What This Plan Assumes</h2>
+  <p class="section-subtitle">TBD</p>
+  <hr class="section-divider">
+
+  <div id="sec-10"></div>
+  <div class="section-eyebrow">11 · Accessibility Analysis</div>
+  <h2 class="section-title">[Demographic] Assessment</h2>
+  <p class="section-subtitle">TBD</p>
+  <hr class="section-divider">
+
+  <div id="sec-11"></div>
+  <div class="section-eyebrow">12 · Decision Matrix</div>
+  <h2 class="section-title">Key Decisions This Report Makes</h2>
+  <p class="section-subtitle">TBD</p>
+  <hr class="section-divider">
+
+  <div id="sec-12"></div>
+  <div class="section-eyebrow">13 · Communication</div>
+  <h2 class="section-title">WhatsApp Summary</h2>
+  <p class="section-subtitle">TBD</p>
+  <hr class="section-divider">
+
+  <div id="sec-13"></div>
+  <div class="section-eyebrow">14 · Evidence Log</div>
+  <h2 class="section-title">Source Registry</h2>
+  <p class="section-subtitle">TBD</p>
+
+</div><!-- end .rev-2 -->
+
+<hr class="section-divider">
 <div style="text-align: center; padding: 32px 0 16px; border-top: 1px solid var(--divider);">
-  <p style="font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--text-muted); letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 8px;">Braj Yatra Consulting Report · Raksha Bandhan 2026 · <em>Revision 2</em></p>
+  <p style="font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--text-muted); letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 8px;">Braj Yatra Consulting Report · Raksha Bandhan 2026 · <em id="footerRevLabel">Revision 1</em></p>
   <p style="font-family: 'EB Garamond', serif; font-size: 18px; color: var(--saffron); font-style: italic;">Jai Shri Krishna 🙏</p>
-  <p style="font-size: 12px; color: var(--text-muted); margin-top: 16px;">All temple timings should be verified directly with temples one week before travel. This report is accurate as of June 2026. Festival-specific adjustments may apply. <em>Revision 2 incorporates learnings from a comparative analysis with an external travel planner.</em></p>
+  <p style="font-size: 12px; color: var(--text-muted); margin-top: 16px;">All temple timings should be verified directly with temples one week before travel. This report is accurate as of June 2026. Festival-specific adjustments may apply. <em>Revision 1 incorporates learnings from a comparative analysis with an external travel planner.</em></p>
 </div>
 
 </div><!-- end .page -->
+
+<script>
+(function() {
+  var html = document.documentElement;
+  var coverToggle = document.getElementById('coverToggle');
+  var revToggle = document.getElementById('revToggle');
+  var fab = document.getElementById('darkModeFab');
+  var DM_KEY = 'tripplan-darkmode';
+  var REV_KEY = 'tripplan-revision';
+
+  function setDarkMode(enabled) {
+    html.classList.toggle('dark-mode', enabled);
+    if (coverToggle) coverToggle.checked = enabled;
+    if (fab) fab.innerHTML = enabled ? '\u2600' : '\u263E';
+    localStorage.setItem(DM_KEY, enabled ? '1' : '0');
+  }
+
+  function setRevision(rev2) {
+    var rev1 = document.querySelector('.rev-1');
+    var rev2el = document.querySelector('.rev-2');
+    if (rev1) rev1.classList.toggle('active', !rev2);
+    if (rev2el) rev2el.classList.toggle('active', rev2);
+    if (revToggle) revToggle.checked = rev2;
+
+    // Update cover label and footer
+    var label = 'Revision ' + (rev2 ? '2' : '1');
+    var coverLabel = document.querySelector('.cover-label');
+    var footerLabel = document.getElementById('footerRevLabel');
+    if (coverLabel) coverLabel.innerHTML = 'Confidential · Pilgrimage Operations Engagement · <em>' + label + '</em>';
+    if (footerLabel) footerLabel.textContent = label;
+
+    localStorage.setItem(REV_KEY, rev2 ? '2' : '1');
+  }
+
+  // Initialize dark mode: localStorage > system preference > light
+  var dmStored = localStorage.getItem(DM_KEY);
+  if (dmStored === '1') {
+    setDarkMode(true);
+  } else if (dmStored === null && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    setDarkMode(true);
+  } else {
+    setDarkMode(false);
+  }
+
+  // Initialize revision: localStorage > Rev 1
+  var revStored = localStorage.getItem(REV_KEY);
+  setRevision(revStored === '2');
+
+  // Dark mode toggle
+  if (coverToggle) {
+    coverToggle.addEventListener('change', function() {
+      setDarkMode(this.checked);
+    });
+  }
+
+  // Revision toggle
+  if (revToggle) {
+    revToggle.addEventListener('change', function() {
+      setRevision(this.checked);
+    });
+  }
+
+  // Floating FAB
+  if (fab) {
+    fab.addEventListener('click', function() {
+      setDarkMode(!html.classList.contains('dark-mode'));
+    });
+
+    var cover = document.querySelector('.cover');
+    if (cover) {
+      var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          fab.classList.toggle('visible', !entry.isIntersecting);
+        });
+      }, { threshold: 0 });
+      observer.observe(cover);
+    }
+  }
+})();
+</script>
 </body>
 </html>
