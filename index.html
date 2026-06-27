@@ -514,10 +514,6 @@
   }
   .toc-sub-05 { margin-left: 28px; }
 
-  @media (max-width: 700px) {
-    .toc-grid { grid-template-columns: 1fr; }
-  }
-
   /* ─── RESPONSIVE ─── */
   @media (max-width: 768px) {
     body { font-size: 14px; }
@@ -529,11 +525,12 @@
     .page { padding: 32px 16px; }
     .section-title { font-size: 26px; }
     .section-subtitle { font-size: 14px; margin-bottom: 24px; }
+    .toc-grid { grid-template-columns: 1fr; }
+    .calendar-grid { grid-template-columns: 1fr; gap: 12px; }
     .exec-summary { padding: 32px 20px; margin-bottom: 32px; }
     .exec-summary p { font-size: 17px; }
     .exec-finding { flex-direction: column; gap: 12px; }
     .toc { padding: 20px; }
-    .toc-grid { grid-template-columns: 1fr; }
     .toc-sub { padding-left: 36px; }
     .day-header { flex-direction: column; gap: 8px; padding: 16px 20px; }
     .day-number { font-size: 32px; }
@@ -588,6 +585,9 @@
     .matrix-table tbody td { padding: 6px 6px; }
     .decision-box { padding: 18px 14px; }
     .whatsapp-bubble { font-size: 12px; }
+    .calendar-card { padding: 14px; }
+    .calendar-card .day-label { font-size: 22px; }
+    .calendar-card .day-schedule { font-size: 11px; }
   }
 
   /* ─── PRINT ─── */
@@ -645,6 +645,73 @@
   li { color: var(--text-secondary); margin-bottom: 6px; font-size: 14px; line-height: 1.6; }
   strong { color: var(--text-primary); }
 
+  .calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin: 32px 0;
+  }
+  .calendar-card {
+    background: var(--cream);
+    border-top: 4px solid var(--saffron);
+    border-radius: 2px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .calendar-card:nth-child(2) { border-top-color: var(--gold); }
+  .calendar-card:nth-child(3) { border-top-color: var(--deep-blue); }
+  .calendar-card .day-label {
+    font-family: 'EB Garamond', serif;
+    font-size: 28px;
+    color: var(--deep-blue);
+    line-height: 1.1;
+  }
+  .calendar-card .day-label small {
+    display: block;
+    font-family: 'Inter', sans-serif;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--text-muted);
+    font-weight: 400;
+  }
+  .calendar-card .day-theme {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--saffron);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+  .calendar-card:nth-child(2) .day-theme { color: var(--gold); }
+  .calendar-card:nth-child(3) .day-theme { color: var(--deep-blue); }
+  .calendar-card .day-schedule {
+    font-size: 12px;
+    color: var(--text-secondary);
+    line-height: 1.65;
+  }
+  .calendar-card .day-schedule strong {
+    color: var(--text-primary);
+  }
+  .calendar-card .day-footer {
+    font-size: 11px;
+    color: var(--text-muted);
+    font-style: italic;
+    border-top: 1px solid var(--divider);
+    padding-top: 8px;
+    margin-top: auto;
+  }
+  .calendar-card .day-footer a {
+    color: var(--saffron);
+    text-decoration: none;
+    font-style: normal;
+    font-weight: 500;
+  }
+  .calendar-card .day-footer a:hover {
+    text-decoration: underline;
+  }
+
   .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; margin: 24px 0; }
   .col-box { padding: 24px; background: var(--cream); border-top: 3px solid var(--saffron); }
   .col-box.blue-top { border-top-color: var(--deep-blue); }
@@ -697,6 +764,7 @@
   <div class="toc-label">📋 Quick Navigation</div>
   <div class="toc-grid">
     <a href="#sec-exec" class="toc-item"><span class="toc-num">00</span> Executive Overview</a>
+    <a href="#sec-plan" class="toc-item"><span class="toc-num">★</span> At-a-Glance Itinerary</a>
     <a href="#sec-01" class="toc-item"><span class="toc-num">01</span> Temple Timing Matrix</a>
     <a href="#sec-02" class="toc-item"><span class="toc-num">02</span> Distance &amp; Travel Times</a>
     <a href="#sec-03" class="toc-item"><span class="toc-num">03</span> Stakeholder Analysis</a>
@@ -715,6 +783,67 @@
     <a href="#sec-13" class="toc-item"><span class="toc-num">13</span> Evidence Log</a>
   </div>
 </div>
+
+<!-- ─── AT-A-GLANCE ITINERARY ─── -->
+<div id="sec-plan"></div>
+<div class="section-eyebrow">★ · At-a-Glance Itinerary</div>
+<h2 class="section-title">3-Day Plan in One Grid</h2>
+<p class="section-subtitle">A quick visual overview of every day — meal times, major sites, and travel. Tap any day to jump to its full timeline below.</p>
+
+<div class="calendar-grid">
+
+  <div class="calendar-card">
+    <div class="day-label">Day 1 <small>Thursday 27 Aug</small></div>
+    <div class="day-theme">🛺 Govardhan Full Circuit</div>
+    <div class="day-schedule">
+      <strong>🥞 9–11 AM</strong> Breakfast + hotel check-in<br>
+      <strong>🍛 11–12:30 PM</strong> Family lunch (reunion!)<br>
+      <strong>🛺 12:30–3:30 PM</strong> Govardhan scenic e-rickshaw tour<br>
+      <strong>🥤 3:30–4 PM</strong> Snack break<br>
+      <strong>🛕 4–6:30 PM</strong> Temple darshan + Jatipura Abhishek<br>
+      <strong>🚐 6:30–7:30 PM</strong> Drive back to Vrindavan<br>
+      <strong>🍛 7:30 PM</strong> Dinner &amp; rest
+    </div>
+    <div class="day-footer">All seated in e-rickshaw · Near-zero walking · <a href="#day-01">View full timeline →</a></div>
+  </div>
+
+  <div class="calendar-card">
+    <div class="day-label">Day 2 <small>Friday 28 Aug</small></div>
+    <div class="day-theme">🎋 Raksha Bandhan</div>
+    <div class="day-schedule">
+      <strong>🥞 7–7:30 AM</strong> Wake up + breakfast at hotel<br>
+      <strong>🌊 8:15–9:30 AM</strong> Yamuna snan + Rakhi at Vishram Ghat<br>
+      <strong>🥞 9:30–10 AM</strong> Breakfast near ghat<br>
+      <strong>🛕 10–11:45 AM</strong> Janmabhoomi darshan<br>
+      <strong>🍛 12:15–1:15 PM</strong> Lunch at hotel (doubles as rest)<br>
+      <strong>💤 1:15–3:45 PM</strong> Afternoon rest<br>
+      <strong>🛕 4–5:15 PM</strong> ISKCON Sandhya Aarti<br>
+      <strong>🛕 5:30–6:30 PM</strong> Banke Bihari evening darshan<br>
+      <strong>🌕 7–8 PM</strong> Yamuna Aarti at Keshi Ghat<br>
+      <strong>🍛 8:15 PM</strong> Dinner
+    </div>
+    <div class="day-footer">Festival day · Full moon · <a href="#day-02">View full timeline →</a></div>
+  </div>
+
+  <div class="calendar-card">
+    <div class="day-label">Day 3 <small>Saturday 29 Aug</small></div>
+    <div class="day-theme">🏛️ Taj Mahal Finale</div>
+    <div class="day-schedule">
+      <strong>🥞 8–8:30 AM</strong> Breakfast + check out<br>
+      <strong>💎 8:30–9:30 AM</strong> Prem Mandir morning darshan<br>
+      <strong>🛕 9:45–10:30 AM</strong> Shree Rangnath Ji Temple<br>
+      <strong>🚐 10:30 AM–12:30 PM</strong> Drive to Agra<br>
+      <strong>🏛️ 12:30–2:30 PM</strong> Taj Mahal (golf carts for seniors)<br>
+      <strong>🍛 2:30–3:30 PM</strong> Final lunch in Agra<br>
+      <strong>🚐 3:30–6:30 PM</strong> Drive to Gurgaon<br>
+      <strong>🏠 ~6:30 PM</strong> Arrive home · Dinner at home
+    </div>
+    <div class="day-footer">No backtracking · Taj on the way home · <a href="#day-03">View full timeline →</a></div>
+  </div>
+
+</div>
+
+<hr class="section-divider">
 
 <!-- ─── EXECUTIVE SUMMARY ─── -->
 <div id="sec-exec"></div>
