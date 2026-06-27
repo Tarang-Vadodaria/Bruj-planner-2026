@@ -36,6 +36,7 @@
     color: var(--text-primary);
     line-height: 1.65;
     font-size: 15px;
+    scroll-behavior: smooth;
   }
 
   /* ─── COVER ─── */
@@ -254,6 +255,14 @@
   }
 
   /* ─── TABLES ─── */
+  .table-wrap {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin: 16px -4px;
+  }
+  .table-wrap::-webkit-scrollbar { height: 4px; }
+  .table-wrap::-webkit-scrollbar-thumb { background: var(--divider); border-radius: 2px; }
+
   .matrix-table {
     width: 100%;
     border-collapse: collapse;
@@ -509,6 +518,78 @@
     .toc-grid { grid-template-columns: 1fr; }
   }
 
+  /* ─── RESPONSIVE ─── */
+  @media (max-width: 768px) {
+    body { font-size: 14px; }
+    .cover { padding: 48px 24px 40px; min-height: auto; }
+    .cover-title { font-size: 36px; max-width: 100%; }
+    .cover-sub { font-size: 14px; margin-bottom: 36px; }
+    .cover-meta { grid-template-columns: 1fr 1fr; gap: 16px; padding-top: 24px; }
+    .cover-meta-item span { font-size: 13px; }
+    .page { padding: 32px 16px; }
+    .section-title { font-size: 26px; }
+    .section-subtitle { font-size: 14px; margin-bottom: 24px; }
+    .exec-summary { padding: 32px 20px; margin-bottom: 32px; }
+    .exec-summary p { font-size: 17px; }
+    .exec-finding { flex-direction: column; gap: 12px; }
+    .toc { padding: 20px; }
+    .toc-grid { grid-template-columns: 1fr; }
+    .toc-sub { padding-left: 36px; }
+    .day-header { flex-direction: column; gap: 8px; padding: 16px 20px; }
+    .day-number { font-size: 32px; }
+    .day-info h3 { font-size: 18px; }
+    .timeline { margin-left: 12px; padding-left: 20px; }
+    .timeline-item::before { left: -29px; width: 8px; height: 8px; }
+    .timeline-title { font-size: 14px; }
+    .timeline-detail { font-size: 13px; }
+    .timeline-time { font-size: 10px; }
+    .two-col { grid-template-columns: 1fr; gap: 16px; }
+    .col-box { padding: 16px; }
+    .matrix-table { font-size: 12px; }
+    .matrix-table thead th,
+    .matrix-table tbody td { padding: 8px 10px; }
+    .risk-item { grid-template-columns: 1fr; gap: 8px; padding: 12px 16px; }
+    .risk-name { font-size: 13px; }
+    .risk-desc { font-size: 12px; }
+    .assumption-row { grid-template-columns: 1fr; gap: 4px; padding: 10px 12px; }
+    .assumption-row .conf { text-align: left; }
+    .decision-box { padding: 24px 20px; margin: 24px 0; }
+    .decision-box h3 { font-size: 20px; }
+    .callout { padding: 14px 16px; flex-direction: column; gap: 8px; }
+    .whatsapp-box { padding: 16px; }
+    .whatsapp-bubble { font-size: 13px; padding: 12px 14px; }
+    .evidence-item { grid-template-columns: 1fr; gap: 4px; padding: 10px 0; }
+    .evidence-conf { text-align: left; }
+    .section-divider { margin: 36px 0; }
+    .timeline-note { font-size: 11px; padding: 3px 8px; }
+    .tag { font-size: 10px; padding: 2px 8px; }
+    .decision-box::before { font-size: 8px; padding: 3px 8px; top: -11px; left: 12px; }
+    .itinerary-day { margin-bottom: 32px; }
+  }
+
+  @media (max-width: 480px) {
+    .cover { padding: 32px 16px 28px; }
+    .cover-title { font-size: 28px; }
+    .cover-label { font-size: 9px; margin-bottom: 28px; }
+    .cover-meta { grid-template-columns: 1fr; gap: 12px; }
+    .cover-meta-item span { font-size: 12px; }
+    .page { padding: 20px 12px; }
+    .section-title { font-size: 22px; }
+    .day-number { font-size: 28px; }
+    .day-info h3 { font-size: 16px; }
+    .timeline { margin-left: 8px; padding-left: 14px; }
+    .timeline-item::before { left: -23px; width: 6px; height: 6px; }
+    .exec-summary { padding: 24px 16px; }
+    .exec-summary p { font-size: 15px; }
+    .toc-grid { gap: 4px; }
+    .toc-item, .toc-sub { font-size: 12px; padding: 4px 8px; }
+    .matrix-table { font-size: 11px; }
+    .matrix-table thead th,
+    .matrix-table tbody td { padding: 6px 6px; }
+    .decision-box { padding: 18px 14px; }
+    .whatsapp-bubble { font-size: 12px; }
+  }
+
   /* ─── PRINT ─── */
   @media print {
     body { font-size: 13px; }
@@ -662,6 +743,7 @@
 <h2 class="section-title">Temple Timing Matrix</h2>
 <p class="section-subtitle">All timings sourced from official temple sites and corroborated by minimum two independent sources. August falls in Summer season (March–October) for all Braj temples. <strong>Updated for Rev 2.</strong></p>
 
+<div class="table-wrap">
 <table class="matrix-table">
   <thead>
     <tr>
@@ -764,6 +846,7 @@
     </tr>
   </tbody>
 </table>
+</div>
 
 <div class="callout callout-gold">
   <div class="callout-icon">🔒</div>
@@ -781,6 +864,7 @@
 <h2 class="section-title">Distance & Travel Time Matrix</h2>
 <p class="section-subtitle">All distances verified. <strong>Updated: Agra routes added for Day 3.</strong> Braj road quality is mixed. August monsoon roads may be slower. Add 20–30% for monsoon conditions.</p>
 
+<div class="table-wrap">
 <table class="matrix-table">
   <thead>
     <tr>
@@ -857,6 +941,7 @@
     </tr>
   </tbody>
 </table>
+</div>
 
 <div class="callout callout-saffron">
   <div class="callout-icon">🗺️</div>
@@ -1222,6 +1307,7 @@
 <h2 class="section-title">1 Night / 2 Day Itinerary</h2>
 <p class="section-subtitle">If the family can only do 1 night. Retains the core: Rakhi on Yamuna + Mathura temples + evening darshan.</p>
 
+<div class="table-wrap">
 <table class="matrix-table">
   <thead>
     <tr>
@@ -1303,6 +1389,7 @@
     </tr>
   </tbody>
 </table>
+</div>
 
 <div class="callout callout-red">
   <div class="callout-icon">❌</div>
@@ -1463,6 +1550,7 @@
 <h2 class="section-title">Senior Citizen Assessment</h2>
 <p class="section-subtitle"><em>Updated: Taj Mahal added. Govardhan re-assessed for evening (instead of morning).</em></p>
 
+<div class="table-wrap">
 <table class="matrix-table">
   <thead>
     <tr>
@@ -1559,6 +1647,7 @@
     </tr>
   </tbody>
 </table>
+</div>
 
 <div class="callout callout-saffron">
   <div class="callout-icon">👴</div>
@@ -1576,6 +1665,7 @@
 <h2 class="section-title">Key Decisions This Report Makes</h2>
 <p class="section-subtitle"><em>Updated for Rev 2. Govardhan re-sequenced, Taj added, Prem Mandir moved to morning.</em></p>
 
+<div class="table-wrap">
 <table class="matrix-table">
   <thead>
     <tr>
@@ -1654,6 +1744,7 @@
     </tr>
   </tbody>
 </table>
+</div>
 
 <hr class="section-divider">
 
@@ -1663,6 +1754,7 @@
 <h2 class="section-title">What Must Be Done Now</h2>
 <p class="section-subtitle"><em>Updated: Taj Mahal ticket booking + Govardhan e-rickshaw pre-booking added.</em></p>
 
+<div class="table-wrap">
 <table class="matrix-table">
   <thead>
     <tr>
@@ -1753,6 +1845,7 @@
     </tr>
   </tbody>
 </table>
+</div>
 
 <hr class="section-divider">
 
